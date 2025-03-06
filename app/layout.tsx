@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./reset.css";
 import "./globals.css";
-import Navbar from "./ui/Navbar";
+import Sidebar from "./ui/Sidebar";
 import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={ inter.className }>
       <body>
-        <Navbar />
+        <Sidebar />
 
         <main>
           {children}

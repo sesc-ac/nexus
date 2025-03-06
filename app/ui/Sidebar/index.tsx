@@ -1,11 +1,11 @@
-import styles from "./Navbar.module.css";
+import styles from "./Sidebar.module.css";
 import Image from "next/image";
 import profilePic from "../../../public/erick.jpg";
 
-export default function Navbar(){
+export default function Sidebar(){
     return (
-        <nav className={ styles.navbar }>
-            <div className={ styles.navbar__container }>
+        <nav className={ styles.sidebar }>
+            <div className={ styles.sidebar__container }>
                 <Image
                     alt="Logotipo do SESC"
                     className={ styles.logo }
