@@ -5,7 +5,7 @@ import Menu from "./Menu";
 
 export default function Sidebar(){
     return (
-        <nav className={ styles.sidebar }>
+        <aside className={ styles.sidebar }>
             <div className={ styles.sidebar__container }>
                 <div className={ styles.user__container }>
                     <Image
@@ -16,26 +16,6 @@ export default function Sidebar(){
 
                     <p className={ styles.user__name }>Érick Fernandes</p>
                 </div>
-
-                
-
-                {/* <menu className={ styles.menu }>
-                    <li>
-                        <a className={ styles.menu__link } href="#">Cupons Fiscais</a>
-                    </li>
-
-                    <li>
-                        <a className={ styles.menu__link } href="#">Link 1</a>
-                    </li>
-
-                    <li>
-                        <a className={ styles.menu__link } href="#">Link 2</a>
-                    </li>
-
-                    <li>
-                        <a className={ styles.menu__link } href="https://nextjs.org/docs">Docs</a>
-                    </li>
-                </menu> */}
 
                 <Menu />
             </div>
@@ -53,6 +33,6 @@ export default function Sidebar(){
                 <p className={ styles.footer__title }>Departamento Regional do Acre</p>
                 <p className={ styles.footer__subtitle }>Sistema Integrado v1.0</p>
             </footer>
-        </nav>
+        </aside>
     );
 }
