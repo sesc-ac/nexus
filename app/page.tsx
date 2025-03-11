@@ -2,19 +2,18 @@ import styles from "./page.module.css";
 import { fetchSales } from "./lib/data";
 
 export default async function Page() {
-  const sales = await fetchSales();
-
-  // console.log('Sales', sales);
+  // const sales = await fetchSales();
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Hello World</h1>
-        <ul>
+
+        {/* <ul>
           {sales.map((sale: any) => (
             <li key={sale.VENDA}>{sale.VENDA} - {sale.DTVENDA} - {sale.DSPRODUTO}-{sale.VLRECEBIDO}-{sale.NMCLIENTE}<br/><br/></li>
           ))}
-        </ul>
+        </ul> */}
 
         <p>
           This is a Next.js with TypeScript template.
