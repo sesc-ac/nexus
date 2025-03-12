@@ -15,4 +15,8 @@
     color: hsl(0, 0%, 40%);
     font-size: .875rem;
     font-weight: 600;
+
+    &:empty{
+        display: none;
+    }
 }

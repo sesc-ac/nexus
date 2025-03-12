@@ -1,0 +1,8 @@
+.button{
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    font-weight: 600;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+}

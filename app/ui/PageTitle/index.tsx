@@ -1,10 +1,16 @@
 import styles from "./PageTitle.module.css";
 
-export default function PageTitle(){
+export default function PageTitle({
+    title,
+    subtitle
+}: { 
+    title: string,
+    subtitle?: string 
+}){
     return(
         <div className={ styles.pageTitle }>
-            <h1 className={ styles.title }>Título da página</h1>
-            <p className={ styles.subtitle }>Uma descrição para a página</p>
+            <h1 className={ styles.title }>{ title }</h1>
+            <p className={ styles.subtitle }>{ subtitle }</p>
         </div>
     );
 }

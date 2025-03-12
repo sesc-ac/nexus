@@ -1,25 +1,25 @@
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import { fetchSales } from "./lib/data";
+import { Button } from "./ui/Button";
+import PageContainer from "./ui/PageContainer";
+import PageTitle from "./ui/PageTitle";
 
 export default async function Page() {
   // const sales = await fetchSales();
 
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <>
+      <PageTitle
+        title="Sistema Integrado"
+        subtitle="Um sistema, várias soluções."
+      />
+
+      <PageContainer>
         <h1>Hello World</h1>
 
-        {/* <ul>
-          {sales.map((sale: any) => (
-            <li key={sale.VENDA}>{sale.VENDA} - {sale.DTVENDA} - {sale.DSPRODUTO}-{sale.VLRECEBIDO}-{sale.NMCLIENTE}<br/><br/></li>
-          ))}
-        </ul> */}
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque debitis nulla magnam, ratione cum porro repudiandae ut quas cumque nostrum voluptatibus recusandae ipsum iste laudantium praesentium blanditiis maiores. Magnam, blanditiis!</p>
 
-        <p>
-          This is a Next.js with TypeScript template.
-        </p>
-
-        <button>Botão</button>
+        <Button>Botão</Button>
 
         <form action="">
           <div>
@@ -38,16 +38,16 @@ export default async function Page() {
 
           <div>
             <input type="checkbox" name="" id="" />
-            <label htmlFor=""></label>
+            <label htmlFor="">Label</label>
             <input type="checkbox" name="" id="" />
-            <label htmlFor=""></label>
+            <label htmlFor="">Label</label>
             <input type="checkbox" name="" id="" />
-            <label htmlFor=""></label>
+            <label htmlFor="">Label</label>
             <input type="checkbox" name="" id="" />
-            <label htmlFor=""></label>
+            <label htmlFor="">Label</label>
           </div>
         </form>
-      </main>
-    </div>
+      </PageContainer>
+    </>
   );
 }

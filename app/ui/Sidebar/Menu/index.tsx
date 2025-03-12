@@ -2,10 +2,24 @@ import Link from 'next/link';
 import Image from "next/image";
 import styles from './Menu.module.css';
 import reciptIcon from '@/public/receipt.svg';
+import homeIcon from '@/public/home.svg';
 
 export default function Menu(){
     return(
         <menu className={ styles.menu }>
+            <Link
+                className={  styles.menu__link }
+                href="/"
+            >
+                <Image 
+                    alt='Página Inicial'
+                    className={ styles.link__icon }
+                    src={ homeIcon }
+                />
+                
+                <p className={ styles.link__name }>Página Inicial</p>
+            </Link>
+
             <p className={ styles.menu__group }>GECON</p>
 
             <Link
