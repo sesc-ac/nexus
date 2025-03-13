@@ -1,10 +1,10 @@
-export async function getCashiers() {
+export async function fetchCashiers() {
     const headers = new Headers();
     headers.append('VENDAS-KEY', process.env.VENDAS_KEY || '');
 
     const requestData = new FormData();
-    requestData.append('initialDate', '2025-03-12');
-    requestData.append('finalDate', '2025-03-12');
+    requestData.append('initialDate', '2025-03-13');
+    requestData.append('finalDate', '2025-03-13');
 
     try{
         await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -19,6 +19,6 @@ export async function getCashiers() {
 
         return data;
     }catch(error){
-        console.error('Data Fetch Error, getCashiers', error);
+        console.error('Data Fetch Error, fetchCashiers', error);
     }
 }
