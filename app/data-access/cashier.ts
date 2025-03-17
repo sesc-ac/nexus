@@ -1,10 +1,14 @@
-export async function fetchCashiers() {
+export async function fetchCashiers(initialDate:string, finalDate:string){
     const headers = new Headers();
     headers.append('VENDAS-KEY', process.env.VENDAS_KEY || '');
 
     const requestData = new FormData();
-    requestData.append('initialDate', '2025-03-13');
-    requestData.append('finalDate', '2025-03-13');
+    requestData.append('initialDate', initialDate);
+
+    if(finalDate) 
+        requestData.append('finalDate', finalDate);
+    else
+        requestData.append('finalDate', initialDate);
 
     try{
         await new Promise((resolve) => setTimeout(resolve, 3000));

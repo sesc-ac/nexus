@@ -1,7 +1,10 @@
 .button{
+    background-color: hsl(0, 0%, 20%);
     border: none;
     border-radius: .25rem;
+    color: #FFF;
     cursor: pointer;
+    font-family: inherit;
     font-weight: 600;
     padding-block: .5rem;
     padding-inline: 2rem;

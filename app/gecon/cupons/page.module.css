@@ -25,27 +25,3 @@
             font-weight: 600;
         }
 
-.dateRangeGroup{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-    .label{
-        font-weight: 700;
-    }
-
-    .group{
-        display: flex;
-        gap: .5rem;
-    }
-
-    .input{
-        border: 1px solid hsl(0, 0%, 90%);
-        border-radius: .25rem;
-        color: hsl(0, 0%, 20%);
-        font-family: inherit;
-        font-size: .875rem;
-        padding-block: 1rem;
-        padding-inline: .75rem;
-    }

@@ -3,8 +3,20 @@ import PageContainer from "@/app/ui/PageContainer";
 import PageTitle from "@/app/ui/PageTitle";
 import { Suspense } from "react";
 import styles from './page.module.css';
+import CashierDateRangeSearch from "@/app/ui/gecon/cupons/CashierDateRangeSearch";
 
-export default async function Page(){
+export default async function Page(
+    props: {
+        searchParams?: Promise<{ 
+            initialDate: string, 
+            finalDate?: string 
+        }>;
+    }
+){
+    const searchParams = await props.searchParams;
+    const initialDate = searchParams?.initialDate as string || new Date().toISOString().split('T')[0];
+    const finalDate = searchParams?.finalDate as string;
+
     return(
         <>
             <PageTitle
@@ -32,17 +44,13 @@ export default async function Page(){
                     </div>
                 </div>
 
-                <div className={ styles.dateRangeGroup }>
-                    <label className={ styles.label }>Período</label>
+                <CashierDateRangeSearch />
 
-                    <div className={ styles.group }>
-                        <input className={ styles.input } type="date" />
-                        <input className={ styles.input } type="date" />
-                    </div>
-                </div>
-
-                <Suspense fallback={<div>Carregando lista...</div>}>
-                    <CashiersList />
+                <Suspense key={ initialDate } fallback={<div>Carregando lista...</div>}>
+                    <CashiersList 
+                        initialDate={ initialDate }
+                        finalDate={ finalDate }
+                    />
                 </Suspense>
             </PageContainer>
         </>

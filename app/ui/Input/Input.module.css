@@ -1,0 +1,10 @@
+.input{
+    background-color: hsl(0, 0%, 90%);
+    border: none;
+    border-radius: .25rem;
+    color: hsl(0, 0%, 20%);
+    font-family: inherit;
+    font-size: .875rem;
+    padding-block: 1rem;
+    padding-inline: .75rem;
+}
