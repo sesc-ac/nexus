@@ -1,0 +1,10 @@
+.flexbox{
+    align-items: center;
+    display: flex;
+    gap: .5rem;
+
+    &.column{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

@@ -1,9 +1,9 @@
-import CashiersList from "@/app/ui/gecon/cupons/CashiersList";
-import PageContainer from "@/app/ui/PageContainer";
-import PageTitle from "@/app/ui/PageTitle";
+import CashiersList from "./_components/CashiersList";
 import { Suspense } from "react";
 import styles from './page.module.css';
-import CashierDateRangeSearch from "@/app/ui/gecon/cupons/CashierDateRangeSearch";
+import CashierDateRangeSearch from "./_components/CashierDateRangeSearch";
+import KPI from "@/app/_ui/KPI";
+import Flexbox from "@/app/_ui/Flexbox";
 
 export default async function Page(
     props: {
@@ -19,40 +19,33 @@ export default async function Page(
 
     return(
         <>
-            <PageTitle
-                title="Cupons Fiscais"
-                subtitle="Aqui você gerencia os cupons fiscais das movimentações dos PDVs."
-            />
-            
-            <PageContainer>
-                <h2>Caixas</h2>
+            <h2>Caixas</h2>
 
-                <div className={ styles.cashiers__kpis}>
-                    <div className={ styles.kpi }>
-                        <p className={ styles.kpi__title }>Total Recebido</p>
-                        <p className={ styles.kpi__value }>R$ 1.000.000,00</p>
-                    </div>
+            <Flexbox>
+                <KPI
+                    title='Total Recebido'
+                    value='R$ 1.000.000,00'
+                />
 
-                    <div className={ styles.kpi }>
-                        <p className={ styles.kpi__title }>Vendas</p>
-                        <p className={ styles.kpi__value }>1000</p>
-                    </div>
+                <KPI
+                    title='Vendas'
+                    value='1000'
+                />
 
-                    <div className={ styles.kpi }>
-                        <p className={ styles.kpi__title }>Caixas</p>
-                        <p className={ styles.kpi__value }>5</p>
-                    </div>
-                </div>
+                <KPI
+                    title='Caixas'
+                    value='5'
+                />
+            </Flexbox>    
 
-                <CashierDateRangeSearch />
+            <CashierDateRangeSearch />
 
-                <Suspense key={ initialDate } fallback={<div>Carregando lista...</div>}>
-                    <CashiersList 
-                        initialDate={ initialDate }
-                        finalDate={ finalDate }
-                    />
-                </Suspense>
-            </PageContainer>
+            <Suspense key={ initialDate } fallback={<div>Carregando lista...</div>}>
+                <CashiersList 
+                    initialDate={ initialDate }
+                    finalDate={ finalDate }
+                />
+            </Suspense>
         </>
     );
 }

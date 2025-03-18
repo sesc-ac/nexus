@@ -1,52 +1,22 @@
 // import styles from "./page.module.css";
-import { fetchSales } from "./lib/data";
-import { Button } from "./ui/Button";
-import PageContainer from "./ui/PageContainer";
-import PageTitle from "./ui/PageTitle";
+import { Button } from "./_ui/Button";
+import PageContainer from "./_ui/PageContainer";
+import PageTitle from "./_ui/PageTitle";
 
-export default async function Page() {
-  // const sales = await fetchSales();
-
+export default function Page() {
   return (
     <>
       <PageTitle
-        title="Sistema Integrado"
-        subtitle="Um sistema, várias soluções."
+        title="Sistema Integrado v1.0"
+        subtitle="A solução integrada do Departamento Regional do Acre."
       />
 
       <PageContainer>
-        <h1>Hello World</h1>
+        <h2>Módulos</h2>
 
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque debitis nulla magnam, ratione cum porro repudiandae ut quas cumque nostrum voluptatibus recusandae ipsum iste laudantium praesentium blanditiis maiores. Magnam, blanditiis!</p>
-
-        <Button>Botão</Button>
-
-        <form action="">
-          <div>
-            <label htmlFor="">Label</label>
-            <input type="text" />
-          </div>
-
-          <div>
-            <input type="radio" name="" id="" />
-            <label htmlFor="">Label</label>
-            <input type="radio" name="" id="" />
-            <label htmlFor="">Label</label>
-            <input type="radio" name="" id="" />
-            <label htmlFor="">Label</label>
-          </div>
-
-          <div>
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">Label</label>
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">Label</label>
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">Label</label>
-            <input type="checkbox" name="" id="" />
-            <label htmlFor="">Label</label>
-          </div>
-        </form>
+        <ul>
+          <li>Cupons Fiscais</li>
+        </ul>
       </PageContainer>
     </>
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./reset.css";
 import "./globals.css";
-import Sidebar from "./ui/Sidebar";
+import Sidebar from "./_ui/Sidebar";
 import { Inter } from 'next/font/google';
 
 export const metadata: Metadata = {

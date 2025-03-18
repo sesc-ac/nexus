@@ -6,34 +6,36 @@ import scheduleIcon from '@/public/schedule.svg';
 import calendarIcon from '@/public/calendar_month.svg';
 import paidIcon from '@/public/paid.svg';
 import bagIcon from '@/public/shopping_bag.svg';
+import Link from 'next/link';
+import Badge from '@/app/_ui/Badge';
 
 
 type CashierItemProps = {
-    id: string;
-    operator: string;
-    totalSalesValue: string;
-    totalSalesQuantity: string;
-    location: string;
-    unit: string;
-    openDate: string;
-    openTime: string;
-    closeTime?: string;
+    closeTime?: string,
+    id: string,
+    location: string,
+    openDate: string,
+    openTime: string
+    operator: string,
+    totalSalesQuantity: string,
+    totalSalesValue: string,
+    unit: string,
 }
 
 export default function CashierItem({
+    closeTime,
     id,
-    operator,
-    totalSalesValue,
-    totalSalesQuantity,
     location,
-    unit,
     openDate,
     openTime,
-    closeTime
+    operator,
+    totalSalesQuantity,
+    totalSalesValue,
+    unit,
 }: CashierItemProps){
     return(
-        <li className={ styles.cashierItem }>
-            <p className={ styles.cashier__status }>{ closeTime ? 'Fechado' : 'Aberto' }</p>
+        <Link href={ `/gecon/cupons/${openDate}-${id}` } className={ styles.cashierItem }>
+            <Badge>{ closeTime ? 'Fechado' : 'Aberto' }</Badge>
 
             <h3 className={ styles.cashier__id }>#{ id } - <span className={ styles.cashier__name }>{ operator }</span></h3>
 
@@ -100,6 +102,6 @@ export default function CashierItem({
                     <p>{ openTime } { closeTime && ` - ${closeTime}` }</p>
                 </div>
             </div>
-        </li>
+        </Link>
     )
 }

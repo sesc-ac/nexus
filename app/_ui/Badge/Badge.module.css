@@ -1,0 +1,15 @@
+.badge{
+    background-color: hsl(0, 0%, 90%);
+    border-radius: .25rem;
+    display: flex;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 700;
+    padding-block: .25rem;
+    padding-inline: .5rem;
+    width: fit-content;
+
+    &.sm{
+        font-size: .5rem;
+    }
+}

@@ -1,0 +1,23 @@
+.box{
+    border: 1px solid hsl(0, 0%, 90%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    
+    &.fill{
+        background-color: hsl(0, 0%, 90%);
+        border: none;
+    }
+    
+    &.radius{
+        border-radius: .25rem;
+    }
+    
+    &.smallGap{
+        gap: .5rem;    
+    }
+
+}

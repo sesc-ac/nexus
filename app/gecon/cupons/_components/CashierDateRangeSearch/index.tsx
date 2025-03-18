@@ -1,16 +1,16 @@
 'use client'
 
-import { Button } from "@/app/ui/Button";
+import { Button } from "@/app/_ui/Button";
 import styles from './CashierDateRangeSearch.module.css';
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
-import Input from "@/app/ui/Input";
+import Input from "@/app/_ui/Input";
 
 export default function CashierDateRangeSearch() {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
 
-    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
         event.preventDefault();
 
         const initialDateInput = event.currentTarget.elements.namedItem('initialDate') as HTMLInputElement;

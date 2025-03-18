@@ -1,4 +1,4 @@
-export async function fetchCashiers(initialDate:string, finalDate:string){
+export async function fetchCashiers(initialDate: string, finalDate: string){
     const headers = new Headers();
     headers.append('VENDAS-KEY', process.env.VENDAS_KEY || '');
 

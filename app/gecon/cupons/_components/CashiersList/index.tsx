@@ -1,4 +1,4 @@
-import { fetchCashiers } from "@/app/data-access/cashier";
+import { fetchCashiers } from "@/app/_data-access/cashier";
 import styles from './CashierList.module.css';
 import CashierItem from "./CashierItem";
 
@@ -7,15 +7,23 @@ type CashierListProps = {
     finalDate?: string;
 }
 
+type FetchedCashierProps = {
+    SQCAIXA: string;
+    NMPESSOA: string;
+    DTABERTURA: string;
+    HRABERTURA: string;
+    HRFECHAMEN: string;
+}
+
 export default async function CashiersList({ initialDate, finalDate }: CashierListProps){
     const cashiers = await fetchCashiers(initialDate, finalDate as string);
 
     return(
         <ul className={ styles.cashierList }>
-            {cashiers.map((cashier: any) => {
+            {cashiers.map((cashier: FetchedCashierProps) => {
                 return(
                     <CashierItem 
-                        key={`${cashier.SQCAIXA}-${cashier.DTABERTURA}`}
+                        key={ `${cashier.SQCAIXA}-${cashier.DTABERTURA}` }
                         id={ cashier.SQCAIXA }
                         operator={ cashier.NMPESSOA }
                         totalSalesValue={ '100000' }
