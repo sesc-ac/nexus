@@ -24,8 +24,7 @@ export default async function CashiersList({ initialDate, finalDate }: CashierLi
 
     return(
         <ul className={ styles.cashierList }>
-            {cashiers.map((cashier: FetchedCashierProps) => {
-                return(
+            {cashiers.map((cashier: FetchedCashierProps) => (
                     <CashierItem 
                         closeTime={ cashier.HRFECHAMEN }
                         id={ cashier.SQCAIXA }
@@ -38,8 +37,8 @@ export default async function CashiersList({ initialDate, finalDate }: CashierLi
                         totalSalesValue={ `R$ ${cashier.TOTALVENDIDO}` }
                         unit={ cashier.DSLOCVENDA }
                     />
-                );
-            })}
+                )
+            )}
         </ul>
     );
 }

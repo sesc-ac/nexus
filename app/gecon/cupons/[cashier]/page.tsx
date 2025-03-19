@@ -50,7 +50,10 @@ export default async function Page({
 
             <h2>Vendas</h2>
 
-            <SalesGrid />
+            <SalesGrid 
+                cashier={ id }
+                date={ date }
+            />
         </>
     );
 }

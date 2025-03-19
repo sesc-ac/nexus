@@ -70,3 +70,23 @@ export async function fetchCashier(id: string, date: string){
         console.error('Data Fetch Error, fetchCashier', error);
     }
 }
+
+export async function fetchSales(cashier: string, date: string){
+    const requestData = new FormData();
+    requestData.append('cashier', cashier);
+    requestData.append('date', date);
+
+    try{
+        const response = await fetch('http://consulta.sescacre.com.br/cupons/vendas.php', {
+            body: requestData,
+            headers: headers,
+            method: 'POST'
+        });
+
+        const data = await response.json();
+
+        return data;
+    }catch(error){
+        console.error('Data Fetch Error, fetchCashier', error);
+    }
+}

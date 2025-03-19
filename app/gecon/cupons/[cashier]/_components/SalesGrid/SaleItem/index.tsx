@@ -1,11 +1,11 @@
 import Box from '@/app/_ui/Box';
-import styles from './SalesItem.module.css';
+import styles from './SaleItem.module.css';
 import Flexbox from '@/app/_ui/Flexbox';
 import Image from 'next/image';
 import scheduleIcon from '@/public/schedule.svg'
 import Badge from '@/app/_ui/Badge';
 
-type SalesItemProps = {
+type SaleItemProps = {
     category: string,
     costumer: string,
     id: string,
@@ -13,13 +13,13 @@ type SalesItemProps = {
     saleValue: string,
 }
 
-export default function SalesItem({
+export default function SaleItem({
     category,
     costumer,
     id,
     saleTime,
     saleValue
-}: SalesItemProps){
+}: SaleItemProps){
     return (
         <Box>
             <Flexbox column>
