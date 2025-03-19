@@ -42,25 +42,6 @@ export default function CashierItem({
             <div className={ styles.cashier__info }>
                 <div className={ styles.cashier__infoItem }>
                     <Image
-                        alt="Total de Vendas"
-                        className={ styles.cashier__infoItemIcon }
-                        src={ paidIcon }
-                    />
-
-                    <p>{ totalSalesValue }</p>
-                </div>
-
-                <div className={ styles.cashier__infoItem }>
-                    <Image
-                        alt="Quantidade de Vendas"
-                        className={ styles.cashier__infoItemIcon }
-                        src={ bagIcon }
-                    />
-
-                    <p>{ totalSalesQuantity }</p>
-                </div>
-                <div className={ styles.cashier__infoItem }>
-                    <Image
                         alt="Localização"
                         className={ styles.cashier__infoItemIcon }
                         src={ locationIcon }
@@ -77,6 +58,28 @@ export default function CashierItem({
                     />
 
                     <p>{ unit }</p>
+                </div>
+            </div>
+            
+            <div className={ styles.cashier__info }>
+                <div className={ styles.cashier__infoItem }>
+                    <Image
+                        alt="Total de Vendas"
+                        className={ styles.cashier__infoItemIcon }
+                        src={ paidIcon }
+                    />
+
+                    <p>{ totalSalesValue }</p>
+                </div>
+
+                <div className={ styles.cashier__infoItem }>
+                    <Image
+                        alt="Quantidade de Vendas"
+                        className={ styles.cashier__infoItemIcon }
+                        src={ bagIcon }
+                    />
+
+                    <p>{ totalSalesQuantity }</p>
                 </div>
             </div>
 

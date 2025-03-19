@@ -1,0 +1,19 @@
+.menuLink{
+    align-items: center;
+    border-radius: .25rem;
+    color: hsl(0, 0%, 20%);
+    display: flex;
+    font-size: .875rem;
+    font-weight: 600;
+    gap: .5rem;
+    padding: .5rem;
+    transition: background-color .25s;
+
+    &:hover{
+        background-color: hsl(0, 0%, 90%);
+    }
+
+    &.active{
+        background-color: hsl(0, 0%, 80%);
+    }
+}

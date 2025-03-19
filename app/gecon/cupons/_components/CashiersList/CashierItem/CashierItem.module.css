@@ -5,6 +5,11 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+    transition: background-color .25s;
+
+    &:hover{
+        background-color: hsl(0, 0%, 90%);
+    }
 }
 
 .cashier__id{

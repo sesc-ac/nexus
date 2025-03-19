@@ -4,28 +4,9 @@
     gap: .25rem;
 }
 
-    .menu__group,
-    .menu__link{
-        padding: .5rem;
-    }
-
     .menu__group{
         color: hsl(0, 0%, 40%);
         font-size: .75rem;
         font-weight: 700;
-    }
-
-    .menu__link{
-        align-items: center;
-        border-radius: .25rem;
-        color: hsl(0, 0%, 20%);
-        display: flex;
-        font-size: .875rem;
-        font-weight: 600;
-        gap: .5rem;
-        transition: background-color .25s;
-
-        &:hover{
-            background-color: hsl(0, 0%, 90%);
-        }
+        padding: .5rem;
     }
