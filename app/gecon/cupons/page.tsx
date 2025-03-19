@@ -1,49 +1,40 @@
 import CashiersList from "./_components/CashiersList";
 import { Suspense } from "react";
-import styles from './page.module.css';
-import CashierDateRangeSearch from "./_components/CashierDateRangeSearch";
 import KPI from "@/app/_ui/KPI";
 import Flexbox from "@/app/_ui/Flexbox";
+import CashiersDateRangeForm from "./_components/CashiersDateRangeForm";
+import CashiersKPIs from "./_components/CashiersKPIs";
 
-export default async function Page(
-    props: {
-        searchParams?: Promise<{ 
-            initialDate: string, 
-            finalDate?: string 
-        }>;
-    }
-){
-    const searchParams = await props.searchParams;
-    const initialDate = searchParams?.initialDate as string || new Date().toISOString().split('T')[0];
-    const finalDate = searchParams?.finalDate as string;
+export default async function Page({
+    searchParams
+}: {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined  }>
+}){
+    const { 
+        initialDate = new Date().toISOString().split('T')[0], 
+        finalDate = new Date().toISOString().split('T')[0]
+    } = await searchParams;
 
+    const CashiersKPIsKey = `${initialDate}KPIsKey`;
+    const CashiersListsKey = `${initialDate}ListKey`;
+    
     return(
         <>
             <h2>Caixas</h2>
-
-            <Flexbox>
-                <KPI
-                    title='Total Recebido'
-                    value='R$ 1.000.000,00'
+            
+            <Suspense key={ CashiersKPIsKey } fallback={<div>Carregando lista...</div>}>
+                <CashiersKPIs 
+                    initialDate={ initialDate as string }
+                    finalDate={ finalDate as string }
                 />
+            </Suspense>
 
-                <KPI
-                    title='Vendas'
-                    value='1000'
-                />
+            <CashiersDateRangeForm />
 
-                <KPI
-                    title='Caixas'
-                    value='5'
-                />
-            </Flexbox>    
-
-            <CashierDateRangeSearch />
-
-            <Suspense key={ initialDate } fallback={<div>Carregando lista...</div>}>
+            <Suspense key={ CashiersListsKey } fallback={<div>Carregando lista...</div>}>
                 <CashiersList 
-                    initialDate={ initialDate }
-                    finalDate={ finalDate }
+                    initialDate={ initialDate as string }
+                    finalDate={ finalDate as string }
                 />
             </Suspense>
         </>

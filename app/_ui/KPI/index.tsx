@@ -8,6 +8,7 @@ export default function KPI({
     value: string
 }){
     const className = `${styles.kpi}`;
+    
     return(
         <div className={ className }>
             <p className={ styles.kpi__title }>{ title }</p>

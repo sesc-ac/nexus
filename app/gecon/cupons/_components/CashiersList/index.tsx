@@ -3,16 +3,20 @@ import styles from './CashierList.module.css';
 import CashierItem from "./CashierItem";
 
 type CashierListProps = {
-    initialDate: string;
-    finalDate?: string;
+    initialDate: string,
+    finalDate?: string
 }
 
 type FetchedCashierProps = {
-    SQCAIXA: string;
-    NMPESSOA: string;
-    DTABERTURA: string;
-    HRABERTURA: string;
-    HRFECHAMEN: string;
+    DSLOCVENDA: string,
+    DTABERTURA: string,
+    HRABERTURA: string,
+    HRFECHAMEN: string,
+    NMPESSOA: string,
+    NMUOP: string,
+    QTDVENDAS: string
+    TOTALVENDIDO: string
+    SQCAIXA: string
 }
 
 export default async function CashiersList({ initialDate, finalDate }: CashierListProps){
@@ -23,16 +27,16 @@ export default async function CashiersList({ initialDate, finalDate }: CashierLi
             {cashiers.map((cashier: FetchedCashierProps) => {
                 return(
                     <CashierItem 
-                        key={ `${cashier.SQCAIXA}-${cashier.DTABERTURA}` }
+                        closeTime={ cashier.HRFECHAMEN }
                         id={ cashier.SQCAIXA }
-                        operator={ cashier.NMPESSOA }
-                        totalSalesValue={ '100000' }
-                        totalSalesQuantity={ '50' }
-                        location={ 'Rio Branco - AC' }
-                        unit={ 'SESC BOSQUE' }
+                        key={ `${cashier.SQCAIXA}-${cashier.DTABERTURA}` }
+                        location={ cashier.NMUOP }
                         openDate={ cashier.DTABERTURA }
                         openTime={ cashier.HRABERTURA }
-                        closeTime={ cashier.HRFECHAMEN }
+                        operator={ cashier.NMPESSOA }
+                        totalSalesQuantity={ cashier.QTDVENDAS }
+                        totalSalesValue={ `R$ ${cashier.TOTALVENDIDO}` }
+                        unit={ cashier.DSLOCVENDA }
                     />
                 );
             })}
