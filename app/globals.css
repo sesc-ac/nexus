@@ -24,18 +24,17 @@ h2{
   font-weight: 700;
 }
 
-b{
+b{font-weight: 700;}
+
+.sm{font-size: .75rem;}
+
+.md{font-size: 1rem;}
+
+.lg{font-size: 1.25rem;}
+
+.clr-text-light{color: hsl(0, 0%, 40%);}
+
+label{
+  font-size: .875rem;
   font-weight: 700;
-}
-
-.lg{
-  font-size: 1.25rem;
-}
-
-.sm{
-  font-size: .75rem;
-}
-
-.clr-text-light{
-  color: hsl(0, 0%, 40%);
 }

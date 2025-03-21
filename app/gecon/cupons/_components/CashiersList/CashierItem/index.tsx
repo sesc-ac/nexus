@@ -8,12 +8,16 @@ import paidIcon from '@/public/paid.svg';
 import bagIcon from '@/public/shopping_bag.svg';
 import Link from 'next/link';
 import Badge from '@/app/_ui/Badge';
+import Flexbox from '@/app/_ui/Flexbox';
+import Divider from '@/app/_ui/Divider';
+import { dateToString } from '@/app/_utils/dataFormat';
 
 
 type CashierItemProps = {
     closeTime?: string,
     id: string,
     location: string,
+    locationId: string,
     openDate: string,
     openTime: string
     operator: string,
@@ -26,6 +30,7 @@ export default function CashierItem({
     closeTime,
     id,
     location,
+    locationId,
     openDate,
     openTime,
     operator,
@@ -34,77 +39,83 @@ export default function CashierItem({
     unit,
 }: CashierItemProps){
     return(
-        <Link href={ `/gecon/cupons/${openDate}-${id}` } className={ styles.cashierItem }>
-            <Badge>{ closeTime ? 'Fechado' : 'Aberto' }</Badge>
+        <Link href={ `/gecon/cupons/${openDate}-${id}-${locationId}` } className={ styles.cashierItem }>
+            <Flexbox spaceBetween>
+                <Flexbox gapLg>
+                    <h3 className='md'>
+                        <b><span className="clr-text-light">#{ id } •</span> { operator }</b>
+                    </h3>
+                    <Badge>{ closeTime ? 'Fechado' : 'Aberto' }</Badge>
+                </Flexbox>
 
-            <h3 className={ styles.cashier__id }>#{ id } - <span className={ styles.cashier__name }>{ operator }</span></h3>
+                <p className='clr-text-light'><b>Cupons Emitidos (0/{ totalSalesQuantity })</b></p>
+            </Flexbox>
 
-            <div className={ styles.cashier__info }>
-                <div className={ styles.cashier__infoItem }>
+            <Flexbox gapLg>
+                <Flexbox gapSm>
                     <Image
-                        alt="Localização"
+                        alt="Unidade"
                         className={ styles.cashier__infoItemIcon }
                         src={ locationIcon }
                     />
 
-                    <p>{ location }</p>
-                </div>
+                    <p className='clr-text-light sm'><b>{ unit }</b></p>
+                </Flexbox>
 
-                <div className={ styles.cashier__infoItem }>
+                <Flexbox gapSm>
                     <Image
-                        alt="Unidade Operacional"
+                        alt="Local de Venda"
                         className={ styles.cashier__infoItemIcon }
                         src={ domainIcon }
                     />
 
-                    <p>{ unit }</p>
-                </div>
-            </div>
-            
-            <div className={ styles.cashier__info }>
-                <div className={ styles.cashier__infoItem }>
-                    <Image
-                        alt="Total de Vendas"
-                        className={ styles.cashier__infoItemIcon }
-                        src={ paidIcon }
-                    />
+                    <p className='clr-text-light sm'><b>{ location }</b></p>
+                </Flexbox>
 
-                    <p>{ totalSalesValue }</p>
-                </div>
-
-                <div className={ styles.cashier__infoItem }>
-                    <Image
-                        alt="Quantidade de Vendas"
-                        className={ styles.cashier__infoItemIcon }
-                        src={ bagIcon }
-                    />
-
-                    <p>{ totalSalesQuantity }</p>
-                </div>
-            </div>
-
-            <div className={ styles.divider }></div>
-
-            <div className={ styles.cashier__info }>
-                <div className={ styles.cashier__infoItem }>
+                <Flexbox gapSm>
                     <Image
                         alt="Data de abertura do Caixa"
                         className={ styles.cashier__infoItemIcon }
                         src={ calendarIcon }
                     />
-                    <p>{ openDate }</p>
-                </div>
 
-                <div className={ styles.cashier__infoItem }>
+                    <p className='clr-text-light sm'><b>{ dateToString(openDate) }</b></p>
+                </Flexbox>
+
+                <Flexbox gapSm>
                     <Image
                         alt="Horário de abertura e fechamento do Caixa"
                         className={ styles.cashier__infoItemIcon }
                         src={ scheduleIcon }
                     />
 
-                    <p>{ openTime } { closeTime && ` - ${closeTime}` }</p>
-                </div>
-            </div>
+                    <p className='clr-text-light sm'><b>{ openTime } { closeTime && ` • ${closeTime}` }</b></p>
+                </Flexbox>
+            </Flexbox>
+
+            <Divider/>
+
+            <Flexbox gapLg>
+                <Flexbox gapSm>
+                    <Image
+                        alt="Total de Vendas"
+                        className={ styles.cashier__infoItemIcon }
+                        src={ paidIcon }
+                    />
+
+                    <p className='clr-text-light sm'><b>{ totalSalesValue }</b></p>
+                </Flexbox>
+
+                <Flexbox gapSm>
+                    <Image
+                        alt="Quantidade de Vendas"
+                        className={ styles.cashier__infoItemIcon }
+                        src={ bagIcon }
+                    />
+
+                    <p className='clr-text-light sm'><b>{ totalSalesQuantity }</b></p>
+                </Flexbox>
+            </Flexbox>
         </Link>
     )
 }

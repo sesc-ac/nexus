@@ -60,7 +60,7 @@
 .sidebar__footer{
     display: flex;
     flex-direction: column;
-    gap: .25rem;
+    gap: .5rem;
     padding: 1rem;
 }
 
@@ -69,12 +69,19 @@
         width: 4.5rem;
     }
 
-    .footer__title,
-    .footer__subtitle{
-        font-size: .75rem;
-        font-weight: 700;
+
+    .footer__info{
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
     }
 
-    .footer__subtitle{
-        color: hsl(0, 0%, 40%);
-    }
+        .footer__title,
+        .footer__subtitle{
+            font-size: .75rem;
+            font-weight: 700;
+        }
+
+        .footer__subtitle{
+            color: hsl(0, 0%, 40%);
+        }

@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 
 type MenuLinkProps = {
     href: string,
-    icon: string,
+    icon?: string,
     name: string,
 }
 
@@ -20,7 +20,7 @@ export default function MenuLink({
 
     const className = `
         ${styles.menuLink}
-        ${pathname === href ? styles.active : ''}
+        ${pathname.includes(href) ? styles.active : ''}
     `;
 
     return(
@@ -28,10 +28,12 @@ export default function MenuLink({
             className={ className }
             href={ href }
         >
-            <Image
-                alt={ name }
-                src={ icon }
-            />
+            {icon &&
+                <Image
+                    alt={ name }
+                    src={ icon }
+                />
+            }
             
             <p className={ styles.link__name }>{ name }</p>
         </Link>

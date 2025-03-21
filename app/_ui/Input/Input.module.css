@@ -5,6 +5,5 @@
     color: hsl(0, 0%, 20%);
     font-family: inherit;
     font-size: .875rem;
-    padding-block: 1rem;
-    padding-inline: .75rem;
+    padding: .75rem;
 }

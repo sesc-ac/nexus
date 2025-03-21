@@ -7,4 +7,12 @@
         align-items: flex-start;
         flex-direction: column;
     }
+
+    &.alignEnd{ align-items: end; }
+
+    &.gapLg{ gap: 1rem; }
+
+    &.gapSm{ gap: .25rem; }
+
+    &.spaceBetween{ justify-content: space-between; }
 }

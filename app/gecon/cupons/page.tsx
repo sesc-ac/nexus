@@ -12,8 +12,11 @@ export default async function Page({
 }){
     const { 
         initialDate = new Date().toISOString().split('T')[0], 
-        finalDate = new Date().toISOString().split('T')[0]
+        finalDate = new Date().toISOString().split('T')[0],
+        filter
     } = await searchParams;
+
+    console.log(initialDate, finalDate, filter);
 
     const CashiersKPIsKey = `${initialDate}KPIsKey`;
     const CashiersListsKey = `${initialDate}ListKey`;
@@ -21,17 +24,17 @@ export default async function Page({
     return(
         <>
             <h2>Caixas</h2>
-            
-            <Suspense key={ CashiersKPIsKey } fallback={<div>Carregando lista...</div>}>
+
+            <CashiersDateRangeForm />
+
+            <Suspense key={ CashiersKPIsKey } fallback={<div>Carregando Informações.......</div>}>
                 <CashiersKPIs 
                     initialDate={ initialDate as string }
                     finalDate={ finalDate as string }
                 />
             </Suspense>
 
-            <CashiersDateRangeForm />
-
-            <Suspense key={ CashiersListsKey } fallback={<div>Carregando lista...</div>}>
+            <Suspense key={ CashiersListsKey } fallback={<div>Carregando Informações.......</div>}>
                 <CashiersList 
                     initialDate={ initialDate as string }
                     finalDate={ finalDate as string }

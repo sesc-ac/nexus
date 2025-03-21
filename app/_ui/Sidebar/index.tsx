@@ -30,8 +30,10 @@ export default function Sidebar(){
                     width={630}
                 />
 
-                <p className={ styles.footer__title }>Departamento Regional do Acre</p>
-                <p className={ styles.footer__subtitle }>Sistema Integrado v1.0</p>
+                <div className={ styles.footer__info }>
+                    <p className={ styles.footer__title }>Departamento Regional do Acre</p>
+                    <p className={ styles.footer__subtitle }>Sistema Integrado v1.0</p>
+                </div>
             </footer>
         </aside>
     );

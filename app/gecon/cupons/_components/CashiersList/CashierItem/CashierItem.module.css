@@ -8,44 +8,6 @@
     transition: background-color .25s;
 
     &:hover{
-        background-color: hsl(0, 0%, 90%);
+        background-color: hsl(0, 0%, 97%);
     }
-}
-
-.cashier__id{
-    color: hsl(0, 0%, 40%);
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-    .cashier__name{
-        color: hsl(0, 0%, 20%);
-    }
-
-.cashier__info{
-    display: flex;
-    gap: 1rem;
-}
-
-    .cashier__infoItem{
-        align-items: center;
-        color: hsl(0, 0%, 40%);
-        display: flex;
-        gap: .25rem;
-        font-size: .75rem;
-        font-weight: 700;
-    }
-
-        .cashier__infoItemIcon{
-            align-items: center;
-            display: flex;
-            gap: .25rem;
-            height: auto;
-            width: 1rem;
-        }
-
-.divider{
-    background-color: hsl(0, 0%, 90%);
-    height: 1px;
-    width: 100%;
 }

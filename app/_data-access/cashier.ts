@@ -1,5 +1,5 @@
 const headers = new Headers();
-headers.append('VENDAS-KEY', process.env.VENDAS_KEY || '');
+headers.append('CUPONS-KEY', process.env.CUPONS_KEY || '');
 
 export async function fetchCashiers(initialDate: string, finalDate: string){
     const requestData = new FormData();

@@ -1,6 +1,7 @@
 import { fetchCashiersTotals } from "@/app/_data-access/cashier";
 import Flexbox from "@/app/_ui/Flexbox";
 import KPI from "@/app/_ui/KPI";
+import { valueToCurrency } from "@/app/_utils/dataFormat";
 
 type CashierKPIsProps = {
     initialDate: string,
@@ -14,7 +15,7 @@ export default async function CashiersKPIs({ initialDate, finalDate }: CashierKP
         <Flexbox>
             <KPI 
                 title="Total Recebido"
-                value={ `R$ ${totals[0].TOTALVENDIDO}` }
+                value={ valueToCurrency(totals[0].TOTALVENDIDO) }
             />
 
             <KPI 

@@ -12,17 +12,17 @@ export default function Menu(){
 
     const links = [
         {name: 'Cupons Fiscais', href: '/gecon/cupons', icon: reciptIcon, group: 'GECON'},
-        {name: 'Chamados', href: '/getic/chamados', icon: reciptIcon, group: 'GETIC'},
-        {name: 'Inventário', href: 'getic/inventario', icon: reciptIcon, group: 'GETIC'},
+        {name: 'Chamados', href: '/getic/chamados', group: 'GETIC'},
+        {name: 'Inventário', href: 'getic/inventario', group: 'GETIC'},
     ];
 
     return(
         <menu className={ styles.menu }>
-            <MenuLink 
+            {/* <MenuLink 
                 href='/'
                 icon={ homeIcon }
                 name='Página Inicial'
-            />
+            /> */}
 
             {linkGroups.map((group) => (
                 <Fragment key={ group.name }>

@@ -6,6 +6,7 @@
     cursor: pointer;
     font-family: inherit;
     font-weight: 600;
-    padding-block: .5rem;
+    padding-block: .75rem;
     padding-inline: 2rem;
+    width: fit-content;
 }

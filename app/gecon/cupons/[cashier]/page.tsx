@@ -13,8 +13,9 @@ export default async function Page({
 }){
     const { cashier } = await params;
 
-    const id = cashier.slice(11);
     const date = cashier.slice(0, 10);
+    const id = cashier.split('-')[3];
+    const locationId = cashier.split('-')[4];
 
     const fetchedCashier = await fetchCashier(id, date);
 
@@ -33,7 +34,7 @@ export default async function Page({
                 <p><b>Operador:</b> { fetchedCashier[0].NMPESSOA }</p>
                 <p><b>Abertura:</b> { fetchedCashier[0].DTABERTURA } • { fetchedCashier[0].HRABERTURA }</p>
                 { fetchedCashier[0].HRFECHAMEN && <p><b>Fechamento:</b> { fetchedCashier[0].DTFECHAMEN } • { fetchedCashier[0].HRFECHAMEN }</p>}
-                <p><b>Unidade:</b> { fetchedCashier[0].DSLOCVENDA }, { fetchedCashier[0].NMUOP }</p>
+                <p><b>Unidade:</b> { fetchedCashier[0].DSLOCVENDA } • { fetchedCashier[0].NMUOP }</p>
             </Box>
 
             <Flexbox>
