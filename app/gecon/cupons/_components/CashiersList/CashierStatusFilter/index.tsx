@@ -4,26 +4,26 @@ import RadioInput from "@/app/_ui/RadioInput";
 export default function CashierStatusFilter(){
     return(
         <Flexbox column>
-            <label htmlFor="cashierFilter">Filtros</label>
+            <label htmlFor="cashiersFilter">Filtros</label>
 
             <Flexbox>
                 <RadioInput
                     defaultChecked
-                    id="cashierFilter"
+                    id="cashiersFilter"
                     labelText="Todos"
-                    name="cashierFilter"
+                    name="cashiersFilter"
                 />
 
                 <RadioInput
-                    id="cashierFilterOpen"
+                    id="cashiersFilterOpen"
                     labelText="Abertos"
-                    name="cashierFilter"
+                    name="cashiersFilter"
                 />
 
                 <RadioInput
-                    id="cashierFilterClose"
+                    id="cashiersFilterClose"
                     labelText="Fechados"
-                    name="cashierFilter"
+                    name="cashiersFilter"
                 />
             </Flexbox>
         </Flexbox>

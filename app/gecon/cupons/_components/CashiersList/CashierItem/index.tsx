@@ -41,10 +41,11 @@ export default function CashierItem({
     return(
         <Link href={ `/gecon/cupons/${openDate}-${id}-${locationId}` } className={ styles.cashierItem }>
             <Flexbox spaceBetween>
-                <Flexbox gapLg>
+                <Flexbox>
                     <h3 className='md'>
                         <b><span className="clr-text-light">#{ id } •</span> { operator }</b>
                     </h3>
+                    
                     <Badge>{ closeTime ? 'Fechado' : 'Aberto' }</Badge>
                 </Flexbox>
 

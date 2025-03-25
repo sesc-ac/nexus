@@ -1,5 +1,4 @@
 import SaleItem from "./SaleItem";
-import styles from './SalesGrid.module.css';
 import { fetchSales } from "@/app/_data-access/cashier";
 
 type FetchedSaleProps = {
@@ -12,7 +11,7 @@ type FetchedSaleProps = {
     VLRECEBIDO: string
 }
 
-export default async function SalesGrid({ 
+export default async function SalesList({ 
     cashier, 
     date 
 }: {
@@ -22,7 +21,7 @@ export default async function SalesGrid({
     const sales = await fetchSales(cashier, date);
 
     return(
-        <div className={ styles.salesGrid }>
+        <div>
             {sales.map((sale: FetchedSaleProps) => (
                 <SaleItem 
                     category={ sale.DSCATEGORI ? sale.DSCATEGORI : 'VENDA AVULSA' }

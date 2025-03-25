@@ -1,7 +1,6 @@
 import { fetchCashiers } from "@/app/_data-access/cashier";
 import styles from './CashierList.module.css';
 import CashierItem from "./CashierItem";
-import { valueToCurrency } from "@/app/_utils/dataFormat";
 import CashierStatusFilter from "./CashierStatusFilter";
 import Flexbox from "@/app/_ui/Flexbox";
 import { Button } from "@/app/_ui/Button";
@@ -54,7 +53,7 @@ export default async function CashiersList({
                             openTime={ cashier.HRABERTURA }
                             operator={ cashier.NMPESSOA }
                             totalSalesQuantity={ cashier.QTDVENDAS }
-                            totalSalesValue={ valueToCurrency(cashier.TOTALVENDIDO) }
+                            totalSalesValue={ cashier.TOTALVENDIDO }
                             unit={ cashier.NMUOP }
                         />
                     )

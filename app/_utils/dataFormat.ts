@@ -13,5 +13,5 @@ export function valueToCurrency(value: string): string{
 }
 
 export function dateToString(date: string): string{
-    return new Date(date).toLocaleDateString();
+    return new Date(date.replaceAll('-', '/')).toLocaleDateString();
 }

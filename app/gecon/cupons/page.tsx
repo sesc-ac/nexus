@@ -1,7 +1,5 @@
 import CashiersList from "./_components/CashiersList";
 import { Suspense } from "react";
-import KPI from "@/app/_ui/KPI";
-import Flexbox from "@/app/_ui/Flexbox";
 import CashiersDateRangeForm from "./_components/CashiersDateRangeForm";
 import CashiersKPIs from "./_components/CashiersKPIs";
 
@@ -15,8 +13,6 @@ export default async function Page({
         finalDate = new Date().toISOString().split('T')[0],
         filter
     } = await searchParams;
-
-    console.log(initialDate, finalDate, filter);
 
     const CashiersKPIsKey = `${initialDate}KPIsKey`;
     const CashiersListsKey = `${initialDate}ListKey`;

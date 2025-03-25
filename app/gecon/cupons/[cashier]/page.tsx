@@ -2,9 +2,11 @@ import styles from './page.module.css';
 import Flexbox from '@/app/_ui/Flexbox';
 import KPI from '@/app/_ui/KPI';
 import Box from '@/app/_ui/Box';
-import SalesGrid from './_components/SalesGrid';
+import SalesList from './_components/SalesList';
 import Badge from '@/app/_ui/Badge';
 import { fetchCashier } from '@/app/_data-access/cashier';
+import RadioInput from '@/app/_ui/RadioInput';
+import { Button } from '@/app/_ui/Button';
 
 export default async function Page({
     params
@@ -47,11 +49,48 @@ export default async function Page({
                     title='Vendas'
                     value={ fetchedCashier[0].QTDVENDAS }
                 />
+
+                <KPI
+                    title='Cupons Emitidos (0%)'
+                    value={ `0/${ fetchedCashier[0].QTDVENDAS }`}
+                />
             </Flexbox>
 
             <h2>Vendas</h2>
 
-            <SalesGrid 
+            <Flexbox
+                alignEnd 
+                spaceBetween
+            >
+                <Flexbox column>
+                    <label htmlFor="salesFilter">Filtros</label>
+
+                    <Flexbox>
+                        <RadioInput 
+                            defaultChecked
+                            id='salesFilter'
+                            labelText='Todas'
+                            name='salesFilter'
+                        />
+
+                        <RadioInput
+                            id='salesFilterPending'
+                            labelText='Cupons Pendentes'
+                            name='salesFilter'
+                        />
+
+                        <RadioInput
+                            id='salesFilterAvailable'
+                            labelText='Cupons Disponíveis'
+                            name='salesFilter'
+                        />
+                    </Flexbox>
+                </Flexbox>
+
+                <Button>Emitir Cupons do Caixa</Button>
+            </Flexbox>
+
+            <SalesList 
                 cashier={ id }
                 date={ date }
             />
