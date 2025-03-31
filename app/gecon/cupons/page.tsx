@@ -21,19 +21,22 @@ export default async function Page({
         <>
             <h2>Caixas</h2>
 
-            <CashiersDateRangeForm />
+            <CashiersDateRangeForm 
+                initialDate={ initialDate as string }
+                finalDate={ finalDate as string }
+            />
 
             <Suspense key={ CashiersKPIsKey } fallback={<div>Carregando Informações.......</div>}>
                 <CashiersKPIs 
-                    initialDate={ initialDate as string }
-                    finalDate={ finalDate as string }
+                    initialDate={ new Date(initialDate as string) }
+                    finalDate={ new Date(finalDate as string) }
                 />
             </Suspense>
 
             <Suspense key={ CashiersListsKey } fallback={<div>Carregando Informações.......</div>}>
                 <CashiersList 
-                    initialDate={ initialDate as string }
-                    finalDate={ finalDate as string }
+                    initialDate={ new Date(initialDate as string) }
+                    finalDate={ new Date(finalDate as string) }
                 />
             </Suspense>
         </>

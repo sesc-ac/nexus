@@ -5,7 +5,7 @@ export default function KPI({
     value
 }: {
     title: string,
-    value: string
+    value: string | number
 }){
     const className = `${styles.kpi}`;
     

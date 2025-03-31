@@ -10,40 +10,27 @@ import Link from 'next/link';
 import Badge from '@/app/_ui/Badge';
 import Flexbox from '@/app/_ui/Flexbox';
 import Divider from '@/app/_ui/Divider';
-import { dateToString } from '@/app/_utils/dataFormat';
-
-
-type CashierItemProps = {
-    closeTime?: string,
-    id: string,
-    location: string,
-    locationId: string,
-    openDate: string,
-    openTime: string
-    operator: string,
-    totalSalesQuantity: string,
-    totalSalesValue: string,
-    unit: string,
-}
+import { dateToString, valueToCurrency } from '@/app/_utils/dataFormat';
+import { Cashier } from '@prisma/client';
 
 export default function CashierItem({
     closeTime,
     id,
+    legacyId,
     location,
-    locationId,
     openDate,
     openTime,
     operator,
     totalSalesQuantity,
     totalSalesValue,
     unit,
-}: CashierItemProps){
+}: Cashier){
     return(
-        <Link href={ `/gecon/cupons/${openDate}-${id}-${locationId}` } className={ styles.cashierItem }>
+        <Link href={ `/gecon/cupons/${id}` } className={ styles.cashierItem }>
             <Flexbox spaceBetween>
                 <Flexbox>
                     <h3 className='md'>
-                        <b><span className="clr-text-light">#{ id } •</span> { operator }</b>
+                        <b><span className="clr-text-light">#{ legacyId } •</span> { operator }</b>
                     </h3>
                     
                     <Badge>{ closeTime ? 'Fechado' : 'Aberto' }</Badge>
@@ -104,7 +91,7 @@ export default function CashierItem({
                         src={ paidIcon }
                     />
 
-                    <p className='clr-text-light sm'><b>{ totalSalesValue }</b></p>
+                    <p className='clr-text-light sm'><b>{ valueToCurrency(totalSalesValue) }</b></p>
                 </Flexbox>
 
                 <Flexbox gapSm>

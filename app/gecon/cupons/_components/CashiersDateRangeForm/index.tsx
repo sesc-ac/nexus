@@ -3,7 +3,15 @@ import { Button } from "@/app/_ui/Button";
 import styles from './CashiersDateRangeForm.module.css';
 import Input from "@/app/_ui/Input";
 
-export default function CashiersDateRangeForm(){
+type CashiersDateRangeFormProps = {
+    initialDate: string,
+    finalDate: string,
+}
+
+export default function CashiersDateRangeForm({
+    initialDate,
+    finalDate
+}: CashiersDateRangeFormProps){
     return (
         <Form 
             action="/gecon/cupons"
@@ -13,7 +21,7 @@ export default function CashiersDateRangeForm(){
 
             <div className={ styles.group }>
                 <Input 
-                    defaultValue={ new Date().toISOString().split('T')[0] }
+                    defaultValue={ initialDate }
                     id="initialDate"
                     max={ new Date().toISOString().split('T')[0] }
                     name='initialDate' 
@@ -22,10 +30,11 @@ export default function CashiersDateRangeForm(){
                 />
 
                 <Input 
-                    defaultValue={ new Date().toISOString().split('T')[0] }
+                    defaultValue={ finalDate }
                     id="finalDate"
                     max={ new Date().toISOString().split('T')[0] }
                     name='finalDate' 
+                    required
                     type="date" 
                 />
 

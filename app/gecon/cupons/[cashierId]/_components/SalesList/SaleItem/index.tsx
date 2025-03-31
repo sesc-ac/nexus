@@ -1,4 +1,3 @@
-import Box from '@/app/_ui/Box';
 import styles from './SaleItem.module.css';
 import Flexbox from '@/app/_ui/Flexbox';
 import Image from 'next/image';
@@ -6,27 +5,26 @@ import scheduleIcon from '@/public/schedule.svg'
 import Badge from '@/app/_ui/Badge';
 import openIcon from '@/public/open_in_new.svg';
 import { valueToCurrency } from '@/app/_utils/dataFormat';
-
-type SaleItemProps = {
-    category: string,
-    costumer: string,
-    id: string,
-    saleTime: string,
-    saleValue: string,
-}
+import { Decimal } from '@prisma/client/runtime/library';
 
 export default function SaleItem({
     category,
     costumer,
-    id,
-    saleTime,
-    saleValue
-}: SaleItemProps){
+    legacyId,
+    time,
+    value
+}: {
+    category: string | null;
+    costumer: string | null;
+    legacyId: number;
+    time: string;
+    value: Decimal;
+}){
     return (
         <div className={ styles.saleItem }>
             <Flexbox spaceBetween>
                 <Flexbox gapLg>
-                    <Badge>#{ id }</Badge>
+                    <Badge>#{ legacyId }</Badge>
                     <p className='sm'><b>{ costumer }</b></p>
                     <p className='clr-text-light sm'><b>{ category }</b></p>
 
@@ -36,13 +34,13 @@ export default function SaleItem({
                             src={ scheduleIcon }
                         />
 
-                        <p className='clr-text-light sm'><b>{ saleTime }</b></p>
+                        <p className='clr-text-light sm'><b>{ time }</b></p>
                     </Flexbox>
                 </Flexbox>
 
                 <Flexbox>
                     <Badge>Pendente</Badge>
-                    <Badge>{ valueToCurrency(saleValue) }</Badge>
+                    <Badge>{ valueToCurrency(value) }</Badge>
 
                     <button className={ styles.openButton }>
                         <Image 

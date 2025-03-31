@@ -1,31 +1,28 @@
-import styles from './page.module.css';
 import Flexbox from '@/app/_ui/Flexbox';
 import KPI from '@/app/_ui/KPI';
 import Box from '@/app/_ui/Box';
 import SalesList from './_components/SalesList';
 import Badge from '@/app/_ui/Badge';
-import { fetchCashier } from '@/app/_data-access/cashier';
+import { getCashier } from '@/app/_data-access/cashier';
 import RadioInput from '@/app/_ui/RadioInput';
 import { Button } from '@/app/_ui/Button';
+import { dateToString, valueToCurrency } from '@/app/_utils/dataFormat';
+import { Decimal } from '@prisma/client/runtime/library';
 
 export default async function Page({
     params
 }: {
-    params: Promise<{ cashier: string }>
+    params: Promise<{ cashierId: string }>
 }){
-    const { cashier } = await params;
+    const { cashierId } = await params;
 
-    const date = cashier.slice(0, 10);
-    const id = cashier.split('-')[3];
-    const locationId = cashier.split('-')[4];
-
-    const fetchedCashier = await fetchCashier(id, date);
+    const cashier = await getCashier(Number(cashierId));
 
     return(
         <>
             <Flexbox>
-                <h2>Caixa #{ id }</h2>
-                <Badge>{ fetchedCashier[0].HRFECHAMEN ? 'Fechado' : 'Aberto' }</Badge>
+                <h2>Caixa #{ cashierId }</h2>
+                <Badge>{ cashier?.openStatus ? 'Aberto' : 'Fechado' }</Badge>
             </Flexbox>
 
             <Box
@@ -33,26 +30,26 @@ export default async function Page({
                 radius
                 smallGap
             >
-                <p><b>Operador:</b> { fetchedCashier[0].NMPESSOA }</p>
-                <p><b>Abertura:</b> { fetchedCashier[0].DTABERTURA } • { fetchedCashier[0].HRABERTURA }</p>
-                { fetchedCashier[0].HRFECHAMEN && <p><b>Fechamento:</b> { fetchedCashier[0].DTFECHAMEN } • { fetchedCashier[0].HRFECHAMEN }</p>}
-                <p><b>Unidade:</b> { fetchedCashier[0].DSLOCVENDA } • { fetchedCashier[0].NMUOP }</p>
+                <p><b>Operador:</b> { cashier?.operator }</p>
+                <p><b>Abertura:</b> { dateToString(cashier?.openDate as Date) } • { cashier?.openTime }</p>
+                { !cashier?.openStatus && <p><b>Fechamento:</b> { dateToString(cashier?.closeDate as Date) } • { cashier?.closeTime }</p>}
+                <p><b>Unidade:</b> { cashier?.location } • { cashier?.unit }</p>
             </Box>
 
             <Flexbox>
                 <KPI
                     title='Total Recebido'
-                    value={ `R$ ${fetchedCashier[0].TOTALVENDIDO}` }
+                    value={ valueToCurrency(cashier?.totalSalesValue as Decimal) }
                 />
 
                 <KPI
                     title='Vendas'
-                    value={ fetchedCashier[0].QTDVENDAS }
+                    value={ cashier?.totalSalesQuantity as number }
                 />
 
                 <KPI
                     title='Cupons Emitidos (0%)'
-                    value={ `0/${ fetchedCashier[0].QTDVENDAS }`}
+                    value={ `0/${cashier?.totalSalesQuantity}`}
                 />
             </Flexbox>
 
@@ -91,8 +88,7 @@ export default async function Page({
             </Flexbox>
 
             <SalesList 
-                cashier={ id }
-                date={ date }
+                cashierId={Number(cashierId)}
             />
         </>
     );

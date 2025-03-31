@@ -1,17 +1,12 @@
-export function valueToCurrency(value: string): string{
-    let valueNumber: number;
+import { Decimal } from "@prisma/client/runtime/library";
 
-    if(!value)
-        valueNumber = 0
-    else 
-        valueNumber = !isNaN(Number(value.replace(',', '.'))) ? Number.parseFloat(value.replace(',', '.')) : 0;
-
+export function valueToCurrency(value: Decimal): string{
     return Intl.NumberFormat('pt-br', {
-        style: "currency", 
-        currency: "BRL"
-    }).format(valueNumber);
+        currency: "BRL",
+        style: 'currency'
+    }).format(value.toString() as Intl.StringNumericLiteral);
 }
 
-export function dateToString(date: string): string{
-    return new Date(date.replaceAll('-', '/')).toLocaleDateString();
+export function dateToString(date: Date): string{
+    return date.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
 }

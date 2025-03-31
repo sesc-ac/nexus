@@ -1,10 +1,11 @@
 // import styles from "./page.module.css";
-import { Button } from "./_ui/Button";
+// import { Button } from "./_ui/Button";
 import PageContainer from "./_ui/PageContainer";
 import PageTitle from "./_ui/PageTitle";
-import { valueToCurrency } from "./_utils/dataFormat";
+import prisma from "./db";
+// import { valueToCurrency } from "./_utils/dataFormat";
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <PageTitle
@@ -15,9 +16,11 @@ export default function Page() {
       <PageContainer>
         <h2>Módulos</h2>
 
+
         <ul>
           <li>Cupons Fiscais</li>
         </ul>
+
       </PageContainer>
     </>
   );
