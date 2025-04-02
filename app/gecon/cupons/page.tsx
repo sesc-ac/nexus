@@ -11,12 +11,12 @@ export default async function Page({
     const { 
         initialDate = new Date().toISOString().split('T')[0], 
         finalDate = new Date().toISOString().split('T')[0],
-        filter
+        // filter
     } = await searchParams;
 
     const CashiersKPIsKey = `${initialDate}KPIsKey`;
     const CashiersListsKey = `${initialDate}ListKey`;
-    
+
     return(
         <>
             <h2>Caixas</h2>

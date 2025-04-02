@@ -16,12 +16,12 @@ export default async function CashiersKPIs({ initialDate, finalDate }: CashierKP
         <Flexbox>
             <KPI 
                 title="Total Recebido"
-                value={ valueToCurrency(totals._sum.totalSalesValue as Decimal) }
+                value={ totals._sum.totalSalesValue ? valueToCurrency(totals._sum.totalSalesValue as Decimal) : valueToCurrency(0) }
             />
 
             <KPI 
                 title="Vendas"
-                value={ totals._sum.totalSalesQuantity as number }
+                value={ totals._sum.totalSalesQuantity ? totals._sum.totalSalesQuantity : 0 }
             />
 
             <KPI 

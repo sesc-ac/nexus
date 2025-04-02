@@ -1,7 +1,8 @@
 import Form from "next/form";
 import { Button } from "@/app/_ui/Button";
-import styles from './CashiersDateRangeForm.module.css';
 import Input from "@/app/_ui/Input";
+import Flexbox from "@/app/_ui/Flexbox";
+import Link from "next/link";
 
 type CashiersDateRangeFormProps = {
     initialDate: string,
@@ -15,31 +16,34 @@ export default function CashiersDateRangeForm({
     return (
         <Form 
             action="/gecon/cupons"
-            className={ styles.dateRangeGroup }
         >
-            <label htmlFor="initialDate" className={ styles.label }>Período</label>
+            <Flexbox column>
+                <label htmlFor="initialDate">Período</label>
 
-            <div className={ styles.group }>
-                <Input 
-                    defaultValue={ initialDate }
-                    id="initialDate"
-                    max={ new Date().toISOString().split('T')[0] }
-                    name='initialDate' 
-                    required
-                    type="date"
-                />
+                <Flexbox>
+                    <Input 
+                        defaultValue={ initialDate }
+                        id="initialDate"
+                        max={ new Date().toISOString().split('T')[0] }
+                        name='initialDate' 
+                        required
+                        type="date"
+                    />
 
-                <Input 
-                    defaultValue={ finalDate }
-                    id="finalDate"
-                    max={ new Date().toISOString().split('T')[0] }
-                    name='finalDate' 
-                    required
-                    type="date" 
-                />
+                    <Input 
+                        defaultValue={ finalDate }
+                        id="finalDate"
+                        max={ new Date().toISOString().split('T')[0] }
+                        name='finalDate' 
+                        required
+                        type="date" 
+                    />
 
-                <Button>Pesquisar</Button>
-            </div>
+                    <Button>Pesquisar</Button>
+                </Flexbox>
+
+                {/* <a href="/gecon/cupons">Limpar</a> */}
+            </Flexbox>
         </Form>
     );
 }
