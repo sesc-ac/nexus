@@ -9,4 +9,6 @@
     padding-block: .75rem;
     padding-inline: 2rem;
     width: fit-content;
+
+    &.fill{ width: 100%; }
 }

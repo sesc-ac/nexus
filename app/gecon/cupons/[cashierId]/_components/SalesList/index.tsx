@@ -10,7 +10,7 @@ export default async function SalesList({
     const sales = await getSales(cashierId);
 
     return(
-        <div>
+        <ul>
             {sales.map((sale) => (
                 <SaleItem 
                     category={ sale.category }
@@ -21,6 +21,6 @@ export default async function SalesList({
                     value={ sale.value as Decimal }
                 />
             ))}
-        </div>
+        </ul>
     );
 }

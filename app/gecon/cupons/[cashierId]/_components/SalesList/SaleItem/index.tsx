@@ -21,7 +21,7 @@ export default function SaleItem({
     value: Decimal;
 }){
     return (
-        <div className={ styles.saleItem }>
+        <li className={ styles.saleItem }>
             <Flexbox spaceBetween>
                 <Flexbox gapLg>
                     <Badge>#{ legacyId }</Badge>
@@ -50,6 +50,6 @@ export default function SaleItem({
                     </button>
                 </Flexbox>
             </Flexbox>
-        </div>
+        </li>
     );
 }
