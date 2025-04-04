@@ -2,18 +2,27 @@ import Badge from "@/app/_ui/Badge";
 import { Button } from "@/app/_ui/Button";
 import Flexbox from "@/app/_ui/Flexbox";
 import './SaleAside.css';
-import { valueToCurrency } from "@/app/_utils/dataFormat";
+import IconButton from "@/app/_ui/IconButton";
+import SaleItem from "./SaleItem";
+import receiptIcon from '@/public/icons/receipt.svg';
+import Image from "next/image";
 
 export default function SaleAside() {
     return (
         <aside className="saleAside open">
-            <button>x</button>
+            <IconButton 
+                icon="closePanel"
+                size="lg"
+            />
 
-            <Flexbox>
-                <h2>Venda #345</h2>
+            <Badge>
+                <Image 
+                    alt='Situação do Cupom Fiscal'
+                    src={ receiptIcon }
+                />
 
-                <Badge>Pendente</Badge>
-            </Flexbox>
+                Pendente
+            </Badge>
 
             <Flexbox column>
                 <p><b>Cliente:</b> Érick Fernandes do Nasicmento</p>
@@ -25,18 +34,13 @@ export default function SaleAside() {
             <h2>Itens</h2>
 
             <ul>
-                <li>
-                    <p>Item 1</p>
-                    <p>{ valueToCurrency(2.5) }</p>
-                </li>
-                
-                <li>
-                    <p>Item 1</p>
-                    <p>{ valueToCurrency(2.5) }</p>
-                </li>
+                <SaleItem />
+                <SaleItem />
+                <SaleItem />
             </ul>
 
             <Button fill>Emitir Cupom</Button>
+            <Button fill variant="download">Baixar Cupom</Button>
         </aside>
     );
 }

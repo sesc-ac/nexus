@@ -1,11 +1,13 @@
 import styles from './SaleItem.module.css';
 import Flexbox from '@/app/_ui/Flexbox';
 import Image from 'next/image';
-import scheduleIcon from '@/public/schedule.svg'
+import scheduleIcon from '@/public/icons/schedule.svg'
 import Badge from '@/app/_ui/Badge';
-import openIcon from '@/public/open_in_new.svg';
+// import openIcon from '@/public/open_in_new.svg';
 import { valueToCurrency } from '@/app/_utils/dataFormat';
 import { Decimal } from '@prisma/client/runtime/library';
+import IconButton from '@/app/_ui/IconButton';
+import receiptIcon from '@/public/icons/receipt.svg';
 
 export default function SaleItem({
     category,
@@ -39,15 +41,18 @@ export default function SaleItem({
                 </Flexbox>
 
                 <Flexbox>
-                    <Badge>Pendente</Badge>
+                    <Badge>
+                        <Image 
+                            alt='Situação do Cupom Fiscal'
+                            src={ receiptIcon }
+                        />
+
+                        Pendente
+                    </Badge>
+
                     <Badge>{ valueToCurrency(value) }</Badge>
 
-                    <button className={ styles.openButton }>
-                        <Image 
-                            alt="Abrir detalhes da venda"
-                            src={ openIcon }
-                        />  
-                    </button>
+                    <IconButton icon='openPanel'/>
                 </Flexbox>
             </Flexbox>
         </li>

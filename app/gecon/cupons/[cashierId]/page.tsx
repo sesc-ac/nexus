@@ -8,7 +8,7 @@ import RadioInput from '@/app/_ui/RadioInput';
 import { Button } from '@/app/_ui/Button';
 import { dateToString, valueToCurrency } from '@/app/_utils/dataFormat';
 import { Decimal } from '@prisma/client/runtime/library';
-import SaleAside from './_components/SalesList/SaleAside';
+import SaleAside from './_components/SaleAside';
 
 export default async function Page({
     params

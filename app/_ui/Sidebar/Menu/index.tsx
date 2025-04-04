@@ -1,6 +1,5 @@
 import styles from './Menu.module.css';
-import reciptIcon from '@/public/receipt.svg';
-import homeIcon from '@/public/home.svg';
+import reciptIcon from '@/public/icons/receipt.svg';
 import { Fragment } from 'react';
 import MenuLink from './MenuLink';
 
