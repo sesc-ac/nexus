@@ -1,13 +1,27 @@
 import Badge from "@/app/_ui/Badge";
-import styles from "./SaleItem.module.css";
 import { valueToCurrency } from "@/app/_utils/dataFormat";
+import { Decimal } from "@prisma/client/runtime/library";
+import Flexbox from "@/app/_ui/Flexbox";
 
-export default function SaleItem(){
+export default function SaleItem({
+    product,
+    productUnit,
+    quantity,
+    value
+}: {
+    product: string,
+    productUnit: string,
+    quantity: number,
+    value: Decimal
+}){
     return(
-        <li className={ styles.saleItem }>
-            <p>Item 1</p>
+        <li>
+            <Flexbox gapSm column>
+                <p className="sm">{ product }</p>
+                <p className="xsm clr-text-light"><b>{quantity} { productUnit }{ quantity > 1 ? 's' : '' }</b></p>
+            </Flexbox>
 
-            <Badge>{ valueToCurrency(2.5) }</Badge>
+            <Badge>{ valueToCurrency(value) }</Badge>
         </li>
     );
 }

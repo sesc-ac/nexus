@@ -1,46 +1,75 @@
+// 'use client';
+
 import Badge from "@/app/_ui/Badge";
 import { Button } from "@/app/_ui/Button";
 import Flexbox from "@/app/_ui/Flexbox";
 import './SaleAside.css';
-import IconButton from "@/app/_ui/IconButton";
 import SaleItem from "./SaleItem";
 import receiptIcon from '@/public/icons/receipt.svg';
 import Image from "next/image";
+import { getSale, getSaleItems } from "@/app/_data-access/sale";
+import { valueToCurrency } from "@/app/_utils/dataFormat";
+import { Decimal } from "@prisma/client/runtime/library";
 
-export default function SaleAside() {
+
+export default async function SaleAside({ 
+    id
+ }: {
+    id: number
+ }) {
+
+    const sale = await getSale(id);
+    const saleItems = await getSaleItems(id);
+
+
     return (
-        <aside className="saleAside open">
-            <IconButton 
-                icon="closePanel"
-                size="lg"
-            />
+        <>
+            <Flexbox>
+                <h2>Venda #{ sale?.legacyId }</h2>
 
-            <Badge>
-                <Image 
-                    alt='Situação do Cupom Fiscal'
-                    src={ receiptIcon }
-                />
+                <Badge>
+                    <Image 
+                        alt='Situação do Cupom Fiscal'
+                        src={ receiptIcon }
+                    />
 
-                Pendente
-            </Badge>
+                    Pendente
+                </Badge>
+            </Flexbox>
 
             <Flexbox column>
-                <p><b>Cliente:</b> Érick Fernandes do Nasicmento</p>
-                <p><b>CPF:</b> 998.***.***-91</p>
-                <p><b>Categoria:</b> Comerciário</p>
-                <p><b>E-mail:</b> email@example.com</p>
+                { sale?.costumer ?
+                    <>
+                        <p><b>Cliente:</b> { sale?.costumer }</p>
+                        <p><b>CPF:</b> { sale?.costumerCpf }</p>
+                        <p><b>Categoria:</b> { sale?.costumerCategory }</p>
+                    </>
+                 :
+                    <p className="clr-text-light"><b>VENDA AVULSA</b></p>
+                }
             </Flexbox>
 
             <h2>Itens</h2>
 
-            <ul>
-                <SaleItem />
-                <SaleItem />
-                <SaleItem />
+            <ul className="saleItems">
+                {saleItems.map((item) => (
+                    <SaleItem 
+                        key={ item.id }
+                        product={ item.product }
+                        productUnit={ item.productUnit }
+                        quantity={ item.quantity }
+                        value={ item.itemValue }
+                    />
+                ))}
+
+                <li>
+                    <b className="sm">TOTAL</b>
+                    <b className="sm">{ valueToCurrency(sale?.value as Decimal) }</b>
+                </li>
             </ul>
 
             <Button fill>Emitir Cupom</Button>
             <Button fill variant="download">Baixar Cupom</Button>
-        </aside>
+        </>
     );
 }

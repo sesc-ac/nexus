@@ -10,11 +10,11 @@ export default function RootLayout({
     <>
       <PageTitle
           title="Cupons Fiscais"
-          subtitle="Aqui você gerencia os cupons fiscais das movimentações dos PDVs."
+          subtitle="Aqui você gerencia a emissão de cupons fiscais das movimentações dos PDVs."
       />
 
       <PageContainer>
-        {children}  
+        { children }  
       </PageContainer>
     </>
   );

@@ -1,7 +1,0 @@
-.saleItem{
-    align-items: center;
-    border: 1px solid hsl(0, 0%, 90%);
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem;
-}

@@ -8,7 +8,6 @@ import RadioInput from '@/app/_ui/RadioInput';
 import { Button } from '@/app/_ui/Button';
 import { dateToString, valueToCurrency } from '@/app/_utils/dataFormat';
 import { Decimal } from '@prisma/client/runtime/library';
-import SaleAside from './_components/SaleAside';
 
 export default async function Page({
     params
@@ -22,7 +21,7 @@ export default async function Page({
     return(
         <>
             <Flexbox>
-                <h2>Caixa #{ cashierId }</h2>
+                <h2>Caixa #{ cashier?.id }</h2>
                 <Badge>{ cashier?.openStatus ? 'Aberto' : 'Fechado' }</Badge>
             </Flexbox>
 
@@ -89,10 +88,8 @@ export default async function Page({
             </Flexbox>
 
             <SalesList 
-                cashierId={ Number(cashierId) }
+                cashierId={ cashier?.id as number }
             />
-
-            <SaleAside />
         </>
     );
 }
