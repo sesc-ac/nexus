@@ -1,18 +1,16 @@
-
-.saleItem{
-    border: 1px solid hsl(0, 0%, 90%);
-    padding-block: .5rem;
-    padding-inline: 1rem;
-}
-
-.openButton{
+.iconButton{
     align-items: center;
     aspect-ratio: 1;
     background-color: hsl(0, 0%, 90%);
     border: none;
     border-radius: 100vw;
+    cursor: pointer;
     display: flex;
     height: auto;
     justify-content: center;
     width: 1.75rem;
+    
+    &.lg{ 
+        width: 2.25rem;
+    } 
 }

@@ -1,8 +1,9 @@
 .badge{
+    align-items: center;
     background-color: hsl(0, 0%, 90%);
     border-radius: .25rem;
     display: flex;
-    gap: .5rem;
+    gap: .25rem;
     font-size: .75rem;
     font-weight: 700;
     padding-block: .25rem;
@@ -11,5 +12,11 @@
 
     &.sm{
         font-size: .5rem;
+    }
+
+    & img {
+        aspect-ratio: 1;
+        height: auto;
+        width: .875rem;
     }
 }

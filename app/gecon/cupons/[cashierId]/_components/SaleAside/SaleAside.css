@@ -1,0 +1,35 @@
+.saleAside{
+    border-left: 1px solid hsl(0, 0%, 90%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    right: 0;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    position: fixed;
+    top: 0;
+
+    &.open{
+        width: var(--saleAsideWidth);
+    }
+}
+
+.saleItems li{
+    align-items: flex-start;
+    border: 1px solid hsl(0, 0%, 90%);
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+
+    &:last-child{
+        background-color: hsl(0, 0%, 90%);
+    }
+}
+
+main:has(.saleAside.open){
+    --saleAsideWidth: 20rem;
+    
+    margin-right: var(--saleAsideWidth);
+}

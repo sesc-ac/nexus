@@ -21,7 +21,7 @@ export default async function Page({
     return(
         <>
             <Flexbox>
-                <h2>Caixa #{ cashierId }</h2>
+                <h2>Caixa #{ cashier?.id }</h2>
                 <Badge>{ cashier?.openStatus ? 'Aberto' : 'Fechado' }</Badge>
             </Flexbox>
 
@@ -88,7 +88,7 @@ export default async function Page({
             </Flexbox>
 
             <SalesList 
-                cashierId={Number(cashierId)}
+                cashierId={ cashier?.id as number }
             />
         </>
     );
