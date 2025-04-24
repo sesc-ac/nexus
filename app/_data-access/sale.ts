@@ -1,7 +1,10 @@
 import prisma from "../db";
 
 export async function getSales(){
-    return await prisma.sale.findMany();
+    return await prisma.sale.findMany({
+        skip: 0,
+        take: 10,
+    });
 }
 
 export async function getSalesByCashier(cashierId: number){

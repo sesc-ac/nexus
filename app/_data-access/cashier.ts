@@ -38,11 +38,3 @@ export async function getCashier(id: number) {
         }
     });
 }
-
-export async function getSales(cashierId: number){
-    return await prisma.sale.findMany({
-        where: {
-            cashierId: cashierId
-        }
-    });
-}

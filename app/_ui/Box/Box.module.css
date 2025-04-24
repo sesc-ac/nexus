@@ -1,5 +1,6 @@
 .box{
     border: 1px solid hsl(0, 0%, 90%);
+    border-radius: .25rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -8,13 +9,13 @@
     width: 100%;
     
     &.fill{
-        background-color: hsl(0, 0%, 90%);
-        border: none;
+        background-color: hsl(0, 0%, 97%);
+        /* border: none; */
     }
     
-    &.radius{
+    /* &.radius{
         border-radius: .25rem;
-    }
+    } */
     
     &.smallGap{
         gap: .5rem;    
