@@ -12,7 +12,13 @@
     justify-content: center;
     padding-block: .75rem;
     padding-inline: 2rem;
+    transition: .25s;
     width: fit-content;
 
     &.fill{ width: 100%; }
+
+    &:disabled{
+        background-color: hsl(0, 0%, 40%);
+        cursor: default;
+    }
 }
