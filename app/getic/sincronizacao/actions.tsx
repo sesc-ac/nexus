@@ -1,7 +1,7 @@
 'use server'
 
-import { createSynchronization } from "@/app/_data-access/synchronization";
-import { syncSalesData } from "@/app/_lib/dataSynchronization"
+import { createSynchronization } from "@/app/data-access/synchronization";
+import { syncSalesData } from "@/app/lib/legacy-data-synchronization/syncData"
 import { revalidatePath } from "next/cache";
 
 export async function initSynchronization(previousState: any, formData: FormData){

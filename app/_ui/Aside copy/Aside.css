@@ -3,6 +3,17 @@
     to { width: var(--saleAsideWidth); }
 }
 
+.asideBackdrop{
+    background-color: hsla(0, 0%, 0%, .30);
+    display: flex;
+    height: 100dvh;
+    justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100dvw;
+}
+
 .aside{
     animation: openAnimation .15s;
     animation-timing-function: ease-in;
@@ -14,9 +25,6 @@
     gap: 1rem;
     height: 100%;
     padding: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
 
     &.open{
         padding-block: 2rem;
@@ -30,8 +38,7 @@ body:has(.aside.open){
 }
 
 main:has(.aside.open){
-    --saleAsideWidth: 25rem;
-    
+    --saleAsideWidth: 20rem;
     margin-right: var(--saleAsideWidth);
     transition-duration: .15s;
     transition-property: margin-right;

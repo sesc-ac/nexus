@@ -1,0 +1,7 @@
+.saleItem{
+    transition: background-color .25s;
+
+    &:hover{
+        background-color: hsl(0, 0%, 97%);
+    }
+}
