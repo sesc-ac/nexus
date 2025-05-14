@@ -23,7 +23,6 @@ export default function RootLayout({
     <html lang="pt-br" className={ inter.className }>
       <body>
         <Sidebar />
-
         <main>
           {children}
         </main>

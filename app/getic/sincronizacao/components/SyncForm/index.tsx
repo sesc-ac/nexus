@@ -36,7 +36,9 @@ export default function SyncForm(){
                         type="date" 
                     />
 
-                    <Button disabled={ isPending }>{ isPending ? 'Sincronizando dados legados...' : 'Iniciar Sincronização' }</Button>
+                    <Button disabled={ isPending }>
+                        { isPending ? 'Sincronizando dados legados...' : 'Iniciar Sincronização' }
+                    </Button>
                 </Flexbox>
     
             </Flexbox>

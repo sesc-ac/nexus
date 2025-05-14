@@ -7,55 +7,150 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Cashier {
+  id String @id @default(cuid())
+
+  legacyId          Int
+  legacyOperatorId  Int
+  legacySalePlaceId Int
+
+  operator    CashierOperator @relation(fields: [operatorId], references: [id])
+  operatorId  String
+  salePlace   SalePlace       @relation(fields: [salePlaceId], references: [id])
+  salePlaceId String
+  sales       Sale[]
+
+  closeTime String?
+  openDate  DateTime
+  openTime  String
+
+  @@unique([legacyId, legacyOperatorId], name: "unique_legacy_constraint")
+}
+
+model CashierOperator {
+  id String @id @default(cuid())
+
+  legacyId Int @unique
+
+  cashiers Cashier[]
+
+  name String
+}
+
+model Customer {
+  id String @id @default(cuid())
+
+  legacyId     Int
+  legacyUnitId Int
+
+  category   CustomerCategory @relation(fields: [categoryId], references: [id])
+  categoryId String
+  sales      Sale[]
+
+  name String
+
+  @@unique([legacyId, legacyUnitId], name: "unique_legacy_constraint")
+}
+
+model CustomerCategory {
+  id String @id @default(cuid())
+
+  legacyId Int @unique
+
+  customers Customer[]
+
+  name String
+}
+
+model PaymentMethod {
+  id String @id @default(cuid())
+
+  legacyId Int @unique
+
+  sales Sale[]
+
+  name String
+}
+
 model Product {
-  id Int @id @default(autoincrement())
+  id String @id @default(cuid())
+
+  legacyId Int @unique
 
   SaleItem SaleItem[]
 
   description String
-  legacyId    Int    @unique
   unit        String
 }
 
 model Sale {
-  id Int @id @default(autoincrement())
-
-  items SaleItem[]
+  id String @id @default(cuid())
 
   legacyId         Int
   legacyCashierId  Int
   legacyOperatorId Int
 
-  date  String
-  time  String
-  value Decimal @db.Decimal(12, 2)
+  cashier         Cashier        @relation(fields: [cashierId], references: [id])
+  cashierId       String
+  customer        Customer?      @relation(fields: [customerId], references: [id])
+  customerId      String?
+  items           SaleItem[]
+  paymentMethod   PaymentMethod? @relation(fields: [paymentMethodId], references: [id])
+  paymentMethodId String?
+
+  date       DateTime
+  NFCEStatus String   @default("Pendente")
+  time       String
+  value      Decimal  @db.Decimal(12, 2)
 
   @@unique([legacyId, legacyCashierId, legacyOperatorId], name: "unique_legacy_constraint")
 }
 
 model SaleItem {
-  id Int @id @default(autoincrement())
+  id String @id @default(cuid())
 
   legacyProductId Int
 
   product   Product @relation(fields: [productId], references: [id])
-  productId Int
+  productId String
 
-  sale   Sale @relation(fields: [saleId], references: [id])
-  saleId Int
+  sale   Sale   @relation(fields: [saleId], references: [id])
+  saleId String
 
   itemValue     Decimal @db.Decimal(12, 2)
   itemUnitValue Decimal @db.Decimal(12, 2)
   quantity      Int
 }
 
+model SalePlace {
+  id String @id @default(cuid())
+
+  legacyId Int @unique
+
+  cashiers Cashier[]
+  unit     Unit      @relation(fields: [unitId], references: [id])
+  unitId   String
+
+  name String
+}
+
 model Synchronization {
-  id Int @id @default(autoincrement())
+  id String @id @default(cuid())
 
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
+
   createdData Int
+  status      String @default("Sucesso")
+  user        String @default("Admin")
   updatedData Int
+}
 
-  status String @default("Sucesso")
-  user   String @default("Admin")
+model Unit {
+  id String @id @default(cuid())
+
+  legacyId Int @unique
+
+  salePlaces SalePlace[]
+
+  name String
 }

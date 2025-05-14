@@ -8,17 +8,9 @@
     padding: 1rem;
     width: 100%;
     
-    &.fill{
-        background-color: hsl(0, 0%, 97%);
-        /* border: none; */
-    }
-    
-    /* &.radius{
-        border-radius: .25rem;
-    } */
-    
-    &.smallGap{
-        gap: .5rem;    
-    }
+    &.fill{ background-color: hsl(0, 0%, 97%); }
 
+    &.fitContent{ width: fit-content; }
+    
+    &.smallGap{ gap: .5rem; }
 }

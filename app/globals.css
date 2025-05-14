@@ -10,6 +10,7 @@ body{
 body{
   color: hsl(0, 0%, 20%);
   font-size: .875rem;
+  font-weight: 600;
 }
 
 main{

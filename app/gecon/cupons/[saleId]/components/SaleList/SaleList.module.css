@@ -1,0 +1,15 @@
+.saleList{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.saleList li{
+    border: 1px solid hsl(0, 0%, 90%);
+    border-radius: .25rem;
+    padding: .5rem;
+
+    &:last-child{
+        background-color: hsl(0, 0%, 97%);
+    }
+}

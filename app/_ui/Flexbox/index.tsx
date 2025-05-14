@@ -3,6 +3,7 @@ import styles from './Flexbox.module.css';
 
 type FlexboxProps = {
     alignEnd?: true,
+    alignStart?: true,
     children: ReactNode,
     column?: true,
     gapLg?: true,
@@ -12,6 +13,7 @@ type FlexboxProps = {
 
 export default function Flexbox({ 
     alignEnd,
+    alignStart,
     children, 
     column,
     gapLg,
@@ -21,6 +23,7 @@ export default function Flexbox({
     const className = `
         ${styles.flexbox}
         ${alignEnd ? styles.alignEnd : ''}
+        ${alignStart ? styles.alignStart : ''}
         ${column ? styles.column : ''}
         ${gapLg ? styles.gapLg : ''}
         ${gapSm ? styles.gapSm : ''}

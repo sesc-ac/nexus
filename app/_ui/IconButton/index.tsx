@@ -6,7 +6,6 @@ import closePanelIcon from '@/public/icons/right_panel_close.svg';
 type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     icon: 'openPanel' | 'closePanel',
     size?: 'lg',
-    // icon: 'openPanel' | 'closePanel' | 'open' | 'close' | 'delete' | 'edit' | 'add' | 'save' | 'cancel';
 };
 
 export default function IconButton({ icon, size, ...rest  }: IconButtonProps) {    

@@ -1,7 +1,6 @@
 'use client' // Error boundaries must be Client Components
  
 import { Button } from '@/app/_ui/Button'
-import Flexbox from '@/app/_ui/Flexbox'
 import { useEffect } from 'react'
 import PageContainer from './_ui/PageContainer'
  
