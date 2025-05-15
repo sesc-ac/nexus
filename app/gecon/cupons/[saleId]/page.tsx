@@ -1,14 +1,14 @@
-import Badge from "@/app/_ui/Badge";
-import Flexbox from "@/app/_ui/Flexbox";
+import Badge from "@/app/ui/Badge";
+import Flexbox from "@/app/ui/Flexbox";
 import Image from "next/image";
 import receiptIcon from '@/public/icons/receipt.svg';
-import { Button } from "@/app/_ui/Button";
+import { Button } from "@/app/ui/Button";
 import { getSale, SaleWithRelations } from "@/app/data-access/sale";
 import { dateToString } from "@/app/_utils/dataFormat";
 import scheduleIcon from '@/public/icons/schedule.svg';
 import calendarIcon from '@/public/icons/calendar_month.svg';
-import Box from "@/app/_ui/Box";
-import Aside from "@/app/_ui/Aside";
+import Box from "@/app/ui/Box";
+import Aside from "@/app/ui/Aside";
 import SaleList from "./components/SaleList";
 
 export default async function Page({
@@ -34,7 +34,7 @@ export default async function Page({
                             src={ receiptIcon }
                             />
 
-                        { sale?.NFCEStatus }
+                        <p className="clr-text-blue">{ sale?.NFCEStatus }</p>
                     </Badge>
                 </Flexbox>
 

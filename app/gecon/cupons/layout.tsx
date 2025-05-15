@@ -1,5 +1,5 @@
-import PageContainer from "@/app/_ui/PageContainer";
-import PageTitle from "@/app/_ui/PageTitle";
+import PageContainer from "@/app/ui/PageContainer";
+import PageTitle from "@/app/ui/PageTitle";
 
 export default function RootLayout({
   children,

@@ -1,0 +1,46 @@
+@keyframes openAnimation {
+    from { width: 0; }
+    to { width: var(--saleAsideWidth); }
+}
+
+.asideBackdrop{
+    background-color: hsla(0, 0%, 0%, .30);
+    display: flex;
+    height: 100dvh;
+    justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100dvw;
+}
+
+.aside{
+    animation: openAnimation .15s;
+    animation-timing-function: ease-in;
+    border-left: 1px solid var(--clr-neutral-90);
+    background-color: hsl(0, 0%, 100%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    padding: 0;
+
+    &.open{
+        padding-block: 2rem;
+        padding-inline: 1rem;
+        width: var(--saleAsideWidth);
+    }
+}
+
+body:has(.aside.open){
+    overflow: hidden;
+}
+
+main:has(.aside.open){
+    --saleAsideWidth: 20rem;
+    margin-right: var(--saleAsideWidth);
+    transition-duration: .15s;
+    transition-property: margin-right;
+    transition-timing-function: ease-in;
+}

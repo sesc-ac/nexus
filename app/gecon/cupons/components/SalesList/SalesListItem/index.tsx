@@ -4,11 +4,11 @@ import scheduleIcon from '@/public/icons/schedule.svg';
 import personIcon from '@/public/icons/person.svg';
 import calendarIcon from '@/public/icons/calendar_month.svg';
 import { dateToString, valueToCurrency } from '@/app/_utils/dataFormat';
-import Badge from "@/app/_ui/Badge";
-import Box from "@/app/_ui/Box";
-import Flexbox from "@/app/_ui/Flexbox";
+import Badge from "@/app/ui/Badge";
+import Box from "@/app/ui/Box";
+import Flexbox from "@/app/ui/Flexbox";
 import Link from 'next/link';
-import Divider from '@/app/_ui/Divider';
+import Divider from '@/app/ui/Divider';
 import Image from 'next/image';
 import styles from './SalesItem.module.css';
 import receiptIcon from '@/public/icons/receipt.svg';
@@ -25,7 +25,7 @@ export default function SalesListItem({
                 <Box>
                     <Flexbox spaceBetween>
                         <Flexbox gapLg>
-                            <Badge>#{ sale.legacyId }</Badge>
+                            <Badge><p className='clr-text-blue'>#{ sale.legacyId }</p></Badge>
 
                             <Badge>
                                 <Image 
@@ -33,7 +33,7 @@ export default function SalesListItem({
                                     src={ receiptIcon }
                                 />
 
-                                { sale.NFCEStatus }
+                                <p className='clr-text-blue'>{ sale.NFCEStatus }</p>
                             </Badge>
 
                             <p className='sm'><b>{ sale.customer?.name || 'VENDA AVULSA' }</b></p>

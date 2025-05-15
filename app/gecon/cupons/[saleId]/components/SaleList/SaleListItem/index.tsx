@@ -1,7 +1,7 @@
 
 import { valueToCurrency } from "@/app/_utils/dataFormat";
 import { Decimal } from "@prisma/client/runtime/library";
-import Flexbox from "@/app/_ui/Flexbox";
+import Flexbox from "@/app/ui/Flexbox";
 
 export default function SaleListItem({
     product,

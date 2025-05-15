@@ -1,0 +1,11 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+    .menu__group{
+        color: var(--clr-neutral-20);
+        font-size: .75rem;
+        padding: .5rem;
+    }

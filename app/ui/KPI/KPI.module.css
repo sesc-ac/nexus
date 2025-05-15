@@ -1,0 +1,22 @@
+.kpi{
+    border: 1px solid var(--clr-neutral-90);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+    .kpi__title{
+        color: var(--clr-neutral-40);
+        font-size: .75rem;
+        font-weight: 700;
+    }
+
+    .kpi__value{
+        color: var(--clr-neutral-20);
+        font-size: 1.25rem;
+        font-weight: 600;
+    }

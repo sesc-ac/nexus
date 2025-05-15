@@ -1,8 +1,8 @@
 'use client' // Error boundaries must be Client Components
  
-import { Button } from '@/app/_ui/Button'
+import { Button } from '@/app/ui/Button'
 import { useEffect } from 'react'
-import PageContainer from './_ui/PageContainer'
+import PageContainer from './ui/PageContainer'
  
 export default function Error({
   error,
