@@ -17,10 +17,11 @@ export type fetchedCustomer = {
 
 export type fetchedCustomerCategory = {
     DSCATEGORI: string,
+    
 }
 
 export type fetchedPaymentMethod = {
-    DSMOEDAPGT: string
+    DSMOEDAPGT: string,
 }
 
 export type fetchedProduct = {
@@ -48,7 +49,7 @@ export type fetchedSaleItem = {
 }
 
 export type fetchedSalePaymentMethod = {
-    CDMOEDAPGT: string
+    CDMOEDAPGT: string,
 }
 
 export type fetchedSalePlace = {

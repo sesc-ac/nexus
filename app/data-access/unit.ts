@@ -5,10 +5,11 @@ export async function createUnit(unit: Prisma.UnitCreateInput): Promise<Unit>{
     return await prisma.unit.create({ data: unit });
 }
 
-export async function getUnitByLegacyId(legacyId: number){
-    return await prisma.unit.findUnique({
+export async function getUnitByLegacyId(legacyId: number, legacyOriginDatabase: string): Promise<Unit | null>{
+    return await prisma.unit.findFirst({
         where: {
-            legacyId: legacyId
+            legacyId: legacyId,
+            legacyOriginDatabase: legacyOriginDatabase
         }
     });
 }

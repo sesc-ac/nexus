@@ -5,10 +5,11 @@ export async function createSalePlace(salePlace: Prisma.SalePlaceCreateInput): P
     return await prisma.salePlace.create({ data: salePlace });
 }
 
-export async function getSalePlaceByLegacyId(legacyId: number){
-    return await prisma.salePlace.findUnique({
+export async function getSalePlaceByLegacyId(legacyId: number, legacyOriginDatabase: string): Promise<SalePlace | null>{
+    return await prisma.salePlace.findFirst({
         where: {
-            legacyId: legacyId
+            legacyId: legacyId,
+            legacyOriginDatabase: legacyOriginDatabase
         }
     });
 }

@@ -5,12 +5,13 @@ export async function createPaymentMethod(paymentMethod: Prisma.PaymentMethodCre
     return await prisma.paymentMethod.create({ data: paymentMethod });
 }
 
-export async function getPaymentMethodtByLegacyId(legacyId: number){
-    console.log('Get Payment Method By Legacy Id', legacyId);
+export async function getPaymentMethodtByLegacyId(legacyId: number, legacyOriginDatabase: string): Promise<PaymentMethod | null>{
+    console.log('Get Payment Method By Legacy Id', legacyId, legacyOriginDatabase);
 
-    return await prisma.paymentMethod.findUnique({
+    return await prisma.paymentMethod.findFirst({
         where: {
             legacyId: legacyId,
+            legacyOriginDatabase: legacyOriginDatabase
         }
     });
 }

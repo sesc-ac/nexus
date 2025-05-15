@@ -13,10 +13,11 @@ export async function getCashierOperator(id: string): Promise<CashierOperator | 
     });
 }
 
-export async function getCashierOperatorByLegacyId(legacyId: number){
-    return await prisma.cashierOperator.findUnique({
+export async function getCashierOperatorByLegacyId(legacyId: number, legacyOriginDatabase: string): Promise<CashierOperator | null>{
+    return await prisma.cashierOperator.findFirst({
         where: {
-            legacyId: legacyId
+            legacyId: legacyId,
+            legacyOriginDatabase: legacyOriginDatabase
         }
     });
 }

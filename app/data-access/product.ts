@@ -5,10 +5,11 @@ export async function createProduct(product: Prisma.ProductCreateInput): Promise
     return await prisma.product.create({ data: product });
 }
 
-export async function getProductByLegacyId(legacyId: number){
-    return await prisma.product.findUnique({
+export async function getProductByLegacyId(legacyId: number, legacyOriginDatabase: string): Promise<Product | null>{
+    return await prisma.product.findFirst({
         where: {
-            legacyId: legacyId
+            legacyId: legacyId,
+            legacyOriginDatabase: legacyOriginDatabase
         }
     });
 }

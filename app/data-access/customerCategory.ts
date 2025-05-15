@@ -5,10 +5,11 @@ export async function createCustomerCategory(customerCategory: Prisma.CustomerCa
     return await prisma.customerCategory.create({ data: customerCategory });
 }
 
-export async function getCustomerCategoryByLegacyId(legacyId: number){
-    return await prisma.customerCategory.findUnique({
+export async function getCustomerCategoryByLegacyId(legacyId: number, legacyOriginDatabase: string): Promise<CustomerCategory | null>{
+    return await prisma.customerCategory.findFirst({
         where: {
-            legacyId: legacyId
+            legacyId: legacyId,
+            legacyOriginDatabase: legacyOriginDatabase
         }
     });
 }
