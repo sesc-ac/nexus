@@ -1,6 +1,6 @@
 import { getSalesTotals } from "@/app/data-access/sale";
-import Flexbox from "@/app/_ui/Flexbox";
-import KPI from "@/app/_ui/KPI";
+import Flexbox from "@/app/ui/Flexbox";
+import KPI from "@/app/ui/KPI";
 import { valueToCurrency } from "@/app/_utils/dataFormat";
 import { Decimal } from "@prisma/client/runtime/library";
 

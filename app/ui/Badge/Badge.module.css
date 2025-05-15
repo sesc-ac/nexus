@@ -1,0 +1,22 @@
+.badge{
+    align-items: center;
+    background-color: var(--clr-neutral-90);
+    border-radius: .25rem;
+    display: flex;
+    gap: .25rem;
+    font-size: .75rem;
+    font-weight: 700;
+    padding-block: .25rem;
+    padding-inline: .5rem;
+    width: fit-content;
+
+    &.sm{
+        font-size: .5rem;
+    }
+
+    & img {
+        aspect-ratio: 1;
+        height: auto;
+        width: .875rem;
+    }
+}

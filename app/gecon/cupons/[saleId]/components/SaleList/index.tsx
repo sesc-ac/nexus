@@ -1,7 +1,7 @@
 import { getSaleItems } from "@/app/data-access/saleItem";
 import { Sale, SaleItem } from "@prisma/client";
 import SaleListItem from "./SaleListItem";
-import Flexbox from "@/app/_ui/Flexbox";
+import Flexbox from "@/app/ui/Flexbox";
 import { valueToCurrency } from "@/app/_utils/dataFormat";
 import styles from "./SaleList.module.css";
 import { SaleWithRelations } from "@/app/data-access/sale";

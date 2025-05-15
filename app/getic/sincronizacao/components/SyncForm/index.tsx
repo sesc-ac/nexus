@@ -3,9 +3,9 @@
 import { useActionState } from "react";
 import { initSynchronization } from "../../actions";
 import Form from "next/form";
-import Flexbox from "@/app/_ui/Flexbox";
-import Input from "@/app/_ui/Input";
-import { Button } from "@/app/_ui/Button";
+import Flexbox from "@/app/ui/Flexbox";
+import Input from "@/app/ui/Input";
+import { Button } from "@/app/ui/Button";
 
 export default function SyncForm(){
     const [state, action, isPending] = useActionState(initSynchronization, null);

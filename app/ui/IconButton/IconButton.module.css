@@ -1,0 +1,16 @@
+.iconButton{
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--clr-neutral-90);
+    border: none;
+    border-radius: 100vw;
+    cursor: pointer;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 1.75rem;
+    
+    &.lg{ 
+        width: 2.25rem;
+    } 
+}

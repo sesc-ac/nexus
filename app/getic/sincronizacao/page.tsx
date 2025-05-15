@@ -1,6 +1,6 @@
-import PageTitle from "@/app/_ui/PageTitle";
-import PageContainer from "@/app/_ui/PageContainer";
-import Box from "@/app/_ui/Box";
+import PageTitle from "@/app/ui/PageTitle";
+import PageContainer from "@/app/ui/PageContainer";
+import Box from "@/app/ui/Box";
 import SyncForm from "./components/SyncForm";
 import SyncList from './components/SyncList';
 

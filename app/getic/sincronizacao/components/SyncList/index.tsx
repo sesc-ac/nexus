@@ -1,7 +1,7 @@
-import Badge from "@/app/_ui/Badge";
-import Box from "@/app/_ui/Box";
-import Divider from "@/app/_ui/Divider";
-import Flexbox from "@/app/_ui/Flexbox";
+import Badge from "@/app/ui/Badge";
+import Box from "@/app/ui/Box";
+import Divider from "@/app/ui/Divider";
+import Flexbox from "@/app/ui/Flexbox";
 import { getSynchronizations } from "@/app/data-access/synchronization";
 import Image from "next/image";
 import scheduleIcon from '@/public/icons/schedule.svg';

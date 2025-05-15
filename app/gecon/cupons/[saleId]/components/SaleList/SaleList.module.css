@@ -5,11 +5,11 @@
 }
 
 .saleList li{
-    border: 1px solid hsl(0, 0%, 90%);
+    border: 1px solid var(--clr-neutral-90);
     border-radius: .25rem;
     padding: .5rem;
 
     &:last-child{
-        background-color: hsl(0, 0%, 97%);
+        background-color: var(--clr-neutral-97);
     }
 }

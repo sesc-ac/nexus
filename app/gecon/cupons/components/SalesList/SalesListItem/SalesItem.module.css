@@ -2,6 +2,6 @@
     transition: background-color .25s;
 
     &:hover{
-        background-color: hsl(0, 0%, 97%);
+        background-color: var(--clr-neutral-97);
     }
 }
