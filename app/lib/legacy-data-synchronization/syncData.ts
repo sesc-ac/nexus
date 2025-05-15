@@ -15,31 +15,32 @@ import { fetchCashierData, fetchCashierOperatorData, fetchCustomerCategoryData, 
 import { createCustomerCategory, getCustomerCategoryByLegacyId } from "@/app/data-access/customerCategory";
 import { createPaymentMethod, getPaymentMethodtByLegacyId } from "@/app/data-access/paymentMethod";
 
-async function syncCashierData(legacyCashierId: number, legacyOperatorId: number){
-    console.log('SYNC CASHIER DATA');
+async function syncCashierData(legacyCashierId: number, legacyOperatorId: number, originDatabase: string){
+    console.log('SYNC CASHIER DATA', originDatabase);
 
-    const fetchedCashier: fetchedCashier[] = await fetchCashierData(legacyCashierId, legacyOperatorId);
+    const fetchedCashier: fetchedCashier[] = await fetchCashierData(legacyCashierId, legacyOperatorId, originDatabase);
     
     const legacySalePlaceId = parseLocaleNumber(fetchedCashier[0].CDLOCVENDA);
 
-    let salePlace = await getSalePlaceByLegacyId(legacySalePlaceId);
+    let salePlace = await getSalePlaceByLegacyId(legacySalePlaceId, originDatabase);
 
     if(!salePlace){
-        salePlace = await syncSalePlaceData(legacySalePlaceId);
+        salePlace = await syncSalePlaceData(legacySalePlaceId, originDatabase);
     }
 
     const legacyCashierOperatorId = parseLocaleNumber(fetchedCashier[0].CDPESSOA);
 
-    let operator = await getCashierOperatorByLegacyId(legacyCashierOperatorId);
+    let operator = await getCashierOperatorByLegacyId(legacyCashierOperatorId, originDatabase);
 
     if(!operator){
-        operator = await syncCashierOperatorData(legacyCashierOperatorId);
+        operator = await syncCashierOperatorData(legacyCashierOperatorId, originDatabase);
     }
 
     return await createCashier({
         closeTime: fetchedCashier[0].HRFECHAMEN,
         legacyId: legacyCashierId,
         legacyOperatorId: legacyOperatorId,
+        legacyOriginDatabase: originDatabase,
         legacySalePlaceId: legacySalePlaceId,
         openDate: new Date(fetchedCashier[0].DTABERTURA),
         openTime: fetchedCashier[0].HRABERTURA,
@@ -48,33 +49,35 @@ async function syncCashierData(legacyCashierId: number, legacyOperatorId: number
     });
 }
 
-async function syncCashierOperatorData(legacyId: number): Promise<CashierOperator>{
-    console.log('SYNC CASHIER OPERATOR DATA');
+async function syncCashierOperatorData(legacyId: number, originDatabase: string): Promise<CashierOperator>{
+    console.log('SYNC CASHIER OPERATOR DATA', originDatabase);
 
-    const fetchedCashierOperator: fetchedCashierOperator[] = await fetchCashierOperatorData(legacyId);
+    const fetchedCashierOperator: fetchedCashierOperator[] = await fetchCashierOperatorData(legacyId, originDatabase);
     
     return await createCashierOperator({
         legacyId: legacyId,
+        legacyOriginDatabase: originDatabase,
         name: fetchedCashierOperator[0].NMPESSOA,
     });
 }
 
-async function syncCustomerData(legacyId: number, legacyUnitId: number): Promise<Customer | null>{
-     console.log('SYNC CUSTOMER DATA');
+async function syncCustomerData(legacyId: number, legacyUnitId: number, originDatabase: string): Promise<Customer | null>{
+     console.log('SYNC CUSTOMER DATA', originDatabase);
 
-    const fetchedCustomer: fetchedCustomer[] = await fetchCustomerData(legacyId, legacyUnitId);
+    const fetchedCustomer: fetchedCustomer[] = await fetchCustomerData(legacyId, legacyUnitId, originDatabase);
 
     if(fetchedCustomer.length){
         const legacyCustomerCategoryId = parseLocaleNumber(fetchedCustomer[0].CDCATEGORI);
 
-        let category = await getCustomerCategoryByLegacyId(legacyCustomerCategoryId);
+        let category = await getCustomerCategoryByLegacyId(legacyCustomerCategoryId, originDatabase);
 
         if(!category)
-            category = await syncCustomerCategoryData(legacyCustomerCategoryId);
+            category = await syncCustomerCategoryData(legacyCustomerCategoryId, originDatabase);
             
         return await createCustomer({
             category: { connect: { id: category.id } },
             legacyId: legacyId,
+            legacyOriginDatabase: originDatabase,
             legacyUnitId: legacyUnitId,
             name: fetchedCustomer[0].NMCLIENTE,
         }) 
@@ -83,32 +86,34 @@ async function syncCustomerData(legacyId: number, legacyUnitId: number): Promise
     return null
 }
 
-async function syncCustomerCategoryData(legacyId: number): Promise<CustomerCategory>{
-    console.log('SYNC CUSTOMER CATEGORY DATA');
+async function syncCustomerCategoryData(legacyId: number, originDatabase: string): Promise<CustomerCategory>{
+    console.log('SYNC CUSTOMER CATEGORY DATA', originDatabase);
 
-    const fetchedCustomerCategory: fetchedCustomerCategory[] = await fetchCustomerCategoryData(legacyId);
+    const fetchedCustomerCategory: fetchedCustomerCategory[] = await fetchCustomerCategoryData(legacyId, originDatabase);
 
     return await createCustomerCategory({
         legacyId: legacyId,
+        legacyOriginDatabase: originDatabase,
         name: fetchedCustomerCategory[0].DSCATEGORI,
     });
 }
 
-async function syncPaymentMethodsData(legacySaleId: number, legacyCashierId: number, legacyOperatorId: number): Promise<PaymentMethod | undefined>{
-    console.log('SYNC PAYMENT METHODS DATA');
+async function syncPaymentMethodsData(legacySaleId: number, legacyCashierId: number, legacyOperatorId: number, originDatabase: string): Promise<PaymentMethod | undefined>{
+    console.log('SYNC PAYMENT METHODS DATA', originDatabase);
 
-    const fetchedSalePaymentMethods: fetchedSalePaymentMethod[] = await fetchSalePaymentMethods(legacySaleId, legacyCashierId, legacyOperatorId);
+    const fetchedSalePaymentMethods: fetchedSalePaymentMethod[] = await fetchSalePaymentMethods(legacySaleId, legacyCashierId, legacyOperatorId, originDatabase);
 
     if(fetchedSalePaymentMethods.length){
         const legacyPaymentMethodId = parseLocaleNumber(fetchedSalePaymentMethods[0].CDMOEDAPGT); 
 
-        let paymentMethod = await getPaymentMethodtByLegacyId(legacyPaymentMethodId);
+        let paymentMethod = await getPaymentMethodtByLegacyId(legacyPaymentMethodId, originDatabase);
 
         if(!paymentMethod){
-            const fetchedPaymentMethod = await fetchPaymentMethod(legacyPaymentMethodId);
+            const fetchedPaymentMethod: fetchedPaymentMethod[] = await fetchPaymentMethod(legacyPaymentMethodId, originDatabase);
 
             return await createPaymentMethod({
                 legacyId: legacyPaymentMethodId,
+                legacyOriginDatabase: originDatabase,
                 name: fetchedPaymentMethod[0].DSMOEDAPGT
             });
         }
@@ -119,22 +124,23 @@ async function syncPaymentMethodsData(legacySaleId: number, legacyCashierId: num
     return undefined;
 }
 
-async function syncProductData(legacyId: number): Promise<Product>{
-    console.log('SYNC PRODUCT DATA');
+async function syncProductData(legacyId: number, originDatabase: string): Promise<Product>{
+    console.log('SYNC PRODUCT DATA', originDatabase);
 
-    const fetchedProduct: fetchedProduct[] = await fetchProductData(legacyId);
+    const fetchedProduct: fetchedProduct[] = await fetchProductData(legacyId, originDatabase);
 
     return await createProduct({
         description: fetchedProduct[0].DSPRODUTO,
         legacyId: legacyId,
+        legacyOriginDatabase: originDatabase,
         unit: fetchedProduct[0].CDUNIDADE,
     });
 }
 
-export async function syncSalesData(initialDate: string, finalDate: string): Promise<[number, number]>{
-    console.log('SYNC SALES DATA');
+export async function syncSalesData(initialDate: string, finalDate: string, originDatabase: string): Promise<[number, number]>{
+    console.log('SYNC SALES DATA', originDatabase);
     
-    const fetchedSales: fetchedSale[] = await fetchSalesData(initialDate as string, finalDate as string);
+    const fetchedSales: fetchedSale[] = await fetchSalesData(initialDate as string, finalDate as string, originDatabase);
     
     let totalCreatedData = 0;
     let totalUpdatedData = 0;
@@ -147,7 +153,7 @@ export async function syncSalesData(initialDate: string, finalDate: string): Pro
         let cashier = await getCashierByLegacyId(legacyCashierId, legacyOperatorId);
 
         if(!cashier){
-            cashier = await syncCashierData(legacyCashierId, legacyOperatorId);
+            cashier = await syncCashierData(legacyCashierId, legacyOperatorId, originDatabase);
             totalCreatedData++;
             totalUpdatedData++;
         }
@@ -158,12 +164,12 @@ export async function syncSalesData(initialDate: string, finalDate: string): Pro
         let customer = await getCustomerByLegacyId(legacyCustomerId, legacyUnitId);
 
         if(!customer){
-            customer = await syncCustomerData(legacyCustomerId, legacyUnitId);
+            customer = await syncCustomerData(legacyCustomerId, legacyUnitId, originDatabase);
             totalCreatedData++;
             totalUpdatedData++;
         }
 
-        const paymentMethod = await syncPaymentMethodsData(legacyId, legacyCashierId, legacyOperatorId);
+        const paymentMethod = await syncPaymentMethodsData(legacyId, legacyCashierId, legacyOperatorId, originDatabase);
 
         const [sale, saleIsCreated] = await findOrCreateSale({
             cashier: { connect: { id: cashier.id } },
@@ -172,6 +178,7 @@ export async function syncSalesData(initialDate: string, finalDate: string): Pro
             legacyId: legacyId,
             legacyCashierId: legacyCashierId,
             legacyOperatorId: legacyOperatorId,
+            legacyOriginDatabase: originDatabase,
             paymentMethod: paymentMethod ? { connect: { id: paymentMethod.id } } : undefined,
             time: fetchedSale.HRVENDA,
             value: parseLocaleNumber(fetchedSale.VLRECEBIDO),
@@ -182,7 +189,7 @@ export async function syncSalesData(initialDate: string, finalDate: string): Pro
         if(saleIsCreated){
             totalCreatedData++;
 
-            const createdSaleItems = await syncSaleItemsData(sale);
+            const createdSaleItems = await syncSaleItemsData(sale, originDatabase);
 
             totalCreatedData += createdSaleItems;
 
@@ -194,27 +201,26 @@ export async function syncSalesData(initialDate: string, finalDate: string): Pro
     return [totalCreatedData, totalUpdatedData];
 }
 
-async function syncSaleItemsData(sale: Sale): Promise<number>{
-    console.log('SYNC SALE ITEMS DATA');
+async function syncSaleItemsData(sale: Sale, originDatabase: string): Promise<number>{
+    console.log('SYNC SALE ITEMS DATA', originDatabase);
 
-    const fetchedSaleItems: fetchedSaleItem[] = await fetchSaleItemsData(sale.legacyId, sale.legacyCashierId, sale.legacyOperatorId);
+    const fetchedSaleItems: fetchedSaleItem[] = await fetchSaleItemsData(sale.legacyId, sale.legacyCashierId, sale.legacyOperatorId, originDatabase);
 
     let totalCreatedData = 0;
 
     for(const fetchedSaleItem of fetchedSaleItems){
         const legacyProductId = Number(fetchedSaleItem.CDPRODUTO);
         
-        let product = await getProductByLegacyId(legacyProductId);
+        let product = await getProductByLegacyId(legacyProductId, originDatabase);
 
         if(!product){
-            product = await syncProductData(legacyProductId);
+            product = await syncProductData(legacyProductId, originDatabase);
             totalCreatedData++;
         }
 
         await createSaleItem({
             itemUnitValue: parseLocaleNumber(fetchedSaleItem.VLITEM),
             itemValue: parseLocaleNumber(fetchedSaleItem.VLRECEBIDO),
-            legacyProductId: parseLocaleNumber(fetchedSaleItem.CDPRODUTO),
             product: { connect: { id: product.id } },
             quantity: parseLocaleNumber(fetchedSaleItem.QTPRODUTO),
             sale: { connect: { id: sale.id } }
@@ -227,33 +233,35 @@ async function syncSaleItemsData(sale: Sale): Promise<number>{
     return totalCreatedData;
 }
 
-async function syncSalePlaceData(legacyId: number): Promise<SalePlace>{
-    console.log('SYNC SALE PLACE DATA');
+async function syncSalePlaceData(legacyId: number, originDatabase: string): Promise<SalePlace>{
+    console.log('SYNC SALE PLACE DATA', originDatabase);
 
-    const fetchedSalePlace: fetchedSalePlace[] = await fetchSalePlaceData(legacyId);
+    const fetchedSalePlace: fetchedSalePlace[] = await fetchSalePlaceData(legacyId, originDatabase);
 
     const legacyUnitId = parseLocaleNumber(fetchedSalePlace[0].CDUOP);
 
-    let unit = await getUnitByLegacyId(legacyUnitId);
+    let unit = await getUnitByLegacyId(legacyUnitId, originDatabase);
 
     if(!unit){
-        unit = await syncUnitData(legacyUnitId);
+        unit = await syncUnitData(legacyUnitId, originDatabase);
     }
 
     return await createSalePlace({
         legacyId: legacyId,
+        legacyOriginDatabase: originDatabase,
         name: fetchedSalePlace[0].DSLOCVENDA,
         unit: { connect: { id: unit.id } }
     });
 }
 
-async function syncUnitData(legacyId: number): Promise<Unit>{
-     console.log('SYNC UNIT DATA');
+async function syncUnitData(legacyId: number, originDatabase: string): Promise<Unit>{
+     console.log('SYNC UNIT DATA', originDatabase);
 
-    const fetchedUnit: fetchedUnit[] = await fetchUnitData(legacyId);
+    const fetchedUnit: fetchedUnit[] = await fetchUnitData(legacyId, originDatabase);
 
     return await createUnit({
         legacyId: legacyId,
+        legacyOriginDatabase: originDatabase,
         name: fetchedUnit[0].NMUOP,
     });
 }

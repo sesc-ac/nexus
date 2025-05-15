@@ -10,11 +10,13 @@ export async function initSynchronization(previousState: any, formData: FormData
     const initialDate = formData.get('initialDate') as string;
     const finalDate = formData.get('finalDate') as string;
 
-    const [totalCreatedData, totalUpdatedData] = await syncSalesData(initialDate, finalDate);
+    const [totalCreatedDB2Data, totalUpdatedDB2Data] = await syncSalesData(initialDate, finalDate, 'DB2');
+    const [totalCreatedDB2CZSData, totalUpdatedDB2CZSData] = await syncSalesData(initialDate, finalDate, 'DB2CZS');
+
 
     await createSynchronization({
-        createdData: totalCreatedData,
-        updatedData: totalUpdatedData,
+        createdData: totalCreatedDB2Data + totalCreatedDB2CZSData,
+        updatedData: totalUpdatedDB2Data + totalUpdatedDB2CZSData,
     });
 
     revalidatePath('/getic/sincronizacao/');

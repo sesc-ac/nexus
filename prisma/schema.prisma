@@ -10,9 +10,10 @@ datasource db {
 model Cashier {
   id String @id @default(cuid())
 
-  legacyId          Int
-  legacyOperatorId  Int
-  legacySalePlaceId Int
+  legacyId             Int
+  legacyOperatorId     Int
+  legacyOriginDatabase String
+  legacySalePlaceId    Int
 
   operator    CashierOperator @relation(fields: [operatorId], references: [id])
   operatorId  String
@@ -30,7 +31,8 @@ model Cashier {
 model CashierOperator {
   id String @id @default(cuid())
 
-  legacyId Int @unique
+  legacyId             Int
+  legacyOriginDatabase String
 
   cashiers Cashier[]
 
@@ -40,8 +42,9 @@ model CashierOperator {
 model Customer {
   id String @id @default(cuid())
 
-  legacyId     Int
-  legacyUnitId Int
+  legacyId             Int
+  legacyOriginDatabase String
+  legacyUnitId         Int
 
   category   CustomerCategory @relation(fields: [categoryId], references: [id])
   categoryId String
@@ -55,40 +58,50 @@ model Customer {
 model CustomerCategory {
   id String @id @default(cuid())
 
-  legacyId Int @unique
+  legacyId             Int
+  legacyOriginDatabase String
 
   customers Customer[]
 
   name String
+
+  @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }
 
 model PaymentMethod {
   id String @id @default(cuid())
 
-  legacyId Int @unique
+  legacyId             Int
+  legacyOriginDatabase String
 
   sales Sale[]
 
   name String
+
+  @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }
 
 model Product {
   id String @id @default(cuid())
 
-  legacyId Int @unique
+  legacyId             Int
+  legacyOriginDatabase String
 
   SaleItem SaleItem[]
 
   description String
   unit        String
+
+  @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }
 
 model Sale {
   id String @id @default(cuid())
 
-  legacyId         Int
-  legacyCashierId  Int
-  legacyOperatorId Int
+  legacyId             Int
+  legacyCashierId      Int
+  legacyOperatorId     Int
+  legacyOriginDatabase String
 
   cashier         Cashier        @relation(fields: [cashierId], references: [id])
   cashierId       String
@@ -103,13 +116,11 @@ model Sale {
   time       String
   value      Decimal  @db.Decimal(12, 2)
 
-  @@unique([legacyId, legacyCashierId, legacyOperatorId], name: "unique_legacy_constraint")
+  @@unique([legacyId, legacyCashierId, legacyOperatorId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }
 
 model SaleItem {
   id String @id @default(cuid())
-
-  legacyProductId Int
 
   product   Product @relation(fields: [productId], references: [id])
   productId String
@@ -125,13 +136,16 @@ model SaleItem {
 model SalePlace {
   id String @id @default(cuid())
 
-  legacyId Int @unique
+  legacyId             Int
+  legacyOriginDatabase String
 
   cashiers Cashier[]
   unit     Unit      @relation(fields: [unitId], references: [id])
   unitId   String
 
   name String
+
+  @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }
 
 model Synchronization {
@@ -148,9 +162,12 @@ model Synchronization {
 model Unit {
   id String @id @default(cuid())
 
-  legacyId Int @unique
+  legacyId             Int
+  legacyOriginDatabase String
 
   salePlaces SalePlace[]
 
   name String
+
+  @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }

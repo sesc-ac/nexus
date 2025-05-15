@@ -6,7 +6,9 @@ const headers = new Headers();
 headers.append('DATA-SYNC-KEY', process.env.DATA_SYNC_KEY as string);
 
 
-async function fetchLegacyData(requestData: FormData){
+async function fetchLegacyData(requestData: FormData, originDatabase: string){
+    requestData.append('originDatabase', originDatabase);
+    
     const response = await fetch(dataSyncURL, {
         body: requestData,
         headers: headers,
@@ -21,8 +23,8 @@ async function fetchLegacyData(requestData: FormData){
     return data;
 }
 
-export async function fetchCashierData(legacyCashierId: number, legacyOperatorId: number){
-    console.log('FETCH CASHIER DATA');
+export async function fetchCashierData(legacyCashierId: number, legacyOperatorId: number, originDatabase: string){
+    console.log('FETCH CASHIER DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -39,11 +41,11 @@ export async function fetchCashierData(legacyCashierId: number, legacyOperatorId
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchCashierOperatorData(legacyId: number){
-    console.log('FETCH CASHIER OPERATOR DATA');
+export async function fetchCashierOperatorData(legacyId: number, originDatabase: string){
+    console.log('FETCH CASHIER OPERATOR DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -55,11 +57,11 @@ export async function fetchCashierOperatorData(legacyId: number){
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchCustomerData(legacyId: number, legacyUnitId: number){
-    console.log('FETCH CUSTOMER DATA');
+export async function fetchCustomerData(legacyId: number, legacyUnitId: number, originDatabase: string){
+    console.log('FETCH CUSTOMER DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -73,11 +75,11 @@ export async function fetchCustomerData(legacyId: number, legacyUnitId: number){
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchCustomerCategoryData(legacyId: number){
-    console.log('FETCH CUSTOMER CATEGORY DATA');
+export async function fetchCustomerCategoryData(legacyId: number, originDatabase: string){
+    console.log('FETCH CUSTOMER CATEGORY DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -89,11 +91,11 @@ export async function fetchCustomerCategoryData(legacyId: number){
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchPaymentMethod(legacyId: number){
-    console.log('FETCH PAYMENT METHOD DATA');
+export async function fetchPaymentMethod(legacyId: number, originDatabase: string){
+    console.log('FETCH PAYMENT METHOD DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -105,11 +107,11 @@ export async function fetchPaymentMethod(legacyId: number){
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchProductData(legacyId: number){
-    console.log('FETCH PRODUCT DATA');
+export async function fetchProductData(legacyId: number, originDatabase: string){
+    console.log('FETCH PRODUCT DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -122,11 +124,11 @@ export async function fetchProductData(legacyId: number){
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchSalesData(initialDate: string, finalDate: string){
-    console.log('FETCH SALES DATA');
+export async function fetchSalesData(initialDate: string, finalDate: string, originDatabase: string){
+    console.log('FETCH SALES DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -145,11 +147,11 @@ export async function fetchSalesData(initialDate: string, finalDate: string){
     `;
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchSaleItemsData(legacySaleId: number, legacyCashierId: number, legacyOperatorId: number){
-    console.log('FETCH SALE ITEMS DATA');
+export async function fetchSaleItemsData(legacySaleId: number, legacyCashierId: number, legacyOperatorId: number, originDatabase: string){
+    console.log('FETCH SALE ITEMS DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -167,11 +169,11 @@ export async function fetchSaleItemsData(legacySaleId: number, legacyCashierId: 
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchSalePlaceData(legacyId: number){
-    console.log('FETCH SALE PLACE DATA');
+export async function fetchSalePlaceData(legacyId: number, originDatabase: string){
+    console.log('FETCH SALE PLACE DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -184,11 +186,11 @@ export async function fetchSalePlaceData(legacyId: number){
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchSalePaymentMethods(legacySaleId: number, legacyCashierId: number, legacyOperatorId: number){
-    console.log('FETCH SALE PAYMENT METHODS DATA');
+export async function fetchSalePaymentMethods(legacySaleId: number, legacyCashierId: number, legacyOperatorId: number, originDatabase: string){
+    console.log('FETCH SALE PAYMENT METHODS DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -202,11 +204,11 @@ export async function fetchSalePaymentMethods(legacySaleId: number, legacyCashie
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
+    return await fetchLegacyData(requestData, originDatabase);
 }
 
-export async function fetchUnitData(legacyId: number){
-    console.log('FETCH UNIT DATA');
+export async function fetchUnitData(legacyId: number, originDatabase: string){
+    console.log('FETCH UNIT DATA', originDatabase);
 
     const requestData = new FormData();
 
@@ -218,6 +220,5 @@ export async function fetchUnitData(legacyId: number){
 
     requestData.append('query', query);
 
-    return await fetchLegacyData(requestData);
-
+    return await fetchLegacyData(requestData, originDatabase);
 }
