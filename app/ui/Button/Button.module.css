@@ -1,6 +1,6 @@
 .button{
     align-items: center;
-    background-color: var(--clr-blue);
+    background-color: var(--clr-neutral-20);
     border: none;
     border-radius: .25rem;
     color: #FFF;

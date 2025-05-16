@@ -5,7 +5,7 @@
 }
 
     .menu__group{
-        color: var(--clr-neutral-20);
+        color: var(--clr-neutral-40);
         font-size: .75rem;
         padding: .5rem;
     }

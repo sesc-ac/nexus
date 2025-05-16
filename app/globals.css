@@ -35,7 +35,7 @@ b{font-weight: 700;}
 
 .lg{font-size: 1.25rem;}
 
-.clr-text-blue{color: var(--clr-blue-dark);}
+/* .clr-text-blue{color: var(--clr-blue-dark);} */
 
 .clr-text-light{color: var(--clr-neutral-40);}
 
@@ -47,11 +47,11 @@ label{
 /* COLORS GLOBALS */
 
 :root{
-  --clr-blue: #004C99;
-  --clr-blue-dark: #003366;
-  --clr-blue-80: #99CCFF;
+  /* --clr-blue: #004C99; */
+  /* --clr-blue-dark: #003366; */
+  /* --clr-blue-80: #99CCFF; */
   --clr-blue-90: #CDE6FF;
-  --clr-blue-97: #F0F7FF;
+  /* --clr-blue-97: #F0F7FF; */
 
   --clr-neutral-20: #333333;
   --clr-neutral-40: #666666;

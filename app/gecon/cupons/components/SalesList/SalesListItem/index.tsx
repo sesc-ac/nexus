@@ -25,7 +25,7 @@ export default function SalesListItem({
                 <Box>
                     <Flexbox spaceBetween>
                         <Flexbox gapLg>
-                            <Badge><p className='clr-text-blue'>#{ sale.legacyId }</p></Badge>
+                            <Badge><p className=''>#{ sale.legacyId }</p></Badge>
 
                             <Badge>
                                 <Image 
@@ -33,7 +33,7 @@ export default function SalesListItem({
                                     src={ receiptIcon }
                                 />
 
-                                <p className='clr-text-blue'>{ sale.NFCEStatus }</p>
+                                <p className=''>{ sale.NFCEStatus }</p>
                             </Badge>
 
                             <p className='sm'><b>{ sale.customer?.name || 'VENDA AVULSA' }</b></p>

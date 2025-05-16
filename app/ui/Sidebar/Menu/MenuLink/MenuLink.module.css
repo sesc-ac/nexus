@@ -1,7 +1,7 @@
 .menuLink{
     align-items: center;
     border-radius: .25rem;
-    color: var(--clr-blue-dark);
+    color: var(--clr-neutral-20);
     display: flex;
     font-size: .875rem;
     font-weight: 600;
@@ -14,6 +14,6 @@
     }
 
     &.active{
-        background-color: var(--clr-blue-90);
+        background-color: var(--clr-neutral-80);
     }
 }

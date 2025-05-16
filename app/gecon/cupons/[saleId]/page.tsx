@@ -34,7 +34,7 @@ export default async function Page({
                             src={ receiptIcon }
                             />
 
-                        <p className="clr-text-blue">{ sale?.NFCEStatus }</p>
+                        <p className="">{ sale?.NFCEStatus }</p>
                     </Badge>
                 </Flexbox>
 
