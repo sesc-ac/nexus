@@ -11,8 +11,8 @@ export default async function Page({
     console.log('CUPONS PAGE');
 
     const { 
-        initialDate = new Date().toISOString().split('T')[0],
-        finalDate = new Date().toISOString().split('T')[0],
+        initialDate = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0],
+        finalDate = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0],
     } = await searchParams;
 
     const salesKPIsKey = `${initialDate}KPIsKey`;

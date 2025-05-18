@@ -59,7 +59,7 @@ export default async function Page({
                 </Flexbox>
             </Flexbox>
 
-            <Box fill smallGap>
+            <Box fill gapSm>
                 {sale?.customer ? 
                     <>
                         <h2>Cliente</h2>
@@ -73,7 +73,7 @@ export default async function Page({
                 
             </Box>
 
-            <Box fill smallGap>
+            <Box fill gapSm>
                 <h2>Caixa #{ sale?.cashier.legacyId }</h2>
 
                 <p><b>Operador: </b>{ sale?.cashier.operator.name }</p>
