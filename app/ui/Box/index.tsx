@@ -5,23 +5,23 @@ type BoxProps = {
     children: ReactNode,
     fill?: true,
     fitContent?: true,
-    radius?: true,
-    smallGap?: true
+    gapSm?: true
+    paddingSm?: true
 }
 
 export default function Box({ 
     children, 
     fill, 
     fitContent, 
-    radius, 
-    smallGap 
+    gapSm, 
+    paddingSm, 
 }: BoxProps){
     const className = `
         ${styles.box}
         ${fill ? styles.fill : ''}
         ${fitContent ? styles.fitContent : ''}
-        ${smallGap ? styles.smallGap : ''}
-        ${radius ? styles.radius : ''}
+        ${gapSm ? styles.gapSm : ''}
+        ${paddingSm ? styles.paddingSm : ''}
     `;
 
     return(
