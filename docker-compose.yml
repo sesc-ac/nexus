@@ -1,0 +1,14 @@
+services:
+  db:
+    container_name: nexus_postgres
+    env_file:
+       - .env
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data: 

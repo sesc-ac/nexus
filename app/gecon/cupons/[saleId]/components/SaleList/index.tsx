@@ -1,5 +1,3 @@
-import { getSaleItems } from "@/app/data-access/saleItem";
-import { Sale, SaleItem } from "@prisma/client";
 import SaleListItem from "./SaleListItem";
 import Flexbox from "@/app/ui/Flexbox";
 import { valueToCurrency } from "@/app/_utils/dataFormat";
