@@ -1,7 +1,6 @@
 import styles from './SalesList.module.css';
 import { getSalesByDateRange, SaleWithRelations } from "@/app/data-access/sale";
 import SalesListItem from './SalesListItem';
-import { Sale } from '@prisma/client';
 
 type SalesListProps = {
     initialDate: Date,

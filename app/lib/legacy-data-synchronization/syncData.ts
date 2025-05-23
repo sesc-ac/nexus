@@ -106,7 +106,7 @@ async function syncPaymentMethodsData(legacySaleId: number, legacyCashierId: num
     if(fetchedSalePaymentMethods.length){
         const legacyPaymentMethodId = parseLocaleNumber(fetchedSalePaymentMethods[0].CDMOEDAPGT); 
 
-        let paymentMethod = await getPaymentMethodtByLegacyId(legacyPaymentMethodId, originDatabase);
+        const paymentMethod = await getPaymentMethodtByLegacyId(legacyPaymentMethodId, originDatabase);
 
         if(!paymentMethod){
             const fetchedPaymentMethod: fetchedPaymentMethod[] = await fetchPaymentMethod(legacyPaymentMethodId, originDatabase);
