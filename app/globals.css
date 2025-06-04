@@ -1,14 +1,22 @@
+ @keyframes openAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+:root{
+  --header-height: 2.5rem;
+}
+
 html,
 body{
   height: 100%;
 }
 
 body{
-  display: flex;
-}
-
-body{
+  animation: openAnimation .15s;
+  animation-timing-function: ease-in;
   color: var(--clr-neutral-20);
+  display: flex;
   font-size: .875rem;
   font-weight: 600;
 }
@@ -53,11 +61,14 @@ label{
   --clr-blue-90: #CDE6FF;
   /* --clr-blue-97: #F0F7FF; */
 
-  --clr-neutral-20: #333333;
+  --clr-neutral-10: #1A1A1A; 
+  --clr-neutral-20: #333333; 
   --clr-neutral-40: #666666;
   --clr-neutral-80: #CCCCCC;
   --clr-neutral-90: #E6E6E6;
   --clr-neutral-97: #F7F7F7;
 
   --clr-white: #FFF;
+
+  --clr-yellow: #F6BE00;
 }
