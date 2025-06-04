@@ -13,3 +13,11 @@ export async function getProductByLegacyId(legacyId: number, legacyOriginDatabas
         }
     });
 }
+
+export async function getProducts(){
+    return await prisma.product.findMany({
+        orderBy: {
+            description: 'asc'
+        }
+    });
+}

@@ -1,9 +1,14 @@
 .productList{
     display: grid;
     gap: .5rem;
-    grid-template-columns: repeat(4, 1fr);
-}
+    grid-template-columns: repeat(2, 1fr);
 
-.productList li{
-    align-self: stretch;
+    & li{
+        transition-duration: .25s;
+        transition-property: background-color;
+
+        &:hover{
+            background-color: var(--clr-neutral-97);
+        }
+    }
 }
