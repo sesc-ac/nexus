@@ -19,6 +19,6 @@
 
     &:disabled{
         background-color: var(--clr-neutral-40);
-        cursor: default;
+        cursor: not-allowed;
     }
 }

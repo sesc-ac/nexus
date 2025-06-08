@@ -72,3 +72,9 @@ label{
 
   --clr-yellow: #F6BE00;
 }
+
+/* GLOBAL CUSTOM PROPERTIES */
+
+:root{
+  --default-border: 1px solid var(--clr-neutral-90);
+}

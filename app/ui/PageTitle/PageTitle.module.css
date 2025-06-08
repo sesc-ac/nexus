@@ -1,9 +1,10 @@
 .pageTitle{
-    border-bottom: 1px solid var(--clr-neutral-90);
+    border-bottom: var(--default-border);
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    padding: 2rem;
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
 }
 
 .title{

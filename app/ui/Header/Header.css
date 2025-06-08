@@ -2,12 +2,11 @@
     from { opacity: 0; }
     to { opacity: 1; }
 } */
-/*
 
-.aside{
+/* .aside{
     animation: openAnimation .15s;
     animation-timing-function: ease-in;
-    border-left: 1px solid var(--clr-neutral-90);
+    border-left: var(--default-border);
     background-color: hsl(0, 0%, 100%);
     box-sizing: border-box;
     display: flex;
@@ -39,19 +38,20 @@
     transition-timing-function: ease-in;
 } */
 
-body{
+main{
     margin-top: var(--header-height);
 }
 
 .header{
     align-items: center;
-    animation: openAnimation 1s;
+    animation: openAnimation .75s;
     animation-timing-function: ease-in;
     background-color: var(--clr-neutral-10);
     border-bottom: 4px solid var(--clr-yellow);
     box-sizing: border-box;
     display: flex;
     height: var(--header-height);
+    justify-content: center;
     padding: 1rem;
     position: fixed;
     top: 0;

@@ -2,9 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: "standalone",
+  crossOrigin: 'anonymous',
   devIndicators: false,
-  crossOrigin: 'anonymous'
+  output: "standalone",
 };
 
 export default nextConfig;

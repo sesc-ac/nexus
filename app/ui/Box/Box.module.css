@@ -1,5 +1,5 @@
 .box{
-    border: 1px solid var(--clr-neutral-90);
+    border: var(--default-border);
     border-radius: .25rem;
     box-sizing: border-box;
     display: flex;

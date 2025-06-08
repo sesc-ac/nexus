@@ -6,7 +6,7 @@
 .aside{
     animation: openAnimation .15s;
     animation-timing-function: ease-in;
-    border-left: 1px solid var(--clr-neutral-90);
+    border-left: var(--default-border);
     background-color: hsl(0, 0%, 100%);
     box-sizing: border-box;
     display: flex;

@@ -5,7 +5,7 @@
 }
 
 .saleList li{
-    border: 1px solid var(--clr-neutral-90);
+    border: var(--default-border);
     border-radius: .25rem;
     padding: .5rem;
 

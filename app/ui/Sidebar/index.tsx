@@ -38,7 +38,7 @@ export default function Sidebar(){
                     gapSm 
                 >
                     <a target="_blank" href="https://sescacre.com.br/"><p className="sm "><b>Departamento Regional do Acre</b></p></a>
-                   <a target="_blank" href="https://github.com/sesc-ac"><p className="sm "><b>v1.0</b></p></a>
+                   <a target="_blank" href="https://github.com/sesc-ac"><p className="sm "><b>Versão: ALFA</b></p></a>
                 </Flexbox>
             </footer>
         </aside>
