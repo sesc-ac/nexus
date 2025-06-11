@@ -3,7 +3,7 @@ import styles from './Box.module.css';
 
 type BoxProps = {
     children: ReactNode,
-    fill?: true,
+    fill?: boolean,
     fitContent?: true,
     gapSm?: true
     paddingSm?: true

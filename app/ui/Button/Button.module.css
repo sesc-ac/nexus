@@ -15,10 +15,10 @@
     transition: .25s;
     width: fit-content;
 
-    &.fill{ width: 100%; }
-
     &:disabled{
         background-color: var(--clr-neutral-40);
         cursor: not-allowed;
     }
+
+    &.fillWidth{ width: 100%; }
 }

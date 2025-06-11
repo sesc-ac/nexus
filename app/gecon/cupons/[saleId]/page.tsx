@@ -85,7 +85,7 @@ export default async function Page({
             <Aside>
                 <h2>Itens</h2>
                 <SaleList sale={ sale as SaleWithRelations }/>
-                <Button fill>Emitir Cupom</Button>
+                <Button fillWidth>Emitir Cupom</Button>
             </Aside>
         </>
     );
