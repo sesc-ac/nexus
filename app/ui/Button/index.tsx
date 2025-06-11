@@ -5,14 +5,14 @@ import downloadIcon from '@/public/icons/file_save.svg';
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     children: React.ReactNode,
-    fill?: true,
+    fillWidth?: true,
     variant?: 'download',
 };
 
-export function Button({ children, fill, variant, ...rest  }: ButtonProps) {
+export function Button({ children, fillWidth, variant, ...rest  }: ButtonProps) {
     const className = `
         ${styles.button}
-        ${fill ? styles.fill : ''}
+        ${fillWidth ? styles.fillWidth : ''}
     `;
 
     return(

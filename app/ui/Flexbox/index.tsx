@@ -7,6 +7,7 @@ type FlexboxProps = {
     alignStart?: true,
     children: ReactNode,
     column?: true,
+    fillWidth?: true,
     gapLg?: true,
     gapSm?: true,
     spaceBetween?: true
@@ -18,6 +19,7 @@ export default function Flexbox({
     alignStart,
     children, 
     column,
+    fillWidth,
     gapLg,
     gapSm,
     spaceBetween 
@@ -28,6 +30,7 @@ export default function Flexbox({
         ${alignEnd ? styles.alignEnd : ''}
         ${alignStart ? styles.alignStart : ''}
         ${column ? styles.column : ''}
+        ${fillWidth ? styles.fillWidth : ''}
         ${gapLg ? styles.gapLg : ''}
         ${gapSm ? styles.gapSm : ''}
         ${spaceBetween ? styles.spaceBetween : ''}

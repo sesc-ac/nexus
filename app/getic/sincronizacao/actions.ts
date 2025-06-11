@@ -1,11 +1,11 @@
-'use server'
+'use server';
 
 import { createSynchronization } from "@/app/data-access/synchronization";
-import { syncSalesData } from "@/app/lib/legacy-data-synchronization/syncData"
+import { syncSalesData } from "@/app/lib/legacy-data-synchronization/syncData";
 import { revalidatePath } from "next/cache";
 
 export async function initSynchronization(previousState: any, formData: FormData){
-    console.log('ACTION CREATE SYNCHRONIZATION');
+    console.log('INIT SYNCHRONIZATION ACTION');
 
     const initialDate = formData.get('initialDate') as string;
     const finalDate = formData.get('finalDate') as string;

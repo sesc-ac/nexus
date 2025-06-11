@@ -2,8 +2,11 @@
     background-color: var(--clr-neutral-90);
     border: none;
     border-radius: .25rem;
+    box-sizing: border-box;
     color: var(--clr-neutral-20);
     font-family: inherit;
     font-size: .875rem;
     padding: .75rem;
+
+    &.fillWidth{ width: 100%; }
 }

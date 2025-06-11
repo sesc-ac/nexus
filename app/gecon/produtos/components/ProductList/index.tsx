@@ -28,39 +28,106 @@ export default async function ProductList(){
 
                                 <p>{ product.description }</p>
 
-                                <Flexbox gapSm>
-                                    <Box fill paddingSm>
-                                        <Flexbox spaceBetween>
-                                            <p className="sm">COFINS</p>
+                                <Flexbox column>
+                                    <Flexbox fillWidth>
+                                        <Box fill={ product.ncm ? false : true } paddingSm>
+                                            <Flexbox spaceBetween>
+                                                <p className="sm">NCM</p>
 
-                                            <Image
-                                                alt="Situação do COFINS do produto"
-                                                src={ errorCircleIcon }
-                                            />
-                                        </Flexbox>
-                                    </Box>
+                                                {product.ncm ?   
+                                                        <p className="sm">{ product.ncm }</p>
+                                                    :
+                                                        <Image
+                                                            alt="Tarifa pendente de preenchimento"
+                                                            src={ errorCircleIcon }
+                                                            title="Tarifa pendente de preenchimento"
+                                                        />
+                                                }
+                                            </Flexbox>
+                                        </Box>
 
-                                    <Box fill paddingSm>
-                                        <Flexbox spaceBetween>
-                                            <p className="sm">ICMS</p>
+                                        <Box fill={ product.cfop ? false : true } paddingSm>
+                                            <Flexbox spaceBetween>
+                                                <p className="sm">CFOP</p>
 
-                                            <Image
-                                                alt="Situação do ICMS do produto"
-                                                src={ errorCircleIcon }
-                                            />
-                                        </Flexbox>
-                                    </Box>
+                                                {product.cfop ?   
+                                                        <p className="sm">{ product.cfop }</p>
+                                                    :
+                                                        <Image
+                                                            alt="Tarifa pendente de preenchimento"
+                                                            src={ errorCircleIcon }
+                                                            title="Tarifa pendente de preenchimento"
+                                                        />
+                                                }
+                                            </Flexbox>
+                                        </Box>
 
-                                    <Box fill paddingSm>
-                                        <Flexbox spaceBetween>
-                                            <p className="sm">PIS</p>
+                                        <Box fill={ product.cofinsCST ? false : true } paddingSm>
+                                            <Flexbox spaceBetween>
+                                                <p className="sm">CONFINS - CST</p>
 
-                                            <Image
-                                                alt="Situação do PIS do produto"
-                                                src={ errorCircleIcon }
-                                            />
-                                        </Flexbox>
-                                    </Box>
+                                                {product.cofinsCST ?   
+                                                        <p className="sm">{ product.cofinsCST }</p>
+                                                    :
+                                                        <Image
+                                                            alt="Tarifa pendente de preenchimento"
+                                                            src={ errorCircleIcon }
+                                                            title="Tarifa pendente de preenchimento"
+                                                        />
+                                                }
+                                            </Flexbox>
+                                        </Box>
+                                    </Flexbox>
+
+                                    <Flexbox fillWidth>
+                                        <Box fill={ product.pisCST ? false : true } paddingSm>
+                                            <Flexbox spaceBetween>
+                                                <p className="sm">PIS - CST</p>
+                                                
+                                                {product.pisCST ?   
+                                                        <p className="sm">{ product.pisCST }</p>
+                                                    :
+                                                        <Image
+                                                            alt="Tarifa pendente de preenchimento"
+                                                            src={ errorCircleIcon }
+                                                            title="Tarifa pendente de preenchimento"
+                                                        />
+                                                }
+                                            </Flexbox>
+                                        </Box>
+
+                                        <Box fill={ product.icmsCST ? false : true } paddingSm>
+                                            <Flexbox spaceBetween>
+                                                <p className="sm">ICMS - CST</p>
+
+                                                {product.icmsCST ?   
+                                                        <p className="sm">{ product.icmsCST }</p>
+                                                    :
+                                                        <Image
+                                                            alt="Tarifa pendente de preenchimento"
+                                                            src={ errorCircleIcon }
+                                                            title="Tarifa pendente de preenchimento"
+                                                        />
+                                                }
+                                            </Flexbox>
+                                        </Box>
+
+                                        <Box fill={ product.icmsCSOSN ? false : true } paddingSm>
+                                            <Flexbox spaceBetween>
+                                                <p className="sm">ICMS - CSOSN</p>
+
+                                                {product.icmsCSOSN ?   
+                                                        <p className="sm">{ product.icmsCSOSN }</p>
+                                                    :
+                                                        <Image
+                                                            alt="Tarifa pendente de preenchimento"
+                                                            src={ errorCircleIcon }
+                                                            title="Tarifa pendente de preenchimento"
+                                                        />
+                                                }
+                                            </Flexbox>
+                                        </Box>
+                                    </Flexbox>
                                 </Flexbox>
                             </Box>
                         </Link>
