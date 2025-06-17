@@ -1,10 +1,12 @@
- @keyframes openAnimation {
+/* GLOBAL CUSTOM ANIMATIONS */
+
+@keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 :root{
-  --header-height: 2.5rem;
+  --animation-fade-in: fadeIn ease-in;
 }
 
 html,
@@ -13,17 +15,12 @@ body{
 }
 
 body{
-  animation: openAnimation .15s;
-  animation-timing-function: ease-in;
+  /* animation: var(--animation-fade-in);
+  animation-duration: .25s; */
   color: var(--clr-neutral-20);
   display: flex;
   font-size: .875rem;
   font-weight: 600;
-}
-
-main{
-  flex-basis: 100%;
-  margin-left: 15rem;
 }
 
 /* TYPOGRAPHY GLOBALS */
@@ -58,7 +55,7 @@ label{
   /* --clr-blue: #004C99; */
   /* --clr-blue-dark: #003366; */
   /* --clr-blue-80: #99CCFF; */
-  --clr-blue-90: #CDE6FF;
+  /* --clr-blue-90: #CDE6FF; */
   /* --clr-blue-97: #F0F7FF; */
 
   --clr-neutral-10: #1A1A1A; 

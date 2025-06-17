@@ -1,0 +1,25 @@
+@keyframes topIn {
+    from { top: calc(var(--header-height) * -1); }
+    to { top: 0; }
+}
+
+.header{
+    align-items: center;
+    animation: topIn .25s linear;
+    background-color: var(--clr-neutral-10);
+    border-bottom: 4px solid var(--clr-yellow);
+    box-sizing: border-box;
+    display: flex;
+    height: var(--header-height);
+    justify-content: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    
+    .logo{
+        height: auto;
+        width: 2.25rem;
+    }
+}

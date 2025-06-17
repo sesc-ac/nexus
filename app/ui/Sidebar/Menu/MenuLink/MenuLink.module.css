@@ -16,4 +16,9 @@
     &.active{
         background-color: var(--clr-neutral-80);
     }
+
+    & img{
+        height: auto;
+        width: 1.25rem;
+    }
 }

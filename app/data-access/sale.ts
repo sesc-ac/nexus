@@ -2,7 +2,7 @@ import { Prisma, Sale } from "@prisma/client";
 import prisma from "../db";
 
 export async function findOrCreateSale(sale: Prisma.SaleCreateInput): Promise<[Sale, boolean]>{
-    console.log('FIND OR CREATE SALE DAL', sale);
+    console.log('DAL FIND OR CREATE SALE', sale);
 
     const existingSale = await prisma.sale.findFirst({
         where: {
@@ -21,7 +21,7 @@ export async function findOrCreateSale(sale: Prisma.SaleCreateInput): Promise<[S
 }
 
 export async function getSale(id: string): Promise<SaleWithRelations | null>{
-    console.log('GET SALE DAL', id);
+    console.log('DAL GET SALE', id);
 
     return await prisma.sale.findUnique({
         where: {
@@ -33,7 +33,7 @@ export async function getSale(id: string): Promise<SaleWithRelations | null>{
 }
 
 export async function getSalesByDateRange(initialDate: Date, finalDate: Date): Promise<SaleWithRelations[]> {
-    console.log('GET SALES BY RANGE DATE DAL', initialDate, finalDate);
+    console.log('DAL GET SALES BY RANGE DATE', initialDate, finalDate);
     return await prisma.sale.findMany({
         where: {
             date: {
@@ -48,7 +48,7 @@ export async function getSalesByDateRange(initialDate: Date, finalDate: Date): P
 }
 
 export async function getSalesTotals(initialDate: Date, finalDate: Date){
-    console.log('GET SALES TOTALS DAL');
+    console.log('DAL GET SALES TOTALS');
     
     return await prisma.sale.aggregate({
         _count: {

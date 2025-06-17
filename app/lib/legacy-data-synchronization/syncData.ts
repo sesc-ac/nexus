@@ -4,7 +4,7 @@ import { Product, Sale, SalePlace, Unit, CashierOperator, Customer, CustomerCate
 import { createProduct, getProductByLegacyId } from "../../data-access/product";
 import { findOrCreateSale } from "../../data-access/sale";
 import { createSaleItem } from "../../data-access/saleItem";
-import { parseLocaleNumber } from "../../_utils/dataFormat";
+import { parseLocaleNumber } from "../../utils/dataFormat";
 import { fetchedCashier, fetchedCashierOperator, fetchedCustomer, fetchedCustomerCategory, fetchedPaymentMethod, fetchedProduct, fetchedSale, fetchedSaleItem, fetchedSalePaymentMethod, fetchedSalePlace, fetchedUnit } from "./types";
 import { createUnit, getUnitByLegacyId } from "../../data-access/unit";
 import { createCashier, getCashierByLegacyId } from "../../data-access/cashier";

@@ -4,6 +4,7 @@ import profilePic from "@/public/erick.jpg";
 import Menu from "./Menu";
 import nexusLogo from "@/public/nexus.svg";
 import Flexbox from "../Flexbox";
+import Link from "next/link";
 
 export default function Sidebar(){
     return (
@@ -23,22 +24,25 @@ export default function Sidebar(){
             </div>
 
             <footer className={ styles.sidebar__footer }>
-                <Image
-                    alt="Logotipo do Nexus"
-                    className={ styles.logo }
-                    height={280}
-                    priority
-                    src={ nexusLogo }
-                    width={962}
-                />
+
+                <Link href='/'>
+                    <Image
+                        alt="Logotipo do Nexus"
+                        className={ styles.logo }
+                        height={280}
+                        priority
+                        src={ nexusLogo }
+                        width={962}
+                    />
+                </Link>
 
                 <Flexbox 
                     alignCenter
                     column 
                     gapSm 
                 >
-                    <a target="_blank" href="https://sescacre.com.br/"><p className="sm"><b>Departamento Regional do Acre</b></p></a>
-                    <a target="_blank" href="https://github.com/sesc-ac"><p className="sm clr-text-light"><b>Versão: ALFA</b></p></a>
+                    <Link target="_blank" href="https://sescacre.com.br/"><p className="sm"><b>Departamento Regional do Acre</b></p></Link>
+                    <Link target="_blank" href="https://github.com/sesc-ac"><p className="sm clr-text-light"><b>Versão: ALFA</b></p></Link>
                 </Flexbox>
             </footer>
         </aside>

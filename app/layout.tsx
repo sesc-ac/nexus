@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./reset.css";
 import "./globals.css";
-import Sidebar from "./ui/Sidebar";
 import { Inter } from 'next/font/google';
-import Header from "./ui/Header";
 
 export const metadata: Metadata = {
   title: "Nexus",
@@ -23,12 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={ inter.className }>
       <body>
-        <Header />
-        <Sidebar />
-        
-        <main>
-          {children}
-        </main>
+          { children }
       </body>
     </html>
   );

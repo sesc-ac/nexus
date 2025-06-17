@@ -1,0 +1,18 @@
+body:has(.main){
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    align-items: center;
+    animation: var(--animation-fade-in);
+    animation-duration: .25s;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nexusLogo{
+    height: 6rem;
+    width: auto;
+}
