@@ -2,13 +2,13 @@ import { Prisma, CashierOperator } from "@prisma/client";
 import prisma from "../db";
 
 export async function createCashierOperator(cashierOperator: Prisma.CashierOperatorCreateInput): Promise<CashierOperator>{
-    console.log('CREATE CASHIER OPERATOR DAL', cashierOperator);
+    console.log('DAL CREATE CASHIER OPERATOR', cashierOperator);
 
     return await prisma.cashierOperator.create({ data: cashierOperator });
 }
 
 export async function getCashierOperator(id: string): Promise<CashierOperator | null>{
-    console.log('GET CASHIER OPERATOR DAL', id);
+    console.log('DAL GET CASHIER OPERATOR', id);
 
     return await prisma.cashierOperator.findUnique({
         where: {
@@ -18,7 +18,7 @@ export async function getCashierOperator(id: string): Promise<CashierOperator | 
 }
 
 export async function getCashierOperatorByLegacyId(legacyId: number, legacyOriginDatabase: string): Promise<CashierOperator | null>{
-    console.log('GET CASHIER OPERATOR BY LEGACY ID DAL', legacyId);
+    console.log('DAL GET CASHIER OPERATOR BY LEGACY ID', legacyId);
 
     return await prisma.cashierOperator.findFirst({
         where: {

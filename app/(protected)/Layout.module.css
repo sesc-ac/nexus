@@ -1,0 +1,11 @@
+:root:has(.main){
+    --header-height: 2.5rem;
+}
+
+.main{
+    animation: var(--animation-fade-in);
+    animation-duration: .25s;
+    flex-basis: 100%;
+    margin-left: 15rem;
+    margin-top: var(--header-height);
+}
