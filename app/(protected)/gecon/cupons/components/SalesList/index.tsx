@@ -11,7 +11,7 @@ export default async function SalesList({
     initialDate, 
     finalDate,
 }: SalesListProps){
-    console.log('COMPONENT SALES LIST');
+    console.log('🧩 COMPONENT - SALES LIST');
 
     const sales = await getSalesByDateRange(initialDate, finalDate);
 

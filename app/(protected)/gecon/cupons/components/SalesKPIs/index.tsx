@@ -10,7 +10,7 @@ type SalesKPIsProps = {
 }
 
 export default async function SalesKPIs({ initialDate, finalDate }: SalesKPIsProps){
-    console.log('COMPONENT SALES KPIS');
+    console.log('🧩 COMPONENT - SALES KPIS');
     
     const totals = await getSalesTotals(initialDate, finalDate);
 

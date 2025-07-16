@@ -9,7 +9,7 @@ export default async function SaleList({
 }: {
     sale: SaleWithRelations
 }){
-    console.log('COMPONENT SALE LIST');
+    console.log('🧩 COMPONENT - SALE LIST');
 
     return (
         <ul className={ styles.saleList }>

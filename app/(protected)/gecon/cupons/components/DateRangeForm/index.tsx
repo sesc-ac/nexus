@@ -13,7 +13,7 @@ export default function DateRangeForm({
     initialDate,
     finalDate
 }: DateRangeFormProps){
-    console.log('COMPONENT DATE RANGE FORM');
+    console.log('🧩 COMPONENT - DATE RANGE FORM');
     return (
         <Box 
             fill

@@ -5,6 +5,8 @@ import SyncForm from "./components/SyncForm";
 import SyncList from './components/SyncList';
 
 export default async function Page(){
+    console.log('📄 PAGE - SINCRONIZACAO');
+    
     return (
         <>
             <PageTitle

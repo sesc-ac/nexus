@@ -14,7 +14,7 @@ export default function SaleListItem({
     quantity: number,
     value: Decimal
 }){
-    console.log('COMPONENT SALE LIST ITEM');
+    console.log('🧩 COMPONENT - SALE LIST ITEM');
     
     return(
         <li>
