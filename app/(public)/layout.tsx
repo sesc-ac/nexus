@@ -8,6 +8,8 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>){
+    console.log('🌱 LAYOUT - PUBLIC');
+
     return (
         <main className={ styles.main }>
             <Flexbox alignCenter column>

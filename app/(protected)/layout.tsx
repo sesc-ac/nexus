@@ -7,14 +7,16 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>){
-    return (
-        <>
-            <ProtectedHeader />
-            <Sidebar />
-            
-            <main className={ styles.main }>
-                { children }
-            </main>
-        </>
-    );
+  console.log('🌱 LAYOUT - PROTECTED');
+
+  return (
+      <>
+          <ProtectedHeader />
+          <Sidebar />
+          
+          <main className={ styles.main }>
+              { children }
+          </main>
+      </>
+  );
 }

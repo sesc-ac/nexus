@@ -4,7 +4,7 @@ import { updateProduct } from "@/app/data-access/product";
 import { revalidatePath } from "next/cache";
 
 export async function updateProductAction(formData: FormData){
-    console.log('ACTION UPDATE PRODUCT');
+    console.log('🔁 ACTION - UPDATE PRODUCT');
 
     const productId = formData.get('productId') as string;
 

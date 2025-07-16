@@ -11,7 +11,7 @@ export default async function Page({
 }: {
     params: Promise<{ productId: string }>
 }){
-    console.log('PAGE [PRODUCT ID]');
+    console.log('📄 PAGE - [PRODUCT ID]');
 
     const { productId } = await params;
 

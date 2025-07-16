@@ -5,7 +5,7 @@ import { syncSalesData } from "@/app/lib/legacy-data-synchronization/syncData";
 import { revalidatePath } from "next/cache";
 
 export async function initSynchronization(previousState: any, formData: FormData){
-    console.log('ACTION INIT SYNCHRONIZATION');
+    console.log('🔁 ACTION - INIT SYNCHRONIZATION');
 
     const initialDate = formData.get('initialDate') as string;
     const finalDate = formData.get('finalDate') as string;

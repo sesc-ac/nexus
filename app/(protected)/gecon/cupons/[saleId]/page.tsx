@@ -10,13 +10,14 @@ import calendarIcon from '@/public/icons/calendar_month.svg';
 import Box from "@/app/ui/Box";
 import Aside from "@/app/ui/Aside";
 import SaleList from "./components/SaleList";
+import EmitSaleForm from "./components/SaleList/EmitSaleForm";
 
 export default async function Page({
     params
 }: {
     params: Promise<{ saleId: string }>
 }){
-    console.log('PAGE [SALE ID]');
+    console.log('📄 PAGE - [SALE ID]');
 
     const { saleId } = await params;
 
@@ -85,7 +86,7 @@ export default async function Page({
             <Aside>
                 <h2>Itens</h2>
                 <SaleList sale={ sale as SaleWithRelations }/>
-                <Button fillWidth>Emitir Cupom</Button>
+                <EmitSaleForm saleId={ sale?.id as string } />
             </Aside>
         </>
     );

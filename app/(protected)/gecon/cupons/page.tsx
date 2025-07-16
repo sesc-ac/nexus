@@ -8,7 +8,7 @@ export default async function Page({
 }: {
     searchParams: Promise<{ [key: string]: string | string[] | undefined  }>
 }){
-    console.log('PAGE CUPONS');
+    console.log('📄 PAGE - CUPONS');
 
     const { 
         initialDate = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0],

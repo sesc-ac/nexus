@@ -6,6 +6,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log('🌱 LAYOUT - CUPONS');
+  
   return (
     <>
       <PageTitle
