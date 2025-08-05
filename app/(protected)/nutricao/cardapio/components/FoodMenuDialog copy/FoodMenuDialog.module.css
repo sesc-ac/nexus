@@ -1,0 +1,46 @@
+.dialog[open]{
+   background-color: var(--clr-blue-97);
+   border: none;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   /* gap: 1.5rem; */
+   /* height: 100%; */
+   /* margin-top: var(--header-height); */
+   /* padding-inline: 1rem; */
+   top: 0;
+   width: 100%;
+   z-index: 1;
+
+   .header{
+      align-items: center;
+      background-color: var(--clr-white);
+      border-bottom: 4px solid var(--clr-blue);
+      display: flex;
+      justify-content: space-between;
+      padding-block: .5rem;
+      padding-inline: 2rem;
+      /* & img{
+         height: auto;
+         width: 2rem;
+      }
+
+      & h2{
+         font-size: 2rem;
+      } */
+   }
+
+   & > *{
+      padding: 2rem;
+   }
+
+   .foodMenuCategory{
+      background-color: var(--clr-white);
+      border-radius: .25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      width: 100%;
+   }
+}

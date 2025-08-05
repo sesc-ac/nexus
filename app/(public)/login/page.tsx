@@ -1,5 +1,5 @@
 import { Button } from "@/app/ui/Button";
-import Input from "@/app/ui/Input";
+import { Input } from "@/app/ui/Input";
 import Form from "next/form";
 
 export default function Page() {

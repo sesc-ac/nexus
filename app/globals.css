@@ -7,6 +7,7 @@
 
 :root{
   --animation-fade-in: fadeIn ease-in;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -52,11 +53,11 @@ label{
 /* COLORS GLOBALS */
 
 :root{
-  /* --clr-blue: #004C99; */
+  --clr-blue: hsl(210, 100%, 30%);
   /* --clr-blue-dark: #003366; */
   /* --clr-blue-80: #99CCFF; */
   /* --clr-blue-90: #CDE6FF; */
-  /* --clr-blue-97: #F0F7FF; */
+  --clr-blue-97: hsl(210, 100%, 97%);
 
   --clr-neutral-10: #1A1A1A; 
   --clr-neutral-20: #333333; 

@@ -2,7 +2,7 @@ import { getProduct } from "@/app/data-access/product";
 import Box from "@/app/ui/Box";
 import { Button } from "@/app/ui/Button";
 import Flexbox from "@/app/ui/Flexbox";
-import Input from "@/app/ui/Input";
+import { Input } from "@/app/ui/Input";
 import Form from "next/form";
 import { updateProductAction } from "./actions";
 

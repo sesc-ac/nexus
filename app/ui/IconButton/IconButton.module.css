@@ -12,5 +12,15 @@
     
     &.lg{ 
         width: 2.25rem;
-    } 
+
+        & .icon{
+            height: auto;
+            width: 1.25rem;
+        }
+    }
+
+    & .icon{
+        height: auto;
+        width: .875rem;
+    }
 }

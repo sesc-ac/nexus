@@ -1,0 +1,28 @@
+.table{
+    border-collapse: separate;
+    border-spacing: 0 .5rem;
+
+    & th{
+        border-bottom: var(--default-border);
+        padding-bottom: .5rem;
+        padding-inline: 1rem;
+        text-align: left;
+    }
+
+    & td{
+        background-color: var(--clr-neutral-97);
+        padding: 1rem;
+        vertical-align: middle;
+
+        &:first-child{
+            border-bottom-left-radius: .25rem;
+            border-left: .25rem solid var(--clr-neutral-20);
+            border-top-left-radius: .25rem;
+        }
+
+        &:last-child{
+            border-bottom-right-radius: .25rem;
+            border-top-right-radius: .25rem;
+        }
+    }
+}
