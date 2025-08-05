@@ -45,3 +45,7 @@ a{
 	color: inherit;
 	text-decoration: none;
 }
+dialog{
+	color: inherit;
+	padding: 0;
+}

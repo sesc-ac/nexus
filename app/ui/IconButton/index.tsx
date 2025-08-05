@@ -2,9 +2,11 @@ import Image from 'next/image';
 import styles from './IconButton.module.css';
 import openPanelIcon from '@/public/icons/right_panel_open.svg';
 import closePanelIcon from '@/public/icons/right_panel_close.svg';
+import editIcon from '@/public/icons/edit.svg';
+import deleteIcon from '@/public/icons/delete.svg';
 
 type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    icon: 'openPanel' | 'closePanel',
+    icon: 'closePanel' | 'delete' | 'edit' | 'openPanel',
     size?: 'lg',
 };
 
@@ -16,12 +18,19 @@ export default function IconButton({ icon, size, ...rest  }: IconButtonProps) {
     let srcIcon = '';
     
     switch(icon) {
-        case 'openPanel':
-            srcIcon = openPanelIcon;
-            break;
-        
         case 'closePanel':
             srcIcon = closePanelIcon;
+            break;
+        case 'delete':
+            srcIcon = deleteIcon;
+            break;
+
+        case 'edit':
+            srcIcon = editIcon;
+            break;
+            
+        case 'openPanel':
+            srcIcon = openPanelIcon;
             break;
     }
 
@@ -32,6 +41,7 @@ export default function IconButton({ icon, size, ...rest  }: IconButtonProps) {
         >
             <Image 
                 alt="Botão com ícone"
+                className={ styles.icon }
                 src={ srcIcon }
             />
         </button>

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import './Aside.css';
+import styles from './Aside.module.css';
 
 export default function Aside({
     children,
@@ -8,8 +8,8 @@ export default function Aside({
 }){
     const open = true;
     const className = `
-        aside
-        ${ open ? 'open' : '' }
+        ${ styles.aside }
+        ${ open ? styles.open : '' }
     `;
 
     // const router = useRouter();

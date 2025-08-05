@@ -68,6 +68,19 @@ model CustomerCategory {
   @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }
 
+model FoodMenuProduct {
+  id String @id @default(cuid())
+
+  category         String
+  comerciarioPrice Decimal @db.Decimal(12, 2)
+  conveniadoPrice  Decimal @db.Decimal(12, 2)
+  description      String?
+  empresarioPrice  Decimal @db.Decimal(12, 2)
+  name             String
+  publicoPrice     Decimal @db.Decimal(12, 2)
+  visible          Boolean @default(false)
+}
+
 model PaymentMethod {
   id String @id @default(cuid())
 

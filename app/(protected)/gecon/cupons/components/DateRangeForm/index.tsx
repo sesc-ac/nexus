@@ -1,6 +1,6 @@
 import Form from "next/form";
 import { Button } from "@/app/ui/Button";
-import Input from "@/app/ui/Input";
+import { Input } from "@/app/ui/Input";
 import Flexbox from "@/app/ui/Flexbox";
 import Box from "@/app/ui/Box";
 

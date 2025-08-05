@@ -1,0 +1,88 @@
+.dialog[open]{
+   animation: var(--animation-fade-in);
+   animation-duration: .25s;
+   background-image: linear-gradient(90deg, hsl(210, 100%, 30%), hsl(210, 100%, 40%));
+   border: none;
+   box-sizing: border-box;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin: 0;
+   min-height: 100%;
+   max-width: 100%;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1;
+
+   .foodMenuCategory{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: fit-content;
+      padding: 2rem;
+
+      & h3{
+         font-size: 2rem;
+         text-align: center;
+      }
+   
+      color: white;
+      
+      .foodTable thead tr{
+         background-color: hsl(210, 100%, 20%);
+      }
+
+      .foodTable tbody tr{
+         background-color: hsla(210, 100%, 20%, 50%);
+
+         &:is(:nth-child(odd)){
+            background-color: transparent;
+         }
+      }
+   }
+   
+
+   .foodTable{
+      width: 100%;
+
+      & th, & td{
+         font-size: 1rem;
+         font-weight: 400;
+         padding-block: .75rem;
+         padding-inline: 1rem;
+         text-align: left;
+      }
+   }
+
+   .floatingButton{
+      background-color: var(--clr-white);
+      border-radius: .5rem;
+      bottom: 2rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      left: 2rem;
+      padding: 1.25rem;
+      position: fixed;
+      transition: .25s;
+      transition-property: background-color;
+      width: calc(50% - 4rem);
+
+      &:hover{
+         background-color: var(--clr-neutral-80);
+      }
+
+      & img{
+         height: auto;
+         width: 6rem;
+      }
+
+      & h2{
+         color: hsl(210, 100%, 30%);
+         font-size: 3rem;
+         font-weight: 800;
+      }
+   }
+}

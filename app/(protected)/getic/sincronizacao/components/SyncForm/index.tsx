@@ -4,7 +4,7 @@ import { useActionState } from "react";
 import { initSynchronization } from "../../actions";
 import Form from "next/form";
 import Flexbox from "@/app/ui/Flexbox";
-import Input from "@/app/ui/Input";
+import { Input } from "@/app/ui/Input";
 import { Button } from "@/app/ui/Button";
 
 export default function SyncForm(){
@@ -40,7 +40,6 @@ export default function SyncForm(){
                         { isPending ? 'Sincronizando dados legados...' : 'Iniciar Sincronização' }
                     </Button>
                 </Flexbox>
-    
             </Flexbox>
         </Form> 
     );
