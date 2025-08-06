@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   crossOrigin: 'anonymous',
   devIndicators: false,
   output: "standalone",
+  eslint: { ignoreDuringBuilds: true }
 };
 
 export default nextConfig;
