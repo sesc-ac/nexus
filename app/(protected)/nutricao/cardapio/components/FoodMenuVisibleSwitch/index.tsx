@@ -2,8 +2,6 @@
 
 import Flexbox from "@/app/ui/Flexbox";
 import RadioInput from "@/app/ui/RadioInput";
-import Form from "next/form";
-import { useRef } from "react";
 import { switchFoodMenuProductVisibleAction } from "../../actions";
 
 export default function FoodMenuVisibleSwitch({
@@ -13,12 +11,6 @@ export default function FoodMenuVisibleSwitch({
     productId: string,
     productVisible: boolean
 }){
-    const formRef = useRef<HTMLFormElement>(null);
-
-    function handleClick(){
-        console.log('HANDLE');
-        formRef.current?.requestSubmit();
-    }
 
     return (
         <>
