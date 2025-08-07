@@ -9,6 +9,7 @@ ENV DATABASE_URL=$DATABASE_URL
 
 RUN npm install
 RUN npx prisma generate
+# RUN npx prisma migrate deploy 
 # RUN npm run build
 
 # PRODUCTION
@@ -24,4 +25,4 @@ RUN npm install --omit=dev
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "npm run build && npm start"]
+CMD ["sh", "-c", "npx prisma db push && npm run build && npm start"]
