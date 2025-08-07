@@ -1,0 +1,24 @@
+# NODE
+node_modules
+npm-debug.log
+
+# ENV
+.env
+.env.*
+
+# LOG
+*.log
+.next
+.prisma/migrations
+.prisma/client
+
+# IDE
+.vscode
+.idea
+
+# DOCKER / GIT
+Dockerfile
+docker-compose.yml
+.dockerignore
+.git
+.gitignore

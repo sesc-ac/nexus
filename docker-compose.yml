@@ -1,0 +1,34 @@
+services:
+  app: 
+    build: 
+      context: .
+      args:
+        DATABASE_URL: ${DATABASE_URL}
+    container_name: nexus-web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - dokploy
+
+  db:
+    image: postgres:15
+    container_name: nexus-db
+    restart: always
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - dokploy
+
+volumes:
+  postgres_data:
+
+networks:
+  dokploy:
