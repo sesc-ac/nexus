@@ -6,10 +6,15 @@ import downloadIcon from '@/public/icons/file_save.svg';
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     children: React.ReactNode,
     fillWidth?: true,
-    variant?: 'download',
+    // icon?: 'download',
 };
 
-export function Button({ children, fillWidth, variant, ...rest  }: ButtonProps) {
+export function Button({ 
+    children, 
+    fillWidth, 
+    // icon,
+    ...rest  
+}: ButtonProps) {
     const className = `
         ${styles.button}
         ${fillWidth ? styles.fillWidth : ''}
@@ -20,10 +25,10 @@ export function Button({ children, fillWidth, variant, ...rest  }: ButtonProps) 
             className={ className }
             { ...rest }
         >   
-            {variant === 'download' && <Image
+            {/* {icon === 'download' && <Image
                 src={ downloadIcon }
                 alt="Download"
-            />}
+            />} */}
 
             { children }
         </button>

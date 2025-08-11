@@ -1,0 +1,39 @@
+.foodTable{
+    width: 100%;
+
+    & tbody tr:is(:nth-child(even)){
+        background-color: var(--clr-neutral-90);
+    }
+
+    & th, & td{
+        padding: .5rem;
+        text-align: left;
+        vertical-align: middle;
+
+        &:is(:first-child){
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+        }
+
+        &:is(:last-child){
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+        }
+
+        &:not(:first-child){
+            text-align: right;
+        }
+    }
+
+    & td{
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    & th{
+        background-color: var(--clr-neutral-80);
+        font-size: 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+}

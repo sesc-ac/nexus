@@ -37,9 +37,13 @@ b{font-weight: 700;}
 
 .sm{font-size: .75rem;}
 
+.normal{font-size: .875rem;}
+
 .md{font-size: 1rem;}
 
 .lg{font-size: 1.25rem;}
+
+.upper{text-transform: uppercase;}
 
 /* .clr-text-blue{color: var(--clr-blue-dark);} */
 
@@ -53,11 +57,11 @@ label{
 /* COLORS GLOBALS */
 
 :root{
-  --clr-blue: hsl(210, 100%, 30%);
+  /* --clr-blue: hsl(210, 100%, 30%);    */
   /* --clr-blue-dark: #003366; */
   /* --clr-blue-80: #99CCFF; */
   /* --clr-blue-90: #CDE6FF; */
-  --clr-blue-97: hsl(210, 100%, 97%);
+  /* --clr-blue-97: hsl(210, 100%, 97%); */
 
   --clr-neutral-10: #1A1A1A; 
   --clr-neutral-20: #333333; 

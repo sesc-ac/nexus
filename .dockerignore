@@ -22,3 +22,7 @@ docker-compose.yml
 .dockerignore
 .git
 .gitignore
+
+# APP
+app/(protected)/gecon
+app/(protected)/getic

@@ -6,6 +6,10 @@ import FoodMenuDialog from "./components/FoodMenuDialog";
 import FoodMenuTable from "./components/FoodMenuTable";
 import { getFoodMenuProduct } from "@/app/data-access/foodMenuProduct";
 import FoodMenuForm from "./components/FoodMenuForm";
+import Link from "next/link";
+import { Button } from "@/app/ui/Button";
+import Image from "next/image";
+import menuBookScreenIcon from "@/public/icons/menu_book_screen.svg"
 
 export default async function Page({
     searchParams,
@@ -32,7 +36,16 @@ export default async function Page({
                 <Flexbox spaceBetween>
                     <h2>Produtos ({ foodMenuProducts.length })</h2>
 
-                    <FoodMenuDialog foodMenuProductsJSON={ JSON.stringify(foodMenuProducts) } />
+                    <Link href="/nutricao/cardapio/visualizacao">
+                        <Button>
+                            <Image
+                                alt="Modo de visualização do cardápio"
+                                src={ menuBookScreenIcon }
+                            />
+
+                            Visualização
+                        </Button>
+                    </Link>
                 </Flexbox>
 
                 <FoodMenuTable foodMenuProducts={ foodMenuProducts }/>

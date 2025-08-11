@@ -1,6 +1,6 @@
 import ProtectedHeader from "../ui/ProtectedHeader";
 import Sidebar from "../ui/Sidebar";
-import styles from './Layout.module.css';
+import styles from './layout.module.css';
 
 export default function Layout({
   children,

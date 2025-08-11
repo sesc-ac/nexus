@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import nexusLogo from '@/public/nexus.svg';
 import Flexbox from '../ui/Flexbox';
-import styles from './Layout.module.css';
+import styles from './layout.module.css';
 
 export default function Layout({
   children,
@@ -19,7 +19,7 @@ export default function Layout({
                     src={ nexusLogo }
                 />
 
-                <p className="lg clr-text-light"><b>Versão: ALFA</b></p>
+                <p className="md clr-text-light"><b>Versão: BETA</b></p>
             </Flexbox>
 
             { children }

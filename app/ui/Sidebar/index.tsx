@@ -9,30 +9,27 @@ import Link from "next/link";
 export default function Sidebar(){
     return (
         <aside className={ styles.sidebar }>
-            <div className={ styles.sidebar__container }>
-                <div className={ styles.user__container }>
-                    <Image
+            <main className={ styles.content }>
+                <div className={ styles.user }>
+                    {/* <Image
                         alt="Foto de perfil"
-                        className={ styles.user__photo }
+                        className={ styles.userAvatar }
                         src={ profilePic }
-                    />
+                    /> */}
+                    <div className={ styles.userAvatar }></div>
 
-                    <p className={ styles.user__name }>Érick Fernandes</p>
+                    <p>Usuário</p>
                 </div>
 
                 <Menu />
-            </div>
+            </main>
 
-            <footer className={ styles.sidebar__footer }>
-
+            <footer className={ styles.footer }>
                 <Link href='/'>
                     <Image
                         alt="Logotipo do Nexus"
                         className={ styles.logo }
-                        height={280}
-                        priority
                         src={ nexusLogo }
-                        width={962}
                     />
                 </Link>
 
@@ -42,7 +39,7 @@ export default function Sidebar(){
                     gapSm 
                 >
                     <Link target="_blank" href="https://sescacre.com.br/"><p className="sm"><b>Departamento Regional do Acre</b></p></Link>
-                    <Link target="_blank" href="https://github.com/sesc-ac"><p className="sm clr-text-light"><b>Versão: ALFA</b></p></Link>
+                    <Link target="_blank" href="https://github.com/sesc-ac"><p className="sm clr-text-light"><b>Versão: BETA</b></p></Link>
                 </Flexbox>
             </footer>
         </aside>

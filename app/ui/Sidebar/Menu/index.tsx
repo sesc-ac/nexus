@@ -19,7 +19,7 @@ export default function Menu(){
 
             {moduleGroups.map((group) => (
                 <Fragment key={ group.name }>
-                    <p className={ styles.menu__group }>{ group.name }</p>
+                    <p className="sm upper clr-text-light"><b>{ group.name }</b></p>
 
                     {modules.filter((link) => link.group === group.name).map((link) => (
                         <MenuLink

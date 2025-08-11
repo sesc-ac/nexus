@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Água Mineral com Gás 500 ml",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 2.5,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.0,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Água Mineral sem Gás 500 ml",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 2.0,
+    "conveniadoPrice": 2.8,
+    "empresarioPrice": 2.4,
+    "publicoPrice": 3.0,
+    "visible": true
+  },
+  {
+    "name": "Baixaria (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 8.8,
+    "conveniadoPrice": 9.5,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Bebida Isotônica 500 ml",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 7.0,
+    "conveniadoPrice": 9.8,
+    "empresarioPrice": 8.4,
+    "publicoPrice": 10.5,
+    "visible": true
+  },
+  {
+    "name": "Bolo (ft)",
+    "description": "",
+    "category": "Sobremesas",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.5,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Café com Leite 180 ml",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 2.0,
+    "conveniadoPrice": 2.5,
+    "empresarioPrice": 2.2,
+    "publicoPrice": 3.0,
+    "visible": true
+  },
+  {
+    "name": "Café sem Leite 180 ml",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 1.2,
+    "conveniadoPrice": 1.8,
+    "empresarioPrice": 1.5,
+    "publicoPrice": 2.0,
+    "visible": true
+  },
+  {
+    "name": "Charuto (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 4.5,
+    "empresarioPrice": 4.3,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Coxinha de Frango",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 3.5,
+    "conveniadoPrice": 4.0,
+    "empresarioPrice": 3.75,
+    "publicoPrice": 4.25,
+    "visible": true
+  },
+  {
+    "name": "Creme (200 ml) (und)",
+    "description": "",
+    "category": "Sobremesas",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.5,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Energético (lt)",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 12.0,
+    "conveniadoPrice": 16.8,
+    "empresarioPrice": 14.4,
+    "publicoPrice": 18.0,
+    "visible": true
+  },
+  {
+    "name": "Lasanha (ft)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 4.5,
+    "empresarioPrice": 4.3,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Mingau de Banana (tapioca) 300 ml",
+    "description": "",
+    "category": "Sobremesas",
+    "comerciarioPrice": 3.8,
+    "conveniadoPrice": 4.5,
+    "empresarioPrice": 4.0,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Misto Quente (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.5,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Panqueca (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 4.5,
+    "empresarioPrice": 4.3,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Pão de Queijo",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.5,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Pão Frances c/ Queijo",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 2.8,
+    "conveniadoPrice": 3.0,
+    "empresarioPrice": 2.9,
+    "publicoPrice": 3.8,
+    "visible": true
+  },
+  {
+    "name": "Pão Frances c/ Recheio",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.5,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Pão Frances c/ Manteiga",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 1.3,
+    "conveniadoPrice": 1.9,
+    "empresarioPrice": 1.7,
+    "publicoPrice": 2.0,
+    "visible": true
+  },
+  {
+    "name": "Pão Francês c/ Ovo (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 2.5,
+    "conveniadoPrice": 2.7,
+    "empresarioPrice": 2.6,
+    "publicoPrice": 3.0,
+    "visible": true
+  },
+  {
+    "name": "Pote Plástico 500 ml (und)",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 1.0,
+    "conveniadoPrice": 1.0,
+    "empresarioPrice": 1.0,
+    "publicoPrice": 1.0,
+    "visible": true
+  },
+  {
+    "name": "Pudim (ft)",
+    "description": "",
+    "category": "Sobremesas",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.7,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Quibe de Arroz",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 4.5,
+    "empresarioPrice": 4.5,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante (lt)",
+    "description": "Fanta Laranja | Fanta Uva | Guaraná | Coca Cola",
+    "category": "Bebidas",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 5.6,
+    "empresarioPrice": 4.8,
+    "publicoPrice": 6.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante - Fanta Uva de 2L",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 11.0,
+    "conveniadoPrice": 14.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 14.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante 350 ml",
+    "description": "Schweppes | Sprite",
+    "category": "Bebidas",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 6.6,
+    "empresarioPrice": 5.8,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Salada de Frutas 300ml",
+    "description": "",
+    "category": "Sobremesas",
+    "comerciarioPrice": 4.5,
+    "conveniadoPrice": 4.8,
+    "empresarioPrice": 4.7,
+    "publicoPrice": 5.5,
+    "visible": true
+  },
+  {
+    "name": "Salgado de Forno (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 3.5,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.7,
+    "publicoPrice": 4.3,
+    "visible": true
+  },
+  {
+    "name": "Sanduíche (und)",
+    "description": "Americano | Natural",
+    "category": "Lanches",
+    "comerciarioPrice": 3.5,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.7,
+    "publicoPrice": 4.3,
+    "visible": true
+  },
+  {
+    "name": "Sopa (porção)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 5.5,
+    "empresarioPrice": 4.5,
+    "publicoPrice": 6.0,
+    "visible": true
+  },
+  {
+    "name": "Suco 300 ml",
+    "description": "Com Leite | Sem Leite",
+    "category": "Bebidas",
+    "comerciarioPrice": 2.8,
+    "conveniadoPrice": 3.2,
+    "empresarioPrice": 3.0,
+    "publicoPrice": 3.5,
+    "visible": true
+  },
+  {
+    "name": "Suco Natural 300 ml",
+    "description": "",
+    "category": "Bebidas",
+    "comerciarioPrice": 3.0,
+    "conveniadoPrice": 3.5,
+    "empresarioPrice": 3.5,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Tapioca (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.5,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Tapioca Recheada (und)",
+    "description": "",
+    "category": "Lanches",
+    "comerciarioPrice": 4.4,
+    "conveniadoPrice": 5.0,
+    "empresarioPrice": 4.7,
+    "publicoPrice": 5.5,
+    "visible": true
+  },
+  {
+    "name": "Torta (ft)",
+    "description": "",
+    "category": "Sobremesas",
+    "comerciarioPrice": 3.3,
+    "conveniadoPrice": 3.8,
+    "empresarioPrice": 3.7,
+    "publicoPrice": 4.0,
+    "visible": true
+  }
+]
