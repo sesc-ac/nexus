@@ -15,7 +15,8 @@ export default function MenuTable({
     const intervalRef = useRef<number | number>(null);
 
     async function fetchProducts(){
-        console.log('💿 FETCH PRODUCTS')
+        console.log('💿 FETCH PRODUCTS');
+
         const res = await fetch('/nutricao/cardapio/visualizacao/api', { cache: 'no-store' });
 
         if (!res.ok) throw new Error("fetch failed");
@@ -25,6 +26,7 @@ export default function MenuTable({
     }
 
     useEffect(() => {
+        console.log('🧩 COMPONENT EFFECT');
         function handleVisibility(){
             if(document.visibilityState === 'visible') fetchProducts();
         }
@@ -33,7 +35,14 @@ export default function MenuTable({
 
         intervalRef.current = window.setInterval(fetchProducts, 2000);
 
-        return () => document.removeEventListener('visibilitychange', handleVisibility);
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibility);
+
+            if(intervalRef.current){
+                clearInterval(intervalRef.current);
+                intervalRef.current = null;
+            }
+        }
     }, []);
     
 
