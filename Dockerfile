@@ -25,4 +25,4 @@ RUN npm install --omit=dev
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "npx prisma migrate deploy && npm run build && npm start"]
+CMD ["sh", "-c", "npx prisma db push && npm run build && npm start"]
