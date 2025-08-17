@@ -36,7 +36,7 @@ export default async function Page({
                 <Flexbox spaceBetween>
                     <h2>Produtos ({ foodMenuProducts.length })</h2>
 
-                    <Link href="/nutricao/cardapio/visualizacao">
+                    <Link href="/nutricao/cardapio/visualizacao" target="_blank">
                         <Button>
                             <Image
                                 alt="Modo de visualização do cardápio"

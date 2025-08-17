@@ -52,9 +52,7 @@ export default function MenuTable({
                 <tr>
                     <th>Item</th>
                     <th>Comericário</th>
-                    <th>Conveniado</th>
-                    <th>Empresário</th>
-                    <th>Público Geral</th>
+                    <th>Demais Categorias</th>
                 </tr>
             </thead>
 
@@ -69,8 +67,8 @@ export default function MenuTable({
                         </td>
 
                         <td className={ styles.priceColumn }>{ valueToCurrency(product.comerciarioPrice) }</td>
-                        <td className={ styles.priceColumn }>{ valueToCurrency(product.conveniadoPrice) }</td>
-                        <td className={ styles.priceColumn }>{ valueToCurrency(product.empresarioPrice) }</td>
+                        {/* <td className={ styles.priceColumn }>{ valueToCurrency(product.conveniadoPrice) }</td> */}
+                        {/* <td className={ styles.priceColumn }>{ valueToCurrency(product.empresarioPrice) }</td> */}
                         <td className={ styles.priceColumn }>{ valueToCurrency(product.publicoPrice) }</td>
                     </tr>
                 ))}

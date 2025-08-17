@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import lanchoneteData from './json/nutricao.json';
+import lanchoneteData from './json/lanchonete.json';
 
 const prisma = new PrismaClient();
 

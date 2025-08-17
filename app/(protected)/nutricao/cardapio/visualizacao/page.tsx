@@ -22,7 +22,9 @@ export default async function Page(){
                     <h3>Bebidas</h3>
 
                     <MenuTable category="Bebidas"/>
+                </div>
 
+                <div className={ styles.foodMenuCategory }>
                     <h3>Sobremesas</h3>
 
                     <MenuTable category="Sobremesas"/>

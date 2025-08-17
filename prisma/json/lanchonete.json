@@ -1,0 +1,622 @@
+[
+  {
+    "name": "Baixaria Und",
+    "description": "Baixaria Und",
+    "category": "Lanches",
+    "comerciarioPrice": 12.0,
+    "conveniadoPrice": 16.0,
+    "empresarioPrice": 16.0,
+    "publicoPrice": 16.0,
+    "visible": true
+  },
+  {
+    "name": "Batata Frita - 200g",
+    "description": "Batata Frita - 200g",
+    "category": "Lanches",
+    "comerciarioPrice": 10.0,
+    "conveniadoPrice": 18.0,
+    "empresarioPrice": 18.0,
+    "publicoPrice": 18.0,
+    "visible": true
+  },
+  {
+    "name": "Bolo - Simples",
+    "description": "Bolo - Simples",
+    "category": "Sobremesas",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.5,
+    "empresarioPrice": 7.5,
+    "publicoPrice": 7.5,
+    "visible": true
+  },
+  {
+    "name": "Bolo - Confeitado",
+    "description": "Bolo - Confeitado",
+    "category": "Sobremesas",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Cachorro Quente",
+    "description": "Cachorro Quente",
+    "category": "Lanches",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Calabresa Acebolada - 200g",
+    "description": "Calabresa Acebolada - 200g",
+    "category": "Lanches",
+    "comerciarioPrice": 18.0,
+    "conveniadoPrice": 25.0,
+    "empresarioPrice": 25.0,
+    "publicoPrice": 25.0,
+    "visible": true
+  },
+  {
+    "name": "Charuto - Und",
+    "description": "Charuto - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 10.0,
+    "conveniadoPrice": 15.0,
+    "empresarioPrice": 15.0,
+    "publicoPrice": 15.0,
+    "visible": true
+  },
+  {
+    "name": "Coxinha da Asa - 200g",
+    "description": "Coxinha da Asa - 200g",
+    "category": "Lanches",
+    "comerciarioPrice": 15.0,
+    "conveniadoPrice": 23.0,
+    "empresarioPrice": 23.0,
+    "publicoPrice": 23.0,
+    "visible": true
+  },
+  {
+    "name": "Coxinha de Frango",
+    "description": "Coxinha de Frango",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Hambúrguer",
+    "description": "Hambúrguer",
+    "category": "Lanches",
+    "comerciarioPrice": 10.0,
+    "conveniadoPrice": 15.0,
+    "empresarioPrice": 15.0,
+    "publicoPrice": 15.0,
+    "visible": true
+  },
+  {
+    "name": "Lasanha - CARNE",
+    "description": "Lasanha - CARNE",
+    "category": "Lanches",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Lasanha - FRANGO",
+    "description": "Lasanha - FRANGO",
+    "category": "Lanches",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Mingau Cp 300ml",
+    "description": "Mingau Cp 300ml",
+    "category": "Sobremesas",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Mingau (Mungunzá) - Cp 300ml",
+    "description": "Mingau (Mungunzá) - Cp 300ml",
+    "category": "Sobremesas",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Misto Quente - Und",
+    "description": "Misto Quente - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Panqueca Und",
+    "description": "Panqueca Und",
+    "category": "Lanches",
+    "comerciarioPrice": 10.0,
+    "conveniadoPrice": 15.0,
+    "empresarioPrice": 15.0,
+    "publicoPrice": 15.0,
+    "visible": true
+  },
+  {
+    "name": "Pão de Queijo - Und",
+    "description": "Pão de Queijo - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.5,
+    "empresarioPrice": 7.5,
+    "publicoPrice": 7.5,
+    "visible": true
+  },
+  {
+    "name": "Pão Francês com Queijo",
+    "description": "Pão Francês com Queijo",
+    "category": "Lanches",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.5,
+    "empresarioPrice": 7.5,
+    "publicoPrice": 7.5,
+    "visible": true
+  },
+  {
+    "name": "Pão Francês com Carne Moída",
+    "description": "Pão Francês com Carne Moída",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Pão Francês com Manteiga",
+    "description": "Pão Francês com Manteiga",
+    "category": "Lanches",
+    "comerciarioPrice": 3.0,
+    "conveniadoPrice": 4.5,
+    "empresarioPrice": 4.5,
+    "publicoPrice": 4.5,
+    "visible": true
+  },
+  {
+    "name": "Pão Francês com Ovo Und",
+    "description": "Pão Francês com Ovo Und",
+    "category": "Lanches",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.5,
+    "empresarioPrice": 7.5,
+    "publicoPrice": 7.5,
+    "visible": true
+  },
+  {
+    "name": "Pão Pizza - Und",
+    "description": "Pão Pizza - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Pastel de Carne",
+    "description": "Pastel de Carne",
+    "category": "Lanches",
+    "comerciarioPrice": 7.5,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Pastel de Presunto e Queijo",
+    "description": "Pastel de Presunto e Queijo",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Pastel de Queijo",
+    "description": "Pastel de Queijo",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Pizza - Ft",
+    "description": "Pizza - Ft",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Pote Plástico 500ML - Und",
+    "description": "Pote Plástico 500ML - Und",
+    "category": "",
+    "comerciarioPrice": 1.0,
+    "conveniadoPrice": 1.5,
+    "empresarioPrice": 1.5,
+    "publicoPrice": 1.5,
+    "visible": true
+  },
+  {
+    "name": "Pudim - 250 g Ft",
+    "description": "Pudim - 250 g Ft",
+    "category": "Bebidas",
+    "comerciarioPrice": 6.5,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Quibe de Arroz",
+    "description": "Quibe de Arroz",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Quibe de Macaxeira",
+    "description": "Quibe de Macaxeira",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Quibe de Trigo",
+    "description": "Quibe de Trigo",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Salada de Frutas Cp 300ML",
+    "description": "Salada de Frutas Cp 300ML",
+    "category": "Lanches",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Salgado de Forno - Und",
+    "description": "Salgado de Forno - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 6.5,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Sanduíche Americano - Und",
+    "description": "Sanduíche Americano - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 7.0,
+    "conveniadoPrice": 10.5,
+    "empresarioPrice": 10.5,
+    "publicoPrice": 10.5,
+    "visible": true
+  },
+  {
+    "name": "Sanduíche Natural - Und",
+    "description": "Sanduíche Natural - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 6.5,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  },
+  {
+    "name": "Sopa - Porção 500ml",
+    "description": "Sopa - Porção 500ml",
+    "category": "Lanches",
+    "comerciarioPrice": 12.0,
+    "conveniadoPrice": 18.0,
+    "empresarioPrice": 18.0,
+    "publicoPrice": 18.0,
+    "visible": true
+  },
+  {
+    "name": "Tapioca Simples Und",
+    "description": "Tapioca Simples Und",
+    "category": "Lanches",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.5,
+    "empresarioPrice": 7.5,
+    "publicoPrice": 7.5,
+    "visible": true
+  },
+  {
+    "name": "Tapioca ovos - Und",
+    "description": "Tapioca ovos - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Tapioca queijo - Und",
+    "description": "Tapioca queijo - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 6.0,
+    "conveniadoPrice": 9.0,
+    "empresarioPrice": 9.0,
+    "publicoPrice": 9.0,
+    "visible": true
+  },
+  {
+    "name": "Tapioca queijo e presunto - Und",
+    "description": "Tapioca queijo e presunto - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 7.0,
+    "conveniadoPrice": 10.5,
+    "empresarioPrice": 10.5,
+    "publicoPrice": 10.5,
+    "visible": true
+  },
+  {
+    "name": "Tapioca carne moida - Und",
+    "description": "Tapioca carne moida - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Tapioca completa - Und",
+    "description": "Tapioca completa - Und",
+    "category": "Lanches",
+    "comerciarioPrice": 12.5,
+    "conveniadoPrice": 18.0,
+    "empresarioPrice": 18.0,
+    "publicoPrice": 18.0,
+    "visible": true
+  },
+  {
+    "name": "Torta - Ft",
+    "description": "Torta - Ft",
+    "category": "Lanches",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 12.0,
+    "empresarioPrice": 12.0,
+    "publicoPrice": 12.0,
+    "visible": true
+  },
+  {
+    "name": "Lanche do dia",
+    "description": "Lanche do dia",
+    "category": "Lanches",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 6.0,
+    "empresarioPrice": 6.0,
+    "publicoPrice": 6.0,
+    "visible": true
+  },
+  {
+    "name": "Porção Recheio Extra",
+    "description": "Porção Recheio Extra",
+    "category": "Lanches",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 5.5,
+    "empresarioPrice": 5.5,
+    "publicoPrice": 5.5,
+    "visible": true
+  },
+  {
+    "name": "Água Mineral com Gás - 500ML",
+    "description": "Água Mineral com Gás - 500ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 5.0,
+    "empresarioPrice": 5.0,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Água Mineral sem Gás - 500ML",
+    "description": "Água Mineral sem Gás - 500ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 3.0,
+    "conveniadoPrice": 4.0,
+    "empresarioPrice": 4.0,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Café com Leite - Cp 180ML",
+    "description": "Café com Leite - Cp 180ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 5.0,
+    "empresarioPrice": 5.0,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Café sem Leite - Cp 180ML",
+    "description": "Café sem Leite - Cp 180ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 3.0,
+    "conveniadoPrice": 4.0,
+    "empresarioPrice": 4.0,
+    "publicoPrice": 4.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Fanta Laranja - LT",
+    "description": "Refrigerante Fanta Laranja - LT",
+    "category": "Bebidas",
+    "comerciarioPrice": 4.5,
+    "conveniadoPrice": 7.0,
+    "empresarioPrice": 7.0,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Fanta Laranja - 2L",
+    "description": "Refrigerante Fanta Laranja - 2L",
+    "category": "Bebidas",
+    "comerciarioPrice": 13.0,
+    "conveniadoPrice": 15.0,
+    "empresarioPrice": 15.0,
+    "publicoPrice": 15.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Guaraná Antártica - LT",
+    "description": "Refrigerante Guaraná Antártica - LT",
+    "category": "Bebidas",
+    "comerciarioPrice": 4.5,
+    "conveniadoPrice": 7.0,
+    "empresarioPrice": 7.0,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Guaraná Antártica - zero",
+    "description": "Refrigerante Guaraná Antártica - zero",
+    "category": "Bebidas",
+    "comerciarioPrice": 4.5,
+    "conveniadoPrice": 7.0,
+    "empresarioPrice": 7.0,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Guaraná Antártica - 2L",
+    "description": "Refrigerante Guaraná Antártica - 2L",
+    "category": "Bebidas",
+    "comerciarioPrice": 12.0,
+    "conveniadoPrice": 15.0,
+    "empresarioPrice": 15.0,
+    "publicoPrice": 15.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Fanta Uva - LT",
+    "description": "Refrigerante Fanta Uva - LT",
+    "category": "Bebidas",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.0,
+    "empresarioPrice": 7.0,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Fanta Uva - 2L",
+    "description": "Refrigerante Fanta Uva - 2L",
+    "category": "Bebidas",
+    "comerciarioPrice": 13.0,
+    "conveniadoPrice": 15.0,
+    "empresarioPrice": 15.0,
+    "publicoPrice": 15.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Coca-Cola - 350ML",
+    "description": "Refrigerante Coca-Cola - 350ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.0,
+    "empresarioPrice": 7.0,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Coca-Cola zero - 350ML",
+    "description": "Refrigerante Coca-Cola zero - 350ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.0,
+    "empresarioPrice": 7.0,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Refrigerante Coca-Cola 2L",
+    "description": "Refrigerante Coca-Cola 2L",
+    "category": "Bebidas",
+    "comerciarioPrice": 15.0,
+    "conveniadoPrice": 18.0,
+    "empresarioPrice": 18.0,
+    "publicoPrice": 18.0,
+    "visible": true
+  },
+  {
+    "name": "Suco com Leite - Cp 300ML",
+    "description": "Suco com Leite - Cp 300ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 5.0,
+    "conveniadoPrice": 7.0,
+    "empresarioPrice": 7.0,
+    "publicoPrice": 7.0,
+    "visible": true
+  },
+  {
+    "name": "Suco Natural - 300ML",
+    "description": "Suco Natural - 300ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 4.0,
+    "conveniadoPrice": 5.0,
+    "empresarioPrice": 5.0,
+    "publicoPrice": 5.0,
+    "visible": true
+  },
+  {
+    "name": "Vitamina - Cp 300ML",
+    "description": "Vitamina - Cp 300ML",
+    "category": "Bebidas",
+    "comerciarioPrice": 8.0,
+    "conveniadoPrice": 10.0,
+    "empresarioPrice": 10.0,
+    "publicoPrice": 10.0,
+    "visible": true
+  }
+]
