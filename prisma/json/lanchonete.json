@@ -1,7 +1,7 @@
 [
   {
     "name": "Baixaria Und",
-    "description": "Baixaria Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 12.0,
     "conveniadoPrice": 16.0,
@@ -11,7 +11,7 @@
   },
   {
     "name": "Batata Frita - 200g",
-    "description": "Batata Frita - 200g",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 10.0,
     "conveniadoPrice": 18.0,
@@ -21,7 +21,7 @@
   },
   {
     "name": "Bolo - Simples",
-    "description": "Bolo - Simples",
+    "description": "",
     "category": "Sobremesas",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.5,
@@ -31,7 +31,7 @@
   },
   {
     "name": "Bolo - Confeitado",
-    "description": "Bolo - Confeitado",
+    "description": "",
     "category": "Sobremesas",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 10.0,
@@ -41,7 +41,7 @@
   },
   {
     "name": "Cachorro Quente",
-    "description": "Cachorro Quente",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -51,7 +51,7 @@
   },
   {
     "name": "Calabresa Acebolada - 200g",
-    "description": "Calabresa Acebolada - 200g",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 18.0,
     "conveniadoPrice": 25.0,
@@ -61,7 +61,7 @@
   },
   {
     "name": "Charuto - Und",
-    "description": "Charuto - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 10.0,
     "conveniadoPrice": 15.0,
@@ -71,7 +71,7 @@
   },
   {
     "name": "Coxinha da Asa - 200g",
-    "description": "Coxinha da Asa - 200g",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 15.0,
     "conveniadoPrice": 23.0,
@@ -81,7 +81,7 @@
   },
   {
     "name": "Coxinha de Frango",
-    "description": "Coxinha de Frango",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -91,7 +91,7 @@
   },
   {
     "name": "Hambúrguer",
-    "description": "Hambúrguer",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 10.0,
     "conveniadoPrice": 15.0,
@@ -101,7 +101,7 @@
   },
   {
     "name": "Lasanha - CARNE",
-    "description": "Lasanha - CARNE",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -111,7 +111,7 @@
   },
   {
     "name": "Lasanha - FRANGO",
-    "description": "Lasanha - FRANGO",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -121,7 +121,7 @@
   },
   {
     "name": "Mingau Cp 300ml",
-    "description": "Mingau Cp 300ml",
+    "description": "",
     "category": "Sobremesas",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -131,7 +131,7 @@
   },
   {
     "name": "Mingau (Mungunzá) - Cp 300ml",
-    "description": "Mingau (Mungunzá) - Cp 300ml",
+    "description": "",
     "category": "Sobremesas",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -141,7 +141,7 @@
   },
   {
     "name": "Misto Quente - Und",
-    "description": "Misto Quente - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -151,7 +151,7 @@
   },
   {
     "name": "Panqueca Und",
-    "description": "Panqueca Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 10.0,
     "conveniadoPrice": 15.0,
@@ -161,7 +161,7 @@
   },
   {
     "name": "Pão de Queijo - Und",
-    "description": "Pão de Queijo - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.5,
@@ -171,7 +171,7 @@
   },
   {
     "name": "Pão Francês com Queijo",
-    "description": "Pão Francês com Queijo",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.5,
@@ -181,7 +181,7 @@
   },
   {
     "name": "Pão Francês com Carne Moída",
-    "description": "Pão Francês com Carne Moída",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -191,7 +191,7 @@
   },
   {
     "name": "Pão Francês com Manteiga",
-    "description": "Pão Francês com Manteiga",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 3.0,
     "conveniadoPrice": 4.5,
@@ -201,7 +201,7 @@
   },
   {
     "name": "Pão Francês com Ovo Und",
-    "description": "Pão Francês com Ovo Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.5,
@@ -211,7 +211,7 @@
   },
   {
     "name": "Pão Pizza - Und",
-    "description": "Pão Pizza - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -221,7 +221,7 @@
   },
   {
     "name": "Pastel de Carne",
-    "description": "Pastel de Carne",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 7.5,
     "conveniadoPrice": 10.0,
@@ -231,7 +231,7 @@
   },
   {
     "name": "Pastel de Presunto e Queijo",
-    "description": "Pastel de Presunto e Queijo",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -241,7 +241,7 @@
   },
   {
     "name": "Pastel de Queijo",
-    "description": "Pastel de Queijo",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -251,7 +251,7 @@
   },
   {
     "name": "Pizza - Ft",
-    "description": "Pizza - Ft",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -261,7 +261,7 @@
   },
   {
     "name": "Pote Plástico 500ML - Und",
-    "description": "Pote Plástico 500ML - Und",
+    "description": "",
     "category": "",
     "comerciarioPrice": 1.0,
     "conveniadoPrice": 1.5,
@@ -271,7 +271,7 @@
   },
   {
     "name": "Pudim - 250 g Ft",
-    "description": "Pudim - 250 g Ft",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 6.5,
     "conveniadoPrice": 10.0,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Quibe de Arroz",
-    "description": "Quibe de Arroz",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 10.0,
@@ -291,7 +291,7 @@
   },
   {
     "name": "Quibe de Macaxeira",
-    "description": "Quibe de Macaxeira",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 10.0,
@@ -301,7 +301,7 @@
   },
   {
     "name": "Quibe de Trigo",
-    "description": "Quibe de Trigo",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 10.0,
@@ -311,7 +311,7 @@
   },
   {
     "name": "Salada de Frutas Cp 300ML",
-    "description": "Salada de Frutas Cp 300ML",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -321,7 +321,7 @@
   },
   {
     "name": "Salgado de Forno - Und",
-    "description": "Salgado de Forno - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.5,
     "conveniadoPrice": 10.0,
@@ -331,7 +331,7 @@
   },
   {
     "name": "Sanduíche Americano - Und",
-    "description": "Sanduíche Americano - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 7.0,
     "conveniadoPrice": 10.5,
@@ -341,7 +341,7 @@
   },
   {
     "name": "Sanduíche Natural - Und",
-    "description": "Sanduíche Natural - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.5,
     "conveniadoPrice": 10.0,
@@ -351,7 +351,7 @@
   },
   {
     "name": "Sopa - Porção 500ml",
-    "description": "Sopa - Porção 500ml",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 12.0,
     "conveniadoPrice": 18.0,
@@ -361,7 +361,7 @@
   },
   {
     "name": "Tapioca Simples Und",
-    "description": "Tapioca Simples Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.5,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Tapioca ovos - Und",
-    "description": "Tapioca ovos - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -381,7 +381,7 @@
   },
   {
     "name": "Tapioca queijo - Und",
-    "description": "Tapioca queijo - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 6.0,
     "conveniadoPrice": 9.0,
@@ -391,7 +391,7 @@
   },
   {
     "name": "Tapioca queijo e presunto - Und",
-    "description": "Tapioca queijo e presunto - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 7.0,
     "conveniadoPrice": 10.5,
@@ -401,7 +401,7 @@
   },
   {
     "name": "Tapioca carne moida - Und",
-    "description": "Tapioca carne moida - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -411,7 +411,7 @@
   },
   {
     "name": "Tapioca completa - Und",
-    "description": "Tapioca completa - Und",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 12.5,
     "conveniadoPrice": 18.0,
@@ -421,7 +421,7 @@
   },
   {
     "name": "Torta - Ft",
-    "description": "Torta - Ft",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 12.0,
@@ -431,7 +431,7 @@
   },
   {
     "name": "Lanche do dia",
-    "description": "Lanche do dia",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 6.0,
@@ -441,7 +441,7 @@
   },
   {
     "name": "Porção Recheio Extra",
-    "description": "Porção Recheio Extra",
+    "description": "",
     "category": "Lanches",
     "comerciarioPrice": 4.0,
     "conveniadoPrice": 5.5,
@@ -451,7 +451,7 @@
   },
   {
     "name": "Água Mineral com Gás - 500ML",
-    "description": "Água Mineral com Gás - 500ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 4.0,
     "conveniadoPrice": 5.0,
@@ -461,7 +461,7 @@
   },
   {
     "name": "Água Mineral sem Gás - 500ML",
-    "description": "Água Mineral sem Gás - 500ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 3.0,
     "conveniadoPrice": 4.0,
@@ -471,7 +471,7 @@
   },
   {
     "name": "Café com Leite - Cp 180ML",
-    "description": "Café com Leite - Cp 180ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 4.0,
     "conveniadoPrice": 5.0,
@@ -481,7 +481,7 @@
   },
   {
     "name": "Café sem Leite - Cp 180ML",
-    "description": "Café sem Leite - Cp 180ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 3.0,
     "conveniadoPrice": 4.0,
@@ -491,7 +491,7 @@
   },
   {
     "name": "Refrigerante Fanta Laranja - LT",
-    "description": "Refrigerante Fanta Laranja - LT",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 4.5,
     "conveniadoPrice": 7.0,
@@ -501,7 +501,7 @@
   },
   {
     "name": "Refrigerante Fanta Laranja - 2L",
-    "description": "Refrigerante Fanta Laranja - 2L",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 13.0,
     "conveniadoPrice": 15.0,
@@ -511,7 +511,7 @@
   },
   {
     "name": "Refrigerante Guaraná Antártica - LT",
-    "description": "Refrigerante Guaraná Antártica - LT",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 4.5,
     "conveniadoPrice": 7.0,
@@ -521,7 +521,7 @@
   },
   {
     "name": "Refrigerante Guaraná Antártica - zero",
-    "description": "Refrigerante Guaraná Antártica - zero",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 4.5,
     "conveniadoPrice": 7.0,
@@ -531,7 +531,7 @@
   },
   {
     "name": "Refrigerante Guaraná Antártica - 2L",
-    "description": "Refrigerante Guaraná Antártica - 2L",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 12.0,
     "conveniadoPrice": 15.0,
@@ -541,7 +541,7 @@
   },
   {
     "name": "Refrigerante Fanta Uva - LT",
-    "description": "Refrigerante Fanta Uva - LT",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.0,
@@ -551,7 +551,7 @@
   },
   {
     "name": "Refrigerante Fanta Uva - 2L",
-    "description": "Refrigerante Fanta Uva - 2L",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 13.0,
     "conveniadoPrice": 15.0,
@@ -561,7 +561,7 @@
   },
   {
     "name": "Refrigerante Coca-Cola - 350ML",
-    "description": "Refrigerante Coca-Cola - 350ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.0,
@@ -571,7 +571,7 @@
   },
   {
     "name": "Refrigerante Coca-Cola zero - 350ML",
-    "description": "Refrigerante Coca-Cola zero - 350ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.0,
@@ -581,7 +581,7 @@
   },
   {
     "name": "Refrigerante Coca-Cola 2L",
-    "description": "Refrigerante Coca-Cola 2L",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 15.0,
     "conveniadoPrice": 18.0,
@@ -591,7 +591,7 @@
   },
   {
     "name": "Suco com Leite - Cp 300ML",
-    "description": "Suco com Leite - Cp 300ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 5.0,
     "conveniadoPrice": 7.0,
@@ -601,7 +601,7 @@
   },
   {
     "name": "Suco Natural - 300ML",
-    "description": "Suco Natural - 300ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 4.0,
     "conveniadoPrice": 5.0,
@@ -611,7 +611,7 @@
   },
   {
     "name": "Vitamina - Cp 300ML",
-    "description": "Vitamina - Cp 300ML",
+    "description": "",
     "category": "Bebidas",
     "comerciarioPrice": 8.0,
     "conveniadoPrice": 10.0,

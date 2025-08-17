@@ -7,12 +7,28 @@ import Link from "next/link";
 import Image from "next/image";
 import sescLogo from "@/public/sesc-logo.svg";
 import MenuTable from "./components/MenuTable";
+import lanchesImage from '@/public/lanchonete-lanche.webp';
+import MenuList from "./components/MenuList";
 
 export default async function Page(){
     return (
         <>
             <div className={ styles.foodMenuOverlay }>
-                <div className={ styles.foodMenuCategory }>
+                <Image 
+                    alt="Imagem de Lanches"
+                    height={ 3940 }
+                    src={ lanchesImage }
+                    width={ 5928 }
+                />
+
+                {/* <MenuList category="Lanches" /> */}
+
+
+                <div>
+                    <MenuTable category="Lanches" />
+                </div>
+                {/* <div></div> */}
+                {/* <div className={ styles.foodMenuCategory }>
                     <h3>Lanches</h3>
 
                     <MenuTable category="Lanches"/>
@@ -26,7 +42,7 @@ export default async function Page(){
                     <h3>Sobremesas</h3>
 
                     <MenuTable category="Sobremesas"/>
-                </div>
+                </div> */}
 
                 <Link href="/nutricao/cardapio" className={ styles.floatingButton }>
                     <Image 
