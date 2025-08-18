@@ -1,10 +1,15 @@
+@keyframes progress{
+    0%{ width: 0%; }
+    100% { width: 100%; }
+}
+
 @keyframes imageSlide{
     0%, 45% { translate: 0 0; }
     50%, 100% { translate: -100% 0; }
 }
 
 @keyframes categorySlide{
-    0%, 45% { max-height: fit-content; }
+    0%, 49% { max-height: fit-content; }
     50%, 100% { max-height: 0; }
 }
 
@@ -12,13 +17,43 @@
     --image-size: 30%;
 
     background-color: var(--clr-white);
+    border-top: 1rem solid var(--clr-neutral-20);
     box-sizing: border-box;
     left: 0;
+    /* padding-top: 1rem; */
     padding-left: var(--image-size);
     position: fixed;
     top: 0;
     width: 100%;   
     z-index: 1;
+
+    &::after,
+    &::before{
+        animation-name: progress;
+        animation-delay: 5s;
+        animation-direction: alternate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        
+        content: '';
+        display: block;
+        height: 1rem;
+        position: fixed;
+        left: 0;
+        z-index: 2;
+    }
+
+    &::after{
+        animation-direction: alternate-reverse;
+        background-color: hsl(210, 100%, 40%);
+        bottom: 0;
+    }
+
+    &::before{
+        background-color: var(--clr-yellow);
+        top: 0;
+    }
 }
 
 .overlayImage{
@@ -32,7 +67,8 @@
 }
 
 .lanchesImage,
-.lanchesCategory{
+.lanchesCategory,
+.bebidasCategory{
     animation-duration: 10s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
@@ -61,7 +97,7 @@
 }
 
 .bebidasCategory{
-    animation-delay: 5s;
+    animation-delay: 10s;
 }
 
 .floatingButton{
