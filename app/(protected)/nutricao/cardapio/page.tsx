@@ -2,7 +2,6 @@ import PageTitle from "@/app/ui/PageTitle";
 import PageContainer from "@/app/ui/PageContainer";
 import Flexbox from "@/app/ui/Flexbox";
 import { getFoodMenuProducts } from "@/app/data-access/foodMenuProduct";
-import FoodMenuDialog from "./components/FoodMenuDialog";
 import FoodMenuTable from "./components/FoodMenuTable";
 import { getFoodMenuProduct } from "@/app/data-access/foodMenuProduct";
 import FoodMenuForm from "./components/FoodMenuForm";
@@ -36,16 +35,16 @@ export default async function Page({
                 <Flexbox spaceBetween>
                     <h2>Produtos ({ foodMenuProducts.length })</h2>
 
-                    {/* <Link href="/nutricao/cardapio/visualizacaonova" target="_blank">
+                    <Link href="/nutricao/cardapio/visualizacaonova" target="_blank">
                         <Button>
                             <Image
                                 alt="Modo de visualização do cardápio"
                                 src={ menuBookScreenIcon }
                             />
 
-                            Visualização
+                            Visualização NOVA
                         </Button>
-                    </Link> */}
+                    </Link>
 
                     <Link href="/nutricao/cardapio/visualizacao" target="_blank">
                         <Button>

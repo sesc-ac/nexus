@@ -17,7 +17,7 @@ export default function MenuList({
     async function fetchProducts(){
         console.log('💿 FETCH PRODUCTS');
 
-        const res = await fetch('/nutricao/cardapio/visualizacao/api', { cache: 'no-store' });
+        const res = await fetch('/nutricao/cardapio/visualizacaonova/api', { cache: 'no-store' });
 
         if (!res.ok) throw new Error("fetch failed");
 
@@ -47,15 +47,30 @@ export default function MenuList({
     
 
     return (
-        <ul>
+        <ul className={ styles.menuList }>
             {products.map((product: FoodMenuProduct) => (
                 <li key={ product.id }>
                     <Flexbox spaceBetween>
-                        <p>{ product.name }</p>
+                        <p className='lg upper'><b>{ product.name }</b></p>
 
-                        <Flexbox>
-                            <p>{ valueToCurrency( product.comerciarioPrice ) }</p>
-                            <p>{ valueToCurrency(product.publicoPrice) }</p>
+                        <Flexbox gapLg>
+                            <Flexbox 
+                                alignCenter 
+                                column
+                                gapSm
+                            >
+                                <p className='lg'><b>{ valueToCurrency( product.comerciarioPrice ) }</b></p>
+                                <p className='md'><b>Comerciário</b></p>
+                            </Flexbox>
+
+                            <Flexbox 
+                                alignCenter
+                                column
+                                gapSm
+                            >
+                                <p className='lg'><b>{ valueToCurrency(product.publicoPrice) }</b></p>
+                                <p className='md'><b>Demais Categorias</b></p>
+                            </Flexbox>
                         </Flexbox>
                     </Flexbox>
                 </li>
