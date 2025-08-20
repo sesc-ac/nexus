@@ -3,6 +3,7 @@
     background-color: var(--clr-neutral-20);
     border: none;
     border-radius: .25rem;
+    box-sizing: border-box;
     color: #FFF;
     cursor: pointer;
     display: flex;
@@ -21,4 +22,12 @@
     }
 
     &.fillWidth{ width: 100%; }
+
+    &.secondary{
+        background-color: var(--clr-white);
+        border: 2px solid var(--clr-neutral-20);
+        color: var(--clr-neutral-20);
+        padding-block: calc(.75rem - 2px);
+        padding-inline: calc(2rem - 2px);
+    }
 }
