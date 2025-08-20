@@ -8,10 +8,14 @@
         border-radius: .25rem;
         box-sizing: border-box;
         padding: .75rem;
-
+        
         &:nth-child(4n + 3),
         &:nth-child(4n){
             background-color: var(--clr-neutral-90);
         }
     }
+}
+
+.customerCategory{
+    text-align: center;
 }

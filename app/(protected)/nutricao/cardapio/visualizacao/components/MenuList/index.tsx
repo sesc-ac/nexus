@@ -17,7 +17,7 @@ export default function MenuList({
     async function fetchProducts(){
         console.log('💿 FETCH PRODUCTS');
 
-        const res = await fetch('/nutricao/cardapio/visualizacaonova/api', { cache: 'no-store' });
+        const res = await fetch('/nutricao/cardapio/visualizacao/api', { cache: 'no-store' });
 
         if (!res.ok) throw new Error("fetch failed");
 
@@ -51,7 +51,12 @@ export default function MenuList({
             {products.map((product: FoodMenuProduct) => (
                 <li key={ product.id }>
                     <Flexbox spaceBetween>
-                        <p className='lg upper'><b>{ product.name }</b></p>
+                        <Flexbox
+                            column
+                        >
+                            <p className='lg upper'><b>{ product.name }</b></p>
+                            <p className='md'><b>{ product.description }</b></p>
+                        </Flexbox>
 
                         <Flexbox gapLg>
                             <Flexbox 
@@ -60,7 +65,7 @@ export default function MenuList({
                                 gapSm
                             >
                                 <p className='lg'><b>{ valueToCurrency( product.comerciarioPrice ) }</b></p>
-                                <p className='md'><b>Comerciário</b></p>
+                                <p className={ styles.customerCategory }><b>Comerciário</b></p>
                             </Flexbox>
 
                             <Flexbox 
@@ -69,7 +74,7 @@ export default function MenuList({
                                 gapSm
                             >
                                 <p className='lg'><b>{ valueToCurrency(product.publicoPrice) }</b></p>
-                                <p className='md'><b>Demais Categorias</b></p>
+                                <p className={ styles.customerCategory }><b>Demais Categorias</b></p>
                             </Flexbox>
                         </Flexbox>
                     </Flexbox>
