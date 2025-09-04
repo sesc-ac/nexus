@@ -1,25 +1,31 @@
 import styles from "./Sidebar.module.css";
 import Image from "next/image";
-import profilePic from "@/public/erick.jpg";
 import Menu from "./Menu";
 import nexusLogo from "@/public/nexus.svg";
 import Flexbox from "../Flexbox";
 import Link from "next/link";
+import { verifySession } from "@/app/lib/auth";
+import LogoutWrapper from "../LogoutWrapper";
+import personIcon from "@/public/icons/person.svg";
 
-export default function Sidebar(){
+export default async function Sidebar(){
+    const session = await verifySession();
+
     return (
         <aside className={ styles.sidebar }>
             <main className={ styles.content }>
-                <div className={ styles.user }>
-                    {/* <Image
-                        alt="Foto de perfil"
-                        className={ styles.userAvatar }
-                        src={ profilePic }
-                    /> */}
-                    <div className={ styles.userAvatar }></div>
+                <LogoutWrapper>
+                    <div className={ styles.user }>
+                        <div className={ styles.userAvatar }>
+                            <Image 
+                                alt="Usuário"
+                                src={ personIcon } 
+                            />
+                        </div>
 
-                    <p>Usuário</p>
-                </div>
+                        <p>{ session?.user.name }</p>
+                    </div>
+                </LogoutWrapper>
 
                 <Menu />
             </main>

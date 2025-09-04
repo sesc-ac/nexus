@@ -8,6 +8,8 @@ export function parseLocaleNumber(string: string): number {
     return Number(string.replace(',', '.'));
 }
 
+
+
 export function valueToCurrency(value: Decimal | number): string {
     return value ? Intl.NumberFormat('pt-br', {
         currency: "BRL",

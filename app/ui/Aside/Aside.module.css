@@ -14,14 +14,15 @@
     gap: 1rem;
     height: 100%;
     margin-top: var(--header-height);
-    padding: 0;
+    overflow: auto;
     position: fixed;
     right: 0;
     top: 0;
 
     &.open{
-        padding-block: 2rem;
+        padding-bottom: 3rem;
         padding-inline: 1rem;
+        padding-top: 1.5rem;
         width: var(--saleAsideWidth);
     }
 }
