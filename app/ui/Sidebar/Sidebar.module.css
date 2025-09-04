@@ -31,14 +31,38 @@
             border-radius: .25rem;
             display: flex;
             gap: 1rem;
+            overflow: hidden;
             padding: .5rem;
+            position: relative;
+
+            &::before{
+                align-items: center;
+                background-color: hsl(0 0 20 / .75);
+                color: var(--clr-white);
+                content: 'Sair';
+                display: flex;
+                height: 100%;
+                inset: 0;
+                justify-content: center;
+                position: absolute;
+                transition: translate .5s;
+                translate: -100% 0;
+                width: 100%;
+            }
+
+            &:hover::before{
+                translate: 0 0 0;
+            }
         }
 
             .userAvatar{
+                align-items: center;
                 aspect-ratio: 1;
                 background-color: var(--clr-neutral-90);
                 border-radius: .25rem;
+                display: flex;
                 height: auto;
+                justify-content: center;
                 object-fit: cover;
                 width: 2.5rem;
             }
@@ -57,6 +81,11 @@
 
     .logo{
         height: 2rem;
+        transition: scale .25s;
         width: auto;
+
+        &:hover{
+            scale: 1.10;
+        }
     }
 }

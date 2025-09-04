@@ -19,17 +19,20 @@ export function LoginForm(){
         >
             <Flexbox column gapLg>
                 <Flexbox column fillWidth>
-                    <label htmlFor="user">Usuário</label>
+                    <label htmlFor="cpf">CPF</label>
 
                     <Input
                         fillWidth
-                        id="user"
-                        maxLength={ 20 }
-                        minLength={ 3 }
-                        name="user" 
+                        id="cpf"
+                        maxLength={ 11 }
+                        minLength={ 11 }
+                        name="cpf"
+                        // placeholder="000.000.000-00"
                         required
                         type="text"
                     />
+
+                    {state?.userNotFound ? <p className="sm clr-text-light"><b>{ state.userNotFound }</b></p> : null}
                 </Flexbox>
 
                 <Flexbox column fillWidth>
@@ -40,21 +43,17 @@ export function LoginForm(){
                         id="password"
                         maxLength={ 20 }
                         minLength={ 3 }
-                        name="password" 
+                        name="password"
+                        // placeholder="*********" 
                         required
                         type="password" 
                     />
+
+                    {state?.invalidPassword ? <p className="sm clr-text-light"><b>{ state.invalidPassword }</b></p> : null}
                 </Flexbox>
 
-                <Flexbox fillWidth>
-                    <Button fillWidth type="submit">Entrar</Button>
-
-                    <Link href="/">
-                        <Button secondary>Voltar</Button>
-                    </Link>
-                </Flexbox>
+                <Button fillWidth type="submit">Entrar</Button>
             </Flexbox>
-
         </Form>
     );
 }

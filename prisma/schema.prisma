@@ -170,6 +170,17 @@ model SalePlace {
   @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
 }
 
+model Session {
+  id String @id @default(cuid())
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  createdAt DateTime  @default(now())
+  endedAt   DateTime?
+  updatedAt DateTime  @updatedAt
+}
+
 model Synchronization {
   id String @id @default(cuid())
 
@@ -192,4 +203,17 @@ model Unit {
   name String
 
   @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")
+}
+
+model User {
+  id String @id @default(cuid())
+
+  sessions Session[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  cpf      String @unique
+  name     String
+  password String
 }

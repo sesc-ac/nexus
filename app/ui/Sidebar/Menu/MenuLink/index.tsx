@@ -28,12 +28,12 @@ export default function MenuLink({
             className={ className }
             href={ href }
         >
-            {icon &&
+            {icon ?
                 <Image
                     alt={ name }
                     src={ icon }
                 />
-            }
+            : null}
             
             <p className={ styles.link__name }>{ name }</p>
         </Link>

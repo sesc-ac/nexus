@@ -6,6 +6,7 @@ type BoxProps = {
     fill?: boolean,
     fitContent?: true,
     gapSm?: true
+    hover?: true
     paddingSm?: true
 }
 
@@ -14,6 +15,7 @@ export default function Box({
     fill, 
     fitContent, 
     gapSm, 
+    hover, 
     paddingSm, 
 }: BoxProps){
     const className = `
@@ -21,6 +23,7 @@ export default function Box({
         ${fill ? styles.fill : ''}
         ${fitContent ? styles.fitContent : ''}
         ${gapSm ? styles.gapSm : ''}
+        ${hover ? styles.hover : ''}
         ${paddingSm ? styles.paddingSm : ''}
     `;
 
