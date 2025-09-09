@@ -8,4 +8,6 @@ export async function emitSaleAction(formData: FormData) {
     const saleId = formData.get('saleId') as string;
 
     const result = await emitSale(saleId);
+
+    console.log('RESULT', result);
 }
