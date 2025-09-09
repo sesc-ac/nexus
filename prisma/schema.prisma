@@ -105,13 +105,8 @@ model Product {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  cfop        String?
-  cofinsCST   String?
   description String
-  icmsCSOSN   String?
-  icmsCST     String?
   ncm         String?
-  pisCST      String?
   unit        String
 
   @@unique([legacyId, legacyOriginDatabase], name: "unique_legacy_constraint")

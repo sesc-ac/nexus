@@ -46,7 +46,7 @@ export default async function ProductList(){
                                             </Flexbox>
                                         </Box>
 
-                                        <Box fill={ product.cfop ? false : true } paddingSm>
+                                        {/* <Box fill={ product.cfop ? false : true } paddingSm>
                                             <Flexbox spaceBetween>
                                                 <p className="sm">CFOP</p>
 
@@ -76,10 +76,10 @@ export default async function ProductList(){
                                                         />
                                                 }
                                             </Flexbox>
-                                        </Box>
+                                        </Box> */}
                                     </Flexbox>
 
-                                    <Flexbox fillWidth>
+                                    {/* <Flexbox fillWidth>
                                         <Box fill={ product.pisCST ? false : true } paddingSm>
                                             <Flexbox spaceBetween>
                                                 <p className="sm">PIS - CST</p>
@@ -127,7 +127,7 @@ export default async function ProductList(){
                                                 }
                                             </Flexbox>
                                         </Box>
-                                    </Flexbox>
+                                    </Flexbox> */}
                                 </Flexbox>
                             </Box>
                         </Link>

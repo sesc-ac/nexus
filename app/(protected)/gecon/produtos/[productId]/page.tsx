@@ -50,7 +50,7 @@ export default async function Page({
                                 />
                             </Flexbox>
 
-                            <Flexbox column fillWidth>
+                            {/* <Flexbox column fillWidth>
                                 <label htmlFor="cfop">CFOP</label>
 
                                 <Input 
@@ -74,10 +74,10 @@ export default async function Page({
                                     name="cofinsCST"
                                     type="number"
                                 />
-                            </Flexbox>
+                            </Flexbox> */}
                         </Flexbox>
 
-                        <Flexbox fillWidth>
+                        {/* <Flexbox fillWidth>
                             <Flexbox column fillWidth>
                                 <label htmlFor="pisCST">PIS - CST</label>
 
@@ -116,7 +116,7 @@ export default async function Page({
                                     type="number"
                                 />
                             </Flexbox>
-                        </Flexbox>
+                        </Flexbox> */}
 
                         <Button>Salvar alterações</Button>
                     </Flexbox>

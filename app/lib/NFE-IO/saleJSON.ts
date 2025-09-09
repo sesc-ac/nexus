@@ -31,7 +31,7 @@ export function saleJSON(sale: SaleWithRelations): string{
             'tax': {
                 'icms': {
                     'cst': 40,
-                    'origin': '0',
+                    'origin': 0,
                 },
             }
         }}) : ''
