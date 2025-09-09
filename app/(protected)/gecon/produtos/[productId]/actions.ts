@@ -8,21 +8,9 @@ export async function updateProductAction(formData: FormData){
 
     const productId = formData.get('productId') as string;
 
-    const cfop = formData.get('cfop') as string;
-    const cofinsCST = formData.get('cofinsCST') as string;
-    const icmsCSOSN = formData.get('icmsCSOSN') as string;
-    const icmsCST = formData.get('icmsCST') as string;
     const ncm = formData.get('ncm') as string;
-    const pisCST = formData.get('pisCST') as string;
 
-    const productData = {
-        cfop: cfop,
-        cofinsCST: cofinsCST,
-        icmsCSOSN: icmsCSOSN,
-        icmsCST: icmsCST,
-        ncm: ncm,
-        pisCST: pisCST,
-    }
+    const productData = { ncm: ncm };
 
     await updateProduct(productId, productData);
 

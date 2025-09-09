@@ -25,7 +25,7 @@ export type nfeSale = {
         tax: {
             icms: {
                 cst: number;
-                origin: string;
+                origin: number;
             };
         };
     }[];
