@@ -1,23 +1,9 @@
 import { SaleWithRelations } from "@/app/data-access/sale";
+import { nfeSale } from "./types";
 
 export function saleJSON(sale: SaleWithRelations): string{
-    return JSON.stringify({
+    const nfeSale: nfeSale = {
         'id': sale.id,
-
-        'payment': [
-            {
-                'paymentDetail': [
-                    {
-                        'method': sale.paymentMethod?.name, // REVIEW [ Cash, Cheque, CreditCard, DebitCard, StoreCredict, FoodVouchers, MealVouchers, GiftVouchers, FuelVouchers, BankBill, BankDeposit, InstantPayment, WireTransfer, Cashback, StaticInstantPayment, StoreCredit, ElectronicPaymentNotInformed, WithoutPayment, Others ]
-                        'paymentType': '', // REVIEW [ InCash, Term ]
-                        'amount': sale.value,
-                        'statePag': 'AC'
-                    }
-                ],
-
-                'payback': 0
-            }
-        ],
 
         'operationType': 'Outgoing',
         'destination': 'Internal_Operation',
@@ -32,30 +18,28 @@ export function saleJSON(sale: SaleWithRelations): string{
             'taxRegime': 'Isento'
         } : '',
 
-        'items': sale.items ? sale.items.map(item => { return { 
+        'items': sale.items ? sale.items.map((item, index) => { return { 
+            'code': item.product.id,
             'description': item.product.description,
             'ncm': item.product.ncm,
-            'cfop': item.product.cfop,
+            'cfop': '5100',
             'unit': item.product.unit,
             'quantity': item.quantity,
             'totalAmount': item.itemValue,
+            'unitAmount': item.itemValue,
 
             'tax': {
                 'icms': {
-                    'cst': item.product.icmsCST,
-                    'cson': item.product.icmsCSOSN
+                    'cst': 40,
+                    'origin': '0',
                 },
-
-                'pis': {
-                    'cst': item.product.pisCST
-                },
-
-                'cofins': {
-                    'cst': item.product.cofinsCST
-                }
             }
-            
         }}) : ''
-        
-    }, null, 2);
+    }
+
+    const json = JSON.stringify(nfeSale, null, 2);
+
+    console.log('SALE JSON', json);
+
+    return json;
 }
