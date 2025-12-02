@@ -15,19 +15,19 @@ async function main() {
     data: lanchoneteData.map((product) => product)
   });
 
-  const userAdmin = await prisma.user.findFirst({ where: { cpf: '00000000000' } });
+  // const userAdmin = await prisma.user.findFirst({ where: { cpf: '00000000000' } });
 
-  if(!userAdmin){
-    console.log('• SEED - USER ADMIN');
+  // if(!userAdmin){
+  //   console.log('• SEED - USER ADMIN');
 
-    const password = await bcrypt.hash('123456', 10);
+  //   const password = await bcrypt.hash('123456', 10);
 
-    await prisma.user.create({ data: {
-      cpf: '00000000000',
-      name: 'Administrador do Sistema',
-      password: password,
-    }});
-  }
+  //   await prisma.user.create({ data: {
+  //     cpf: '00000000000',
+  //     name: 'Administrador do Sistema',
+  //     password: password,
+  //   }});
+  // }
 
   console.log("✅ PRISMA SEED SUCCESS");
 }

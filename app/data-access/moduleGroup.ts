@@ -1,7 +1,7 @@
 export function getModuleGroups(){
     return [
         {name: 'Central'},
-        {name: 'GECON'},
-        {name: 'GETIC'},
+        // {name: 'GECON'},
+        // {name: 'GETIC'},
     ];
 }
