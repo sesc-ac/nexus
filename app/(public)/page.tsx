@@ -31,7 +31,7 @@ export default async function Page() {
           </Link>
         ))}
 
-        <LogoutWrapper>
+        {/* <LogoutWrapper>
           <p className={`${styles.link} ${styles.logoutLink}`}>
             <Image 
               alt="Sair" 
@@ -41,7 +41,7 @@ export default async function Page() {
 
             Sair
           </p>
-        </LogoutWrapper>
+        </LogoutWrapper> */}
       </nav>
     </>
   );

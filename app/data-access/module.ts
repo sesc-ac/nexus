@@ -16,35 +16,35 @@ export function getModules(){
             
         },
         
-        {
-            group: 'GECON',
-            href: '/gecon/cupons', 
-            icon: reciptIcon, 
-            name: 'Cupons Fiscais', 
+        // {
+        //     group: 'GECON',
+        //     href: '/gecon/cupons', 
+        //     icon: reciptIcon, 
+        //     name: 'Cupons Fiscais', 
             
-        },
+        // },
         
-        {
-            group: 'GECON',
-            href: '/gecon/produtos', 
-            icon: productIcon, 
-            name: 'Produtos', 
+        // {
+        //     group: 'GECON',
+        //     href: '/gecon/produtos', 
+        //     icon: productIcon, 
+        //     name: 'Produtos', 
             
-        },
+        // },
         
-        {
-            group: 'GETIC',
-            href: '/getic/sincronizacao', 
-            icon: syncIcon, 
-            name: 'Sincronização', 
+        // {
+        //     group: 'GETIC',
+        //     href: '/getic/sincronizacao', 
+        //     icon: syncIcon, 
+        //     name: 'Sincronização', 
             
-        },
+        // },
         
-        {
-            group: 'GETIC',
-            href: '/getic/usuarios', 
-            icon: accountCircleIcon,
-            name: 'Usuários', 
-        },
+        // {
+        //     group: 'GETIC',
+        //     href: '/getic/usuarios', 
+        //     icon: accountCircleIcon,
+        //     name: 'Usuários', 
+        // },
     ];
 }
