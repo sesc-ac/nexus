@@ -21,7 +21,7 @@ export function saleJSON(sale: SaleWithRelations): string{
         'items': sale.items ? sale.items.map((item, index) => { return { 
             'code': item.product.id,
             'description': item.product.description,
-            'ncm': item.product.ncm,
+            'ncm': '22011000',
             'cfop': '5100',
             'unit': item.product.unit,
             'quantity': item.quantity,

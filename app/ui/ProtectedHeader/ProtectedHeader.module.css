@@ -1,6 +1,6 @@
 @keyframes topIn {
-    from { top: calc(var(--header-height) * -1); }
-    to { top: 0; }
+    from { translate: 0 calc(var(--header-height) * -1); }
+    to { translate: 0 0; }
 }
 
 .header{
