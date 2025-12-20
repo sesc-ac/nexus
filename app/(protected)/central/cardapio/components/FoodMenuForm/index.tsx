@@ -32,7 +32,7 @@ export default function FoodMenuForm({
                                 id="name"
                                 name="name"
                                 min="4"
-                                max="50"
+                                max="47"
                                 required
                             />
                         </Flexbox>
@@ -70,7 +70,7 @@ export default function FoodMenuForm({
                             id="description"
                             name="description"
                             min="4"
-                            max="50"
+                            max="78"
                         />
                     </Flexbox>
 

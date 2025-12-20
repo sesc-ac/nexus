@@ -1,0 +1,141 @@
+@keyframes progress{
+    0%{ width: 100%; }
+    100% { width: 0%; }
+}
+
+.foodMenu{
+    align-items: stretch;
+    background-image: linear-gradient(90deg, #003366, #00264D);
+    box-sizing: border-box;
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+    justify-content: flex-start;
+    left: 0;
+    padding-inline: 2.5rem;
+    padding-top: 2.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;   
+    z-index: 1;
+}
+
+.foodMenuTop{
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-inline: 1.5rem;
+}
+
+.sescLogo{
+    height: 3rem;
+    width: auto;
+}
+
+.foodMenuTitle{
+    flex-basis: 100%;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.foodMenuCategory{
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    color: var(--clr-neutral-20);
+    font-size: 1.5rem;
+    font-weight: 900;
+    min-width: 280px;
+    padding-block: .75rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.comerciario{
+        background-color: #978035;
+        color: var(--clr-white);
+    }
+}
+
+.foodMenuList{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    & :first-child{
+        &::after,
+        &::before{
+            animation-duration: var(--animation-duration);
+            animation-iteration-count: infinite;
+            animation-name: progress;
+            animation-timing-function: linear;
+
+            background-color: var(--clr-yellow);
+            content: '';
+            display: block;
+            height: .5rem;
+            left: 0;
+            position: fixed;
+            width: 0;
+            z-index: 2;
+        }
+
+        &::after{
+            /* animation-direction: reverse; */
+            bottom: 0;
+        }
+
+        &::before{
+            top: 0;
+        }
+    }
+}
+
+.foodMenuItem{
+    align-items: center;
+    background-color: #001A33;
+    border-radius: 1rem;
+    display: flex;
+    gap: 1rem;
+    padding-block: .75rem;
+    padding-inline: 1.5rem;
+
+    & :empty{
+        display: none;
+    }
+}
+
+.itemName {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    gap: 1rem;
+    text-transform: uppercase;
+
+    :first-child{
+        font-size: 2.5rem;
+    }
+}
+
+.itemPrice{
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    box-sizing: border-box;
+    color: var(--clr-neutral-20);
+    font-size: 2.5rem;
+    font-weight: 900;
+    min-width: 280px;
+    padding-block: .75rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.comerciario{
+        background-color: #978035;
+        color: var(--clr-white);
+    }
+}
